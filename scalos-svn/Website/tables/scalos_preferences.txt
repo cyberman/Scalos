@@ -1,0 +1,140 @@
+40.28
+Improvement: rearranged values in minimum icon size cycle gadget
+Improvement: added slider to select nominal icon size between 25% and 400%
+Improvement: added option to select whether drawers in text windows are displayed before files, after files, or with files
+Improvement: prefs pages are now virtual. Currently, the drawback is that NListtree fails to display tree lines (this is a known bug in NListtree.mcc).
+
+40.27
+Bugfix: when saving preferences, Workbench preferences was overwritten, silently removing all chunks Scalos isn't aware of. Now all unknown chunks are written back 1:1
+
+40.26
+Bugfix: control bar gadget image previews were not updated correctly when image was changed
+Improvement: Add configuration for drag&drop pop-open windows open delay
+Improvement: Add support for control bar also for standard (non-browser) windows, standard and browser-mode control bars can be configured independently
+
+40.25
+Improvement: allow TrueType font selection for text windows on windows/text windows page
+
+40.24
+Bugfix: resolved NULL pointer hit when adding normal image to user-defined control bar button
+
+40.23
+Improvement: Added support for configuration of transparent Scalos windows - MorphOS 2.x only
+Improvement: Added configuration options for highlighting of selected icon text by a surrounding rectangle
+
+40.22
+Improvement: Added page for user-configurable browser window control bars
+Improvement: Automatically use Zune instead of MUI if present. Fixes crashes with prefs pugins with AFA OS installed
+Improvement: When adding plugins, file requester only shows plugins that have not been added yet
+Improvement: By selecting more than one entry in file requester, multiple plugins can be added
+
+V40.21
+Improvement: Simplified changing of icon font by adding a copy of truetype font settings to icons/labels page
+
+V40.20
+Improvement: In German translation, replaced all &quot;link&quot; by &quot;Verkn&uuml;pfung&quot;.
+Improvement: Added configuration for single-window lasso mode qualifier key.
+Improvement: Added new settings for user-definable thumbnail backfill, frames around thumbnails, and thumbnail background transparency.
+Improvement: Added new user setting to always apply popup menus to every selected icon, regardless of qualifier.
+Improvement: Moved all thumbnail-related settings to separate page.
+Improvement: Added selectable transparency for tooltip bubbles.
+Improvement: New setting Added - Switch on/off the displaying of image thumbnails to be shown if they have no icons (available with &quot;THUMBNAILS_AsDefault&quot; option).
+
+V40.19
+Added cache size limit &quot;user-configurable&quot; option.
+Improvement: Added user-selectable layout direction for each icon type, separate for desktop and standard icon windows.
+Bugfix: Under OS3.1, Scalos Prefs failed to start if THEME: images were not present
+Bugfix: All requesters for unavailable volumes are now suppressed
+Improvement: Added new tooltype &quot;NOPREFSPLUGINS&quot;, causes prefs plugins to be ignored, as name suggests.
+Improvement: the list of hidden device can be changed (stored in workbench.prefs).
+Bugfix: icon borders changed if preferences were reloaded after start.
+
+V40.18
+Improvement: sorting of plugin list is now selectable.
+
+V40.17
+Improvement: Selecting new icon frames now automatically adjusts icon borders.
+Improvement: mcpgfx.library and MCPFrame.mcc are no longer required.
+
+V40.16
+Improvement: Added selection for thumbnail display mode and size of thumbnails.
+Improvement: Icon font is now selectable via Scalos prefs if no &quot;font preferences&quot; is available.
+Improvement: popup font selection for icon and text window font is disabled if corresponding TrueType font is enabled.
+Improvement: Added selectable minimum and maximum sizes for icons.
+Improvement: Added selectable behaviour for default &quot;show&quot; and &quot;view by&quot; to &quot;windows&quot; Scalos Prefs page.
+Improvement: Scalos prefs tries to load page list and modules images from &quot;THEME:Prefs/pages&quot; and &quot;THEME:Prefs/modules&quot;. If images are not found, old built-in images are used.
+Improvement: Scalos plugins that refuse to load are no longer suppressed in plugin list, but rather displayed in italic.
+Improvement: About page uses new revision string in scalos library base instead of hard-coded &quot;1.4&quot; string
+Improvement: Rearranged window related items, now text windows is a register page in &quot;windows&quot; section
+Improvement: Added new tooltype &quot;NOSPLASHWINDOW&quot;. When set, no splash windows are displayed on loading and saving prefs. This applies to prefs modules, too
+Bugfix: Corrected border types around MUI checkboxes.
+
+V40.15
+Improvement: Changed background of prefs pages to MUII_PageBack
+
+V40.14
+Improvement: Renamed prefs page &quot;File display&quot; to &quot;Text windows&quot;. Moved &quot;Text windows&quot; prefs page directly after &quot;Windows&quot; page
+Improvement: New window title bar's refreshing setting into section &quot;Windows&quot;. Screen  and window title bars are refreshed separately
+Improvement: Added new settings &quot;antialiasing&quot; and &quot;gamma correction&quot; on &quot;TrueType Fonts&quot; page.
+
+V40.13
+Improvement: In the &quot;File Display&quot; section, added new checkmark for support hidden files(via FIBF_HIDDEN)
+Improvement: Exchanged  &quot;Borders&quot; and &quot;Attributes&quot; register paqes in &quot;Icons&quot; section
+Improvement: Added passing of tooltypes on to prefs plugins
+
+V40.12
+Improvement: Added font preview for icon font, and text window font
+Improvement: In the &quot;drag and drop&quot; section, added new qualifier input field for &quot;Create links&quot; and &quot;Force move&quot;
+Improvement: On the &quot;Miscellaneous&quot; page, added a cycle gadget to select the type of links Scalos generates
+
+V40.11
+Improvement: Added new prefs page for TrueType font settings. TT Font selection is available for icons, text windows and tooltips and the &quot;About&quot; window (&quot;Screen font&quot;)
+Improvement: Added checking for custom MUI MCCs and MCC versions
+
+V40.10
+Improvement: Rearranged prefs pages - created new prefs group &quot;Drag and Drop&quot;
+
+V40.9
+Improvement: Added slider for degree of default icon drawing transparency
+
+V40.8
+Bugfix: Transparency settings and &quot;Custom&quot; bob routines are now disabled when no CyberGfx library found or when Workbench screen has no more than 256 colours
+
+V40.7
+Bugfix: Several Datatypes images were no longer visible after iconify/uniconify
+
+V40.7
+Improvement: Added icon for iconified state
+
+V40.6
+Improvement: Added gadget to adjust Scalos default stack size
+
+V40.5
+Improvement: Replaced MUI NFloattext class by Floattext
+
+V40.4
+Bugfix: Updated Scalos URL to &quot;scalos.noname.fr&quot;
+
+V40.3
+Bugfix: Added missing load/save functions for Tooltip delay
+
+V40.2
+Bugfix: &quot;Add plugin&quot; command erroneously cleared internal plugin list
+
+V40.2
+Improvement: Changed module image display from TransferAnimObject to DataTypesMCCObject
+
+V40.1
+Initial release - rewritten from scratch in C by Mike, finished by J&uuml;rgen
+
+V39.12
+Bugfix: Fixed double use of fullbench
+
+V39.11
+Improvement: Added new features
+
+V39.10
+Improvement: Added new features
+
+V39.10
+Bugfix: Fixed crash after adding 2 or more plugins

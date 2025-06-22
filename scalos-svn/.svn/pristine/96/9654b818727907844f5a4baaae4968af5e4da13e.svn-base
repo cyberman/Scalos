@@ -1,0 +1,80 @@
+V40.19
+Improvement: when thumbnails are loaded, progress window is only opened if loading takes more than 100ms. Addtionally, for increased performance, gadgets are updates only every 100ms
+
+V40.18
+Bugfix: Enforcer hits on exit after inserting new entries
+Bugfix: dragging images into listview didn't work when started from stand-alone &quot;Pattern Prefs&quot;
+Improvement: Thumbnail is automatically created when an image is dropped onto the listview
+
+V40.17
+Improvement: Automatically use Zune instead of MUI if present. Fixes crashes with prefs pugins with AFA OS installed
+Improvement: thumbnail menu image is now optionally loaded from &quot;THEME:prefs/plugins/pattern&quot;
+
+V40.16
+Improvement: Added support for centered, unscaled background images
+Improvement: Added support for single-colour or gradient backfill
+
+V40.15
+Bugfix: added workaround to get thumbnails generation working with OS3.0/3.1 and Picasso96
+
+V40.14
+Bugfix: All requesters for unavailable volumes are now suppressed
+
+V40.13
+Improvement: &quot;Reset to defaults&quot; now creates reasonable default pattern settings (same as pattern.prefs in release archive).
+Improvement &quot;Open&quot; and &quot;save&quot; requester are only allocated once. This way, directory and file name for &quot;open&quot; and &quot;save as&quot; are remembered until preferences are closed.
+Improvement: Sorting of pattern list is now selectable.
+
+V40.12
+Improvement: background images are checked on startup, and thumbnails are removed for non-existing images
+
+V40.11
+Bugfix: Corrected border types around MUI checkboxes
+
+V40.10
+Improvement: Added checking of MUI MCCs required by prefs plugins
+
+V40.9
+Improvement: Changed background of prefs page to MUII_PageBack
+
+V40.8
+Improvement: Replaced Assembler library startup code by C. 
+Improvement: Added option to show thumbnail preview of patterns in listview.
+
+V40.6
+Bugfix: Fixed handling of internal &quot;modified&quot; flag
+Improvement: Added lamp indicator for &quot;modified&quot; flags
+Bugfix: Changing the &quot;create icons&quot; menu item had no effect
+
+V40.5
+Improvement: Added icon for iconified state
+
+V40.4
+Improvement: Moved core functionaility to &quot;MenuPrefs.prefsplugin&quot;
+
+V40.3
+Bugfix: Removed memory leak in CLI startup code
+
+V40.2
+Bugfix: Bubble for preview gadget was broken
+
+V40.1
+Bugfix: switching between &quot;tiled&quot; and &quot;fit size&quot; didn't work
+Improvement: Completed porting from ASM to C
+
+V39.14
+Improvement: Replaced &quot;list.mui&quot; by &quot;NList.mcc&quot; and &quot;listview.mui&quot; with &quot;NListview.mcc&quot;
+Improvement: Added title and automatic horizontal scroller to listview
+
+V39.13
+Improvement: Completed german (Deutsch) translation
+Bugfix: Fixed some errors with message texts in cycle gadgets
+
+V39.12
+Improvement: Changed locale strings to CatComp #?.cd #?.ct
+
+V39.11
+Bugfix: Fixed import of WBPattern prefs
+
+V39.10
+Improvement: Added HelpBubbles (done by crayor)

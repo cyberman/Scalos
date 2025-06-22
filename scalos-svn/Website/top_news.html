@@ -1,0 +1,98 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+
+<link rev="made" href="mailto:webmaster@scalos.noname.fr">
+<link rel="copyright" href="mailto:webmaster@scalos.noname.fr">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="author" content="Chris&nbsp;Haynes">
+<meta name="description" content="Scalos">
+<meta name="keywords" content="Amiga, Scalos, Workbench replacement">
+<meta name="robots" content="noindex, nofollow">
+
+<style type="text/css"><!--
+  body {margin: 0em}
+//--></style>
+
+<script type="text/javascript" language="JavaScript1.1">
+<!--
+if (document.images)
+{
+  Home0 = new Image();
+  Home0.src = "gfx/panel/home0.jpg";
+  Home1 = new Image();
+  Home1.src = "gfx/panel/home2.jpg";
+  About0 = new Image();
+  About0.src = "gfx/panel/about0.jpg";
+  About1 = new Image();
+  About1.src = "gfx/panel/about2.jpg";
+  Features0 = new Image();
+  Features0.src = "gfx/panel/features0.jpg";
+  Features1 = new Image();
+  Features1.src = "gfx/panel/features2.jpg";
+  Hints0 = new Image();
+  Hints0.src = "gfx/panel/hints0.jpg";
+  Hints1 = new Image();
+  Hints1.src = "gfx/panel/hints2.jpg";
+  Downloads0 = new Image();
+  Downloads0.src = "gfx/panel/downloads0.jpg";
+  Downloads1 = new Image();
+  Downloads1.src = "gfx/panel/downloads2.jpg";
+  Developers0 = new Image();
+  Developers0.src = "gfx/panel/developers0.jpg";
+  Developers1 = new Image();
+  Developers1.src = "gfx/panel/developers2.jpg";
+}
+
+function change(Name,Image,No)
+{
+  if (!document.images) {}
+  else document [Name].src = eval(Image + No + ".src");
+}
+//--></script>
+</head>
+
+<body background="gfx/t_bg.jpg" text="#002244" link="#002244" vlink="#224466">
+
+<!-- Navigation panel -->
+<table cols="2" width="638" align="left" cellspacing="0" cellpadding="0" border="0" summary="Navigation panel">
+  <tr valign="top">
+    <td><img src="gfx/t1.jpg" width="106" height="97" border="0" alt="" align="top"></td>
+    <td valign="bottom" align="left">
+      <table cols="7" width="532" align="left" cellspacing="0" cellpadding="0" border="0" summary="Navigation panel inner">
+        <tr valign="top" align="left">
+          <td colspan="7" align="left"><img src="gfx/t2.jpg" width="138" height="41" border="0" alt=""></td>
+        </tr>
+        <tr align="left">
+          <td><a href="main.php" target="mainframe" onMouseOver="change('HomeA','Home',1)" onMouseOut="change('HomeA','Home',0)" onClick="return change('HomeA','Home',1)">
+          <img src="gfx/panel/home0.jpg" width="76" height="30" alt="Home" border="0" name="HomeA"></a></td>
+          <td><a href="about.php" target="mainframe" onMouseOver="change('AboutA','About',1)" onMouseOut="change('AboutA','About',0)" onClick="return change('AboutA','About',1)">
+          <img src="gfx/panel/about0.jpg" width="76" height="30" alt="About" border="0" name="AboutA"></a></td>
+          <td><a href="news.php" target="mainframe"><img src="gfx/panel/news1.jpg" width="76" height="30" alt="News" border="0"></a></td>
+          <td><a href="features.php" target="mainframe" onMouseOver="change('FeaturesA','Features',1)" onMouseOut="change('FeaturesA','Features',0)" onClick="return change('FeaturesA','Features',1)">
+          <img src="gfx/panel/features0.jpg" width="76" height="30" alt="Features" border="0" name="FeaturesA"></a></td>
+          <td><a href="hints_tips.php" target="mainframe" onMouseOver="change('HintsA','Hints',1)" onMouseOut="change('HintsA','Hints',0)" onClick="return change('HintsA','Hints',1)">
+          <img src="gfx/panel/hints0.jpg" width="76" height="30" alt="Hints &amp; Tips" border="0" name="HintsA"></a></td>
+          <td><a href="downloads.php" target="mainframe" onMouseOver="change('DownloadsA','Downloads',1)" onMouseOut="change('DownloadsA','Downloads',0)" onClick="return change('DownloadsA','Downloads',1)">
+          <img src="gfx/panel/downloads0.jpg" width="76" height="30" alt="Downloads" border="0" name="DownloadsA"></a></td>
+          <td><a href="developers.php" target="mainframe" onMouseOver="change('DevelopersA','Developers',1)" onMouseOut="change('DevelopersA','Developers',0)" onClick="return change('DevelopersA','Developers',1)">
+          <img src="gfx/panel/developers0.jpg" width="76" height="30" alt="Developers" border="0" name="DevelopersA"></a></td>
+        </tr>
+        <tr valign="bottom">
+          <td colspan="7"><img src="gfx/panel/newsbase.jpg" width="532" height="26" alt="" border="0" usemap="#mapnews"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<map name="mapnews">
+  <area shape="rect" coords="1,1,61,26" href="news.php#news" target="mainframe" alt="">
+  <area shape="rect" coords="62,1,188,26" href="news.php#latest" target="mainframe" alt="">
+  <area shape="rect" coords="189,1,305,26" href="oldnews.php" target="mainframe" alt="">
+  <area shape="rect" coords="306,1,406,26" href="versionhistory.php" target="mainframe" alt="">
+  <area shape="rect" coords="407,1,504,26" href="miscnews.php" target="mainframe" alt="">
+</map>
+
+</body>
+</html>

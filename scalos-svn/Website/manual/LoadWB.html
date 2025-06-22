@@ -1,0 +1,72 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, loadwb">
+
+	<TITLE>Scalos LoadWB</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="Images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT WIDTH=100%><FONT COLOR=white><H2><B> LoadWB</B></H2></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar.jpeg"></TD>
+</TR>
+</TABLE>
+<BR>
+<H3><B>Overview</B></H3>
+<P>
+The new LoadWB command replaces the original.  The main difference is that it attempts
+to launch the Scalos desktop by running the file <TT>SCALOS:Scalos</TT>.  Should the attempt
+fail LoadWB will fall back to running the originally installed Workbench.<BR><BR>
+When Scalos is installed, your original <TT>LoadWB</TT> command is renamed to
+<TT>LoadWB.orig</TT>.  Then the new Scalos replacment <TT>LoadWB</TT> is copied to your C:
+directory.  Should Scalos fail to start during boot-up the <TT>LoadWB.orig</TT> will be executed
+as a fail-safe and *should* bring you back to your old Workbench.
+</P>
+<BR>
+
+<H3><B>Command Template</B></H3>
+<P>
+Additional parameters are available for use with the LoadWB command - none of them are
+necessary to everyday use of Scalos but are documented here mainly for completness.
+A number of the parameters are dummies for OS3.5+ compatability.
+<BR><BR>
+<TT>SP=SCALOSPATH/K,ORIG=ORIGINAL/S,DEBUG=-DEBUG/S,DELAY/S,CLEANUP/S,NEWPATH/S,HIDE/S,SIMPLEGELS/S,SKIP=SKIPWBSTARTUP/S</TT><BR>
+<BR>
+<TT>SP=SCALOSPATH/K</TT><BR>
+You must specify a legal directory path for the keyword.<BR>
+Overrides the path to the Scalos installation which is stored in <TT>ENV:Sys/Scalos.prefs</TT>
+<BR><BR>
+<TT>ORIG=ORIGINAL/S</TT><BR>
+Forces the old, original Workbench to beloaded rather than your current Scalos
+installation.  This can be useful for times when something has reacted badly with Scalos
+and you need to do some debugging via Workbench.
+<BR><BR>
+<TT>DEBUG=-DEBUG/S</TT><BR>
+Currently only displays the version string of the LoadWB program.  It mainly remains to keep
+compatability with the original LoadWB command parameter (which provided an additional Debug menu on Workbench).
+<BR><BR>
+<TT>NEWPATH/S</TT><BR>
+Once Scalos has loaded, all programs launched from it inherit the its path
+(which is the path that is set when you loaded WB duringthe s:startup-sequence).
+Programs affected also include any Scalos modules.<BR>
+<BR>
+So if you wanted to add another directory to the path <I>after</I> Scalos
+had loaded you'd open a shell (which therefore inherits the current path),
+do a "path blah add" followed by a "loadwb newpath". Et voila, all tasks
+now run from Scalos also have this directory in their path.
+<BR><BR>
+<TT>DELAY/S,CLEANUP/S,HIDE/S,SIMPLEGELS/S,SKIP=SKIPWBSTARTUP/S</TT><BR>
+These are all dummy parameters which allow Scalos to be installed on a system which may
+have been using these parameters with the original LoadWB command.  This should avoid
+any errors during execution of the <TT>S:Startup-Sequence</TT>.  If you do not need
+them when running you Workbench installation do not bother to specify them - Scalos' LoadWB
+ignores them.
+</P>
+
+</BODY>
+</HTML>

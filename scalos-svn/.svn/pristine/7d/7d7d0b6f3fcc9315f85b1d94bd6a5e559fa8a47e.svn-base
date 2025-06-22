@@ -1,0 +1,96 @@
+V40.30
+New feature: Default icons may be drawn with adjustable degree of transparency
+Improvement: Added support for MorphOS-style iconify gadgets. This fixed any visual distortion of iconify Gadgets under MorphOS
+Improvement: When loading default icons, Scalos now adds information about the original object (Path+Name) for usage by the iconobject datatypes
+Improvement: Made icon dd_Flags handling more flexible, so OS3.9 CD drawers open with correct viewmodes (WB handles invalid values of &quot;3&quot; like DDFLAGS_SHOWALL)
+Bigfix: Scalos didn't handle default icons from icon drawer (e.g. def_drawer.info) correctly. Without separate DefIcons installed, only the icon.library built-in icons were used
+Improvement: Added &quot;skip all&quot; gadget to standard copy/move &quot;replace&quot; dialog
+Bugfix: Fixed enforcer hits/crashes when starting Scalos while Scalos is already running
+Improvement: Added new ScalosControlA() tags SCALOSCTRLA_GetCopyBuffSize and SCALOSCTRLA_SetCopyBuffSize
+Improvement: Added preferences item to set default stack size
+Bugfix: FileTypes code assumed that popupmenu.library was open, leading to crashes on machines where that library was not installed
+
+V40.29
+New feature: Added full support for alpha channel icon drawing, including drag &amp; drop (&quot;Custom&quot; bob routines only)
+Bugfix: Memory for default action in filetype descriptions was freed while not in use
+Improvement: Filetype descriptions are now cached, in order to improve performance
+Bugfix: Starting WB programs left 2 locks dangling
+Improvement: Updated &quot;%os&quot; title function to recognise OS 3.5 and OS 3.9
+Improvement: Made localisable string for &quot;BUSY&quot; disks
+Improvement: Popupmenu items now show default action (the action that is taken upon double-click) in bold text
+Bugfix: Optimisation of drag &amp; drop bobs was broken, leading to very sluggish drawing of bobs when dragging multiple icons
+Improvement: Changed directory for Scalos filetype descriptors from &quot;Scalos:FileTypes/&quot; to &quot;ENV:Scalos/FileTypes/&quot;. For compatibility, Scalos still looks in the old place if the new directory cannot be found
+Bugfix: In Text window, icon update erroneously changed type from &quot;WBGARBAGE&quot; to &quot;WBDRAWER&quot;
+Bugfix: Fixed incorrect update of icons in text windows in &quot;view all&quot; mode
+Improvement: To provide a visual hint that popup menu commands only apply to the icon under the pointer, all other selected icons are temporarily deselected while the popup menu is open
+Improvement: Added keyboard qualifier to apply popup menu commands to every selected icon, instead of only the icon under the mouse pointer
+Bugfix: Fixed long delay upon startup when splash window was turned off
+Bugfix: selecting an icon in one window, then changing to another window, and hitting &quot;enter&quot; caused Scalos to crash with &quot;invalid semaphore state&quot; errors
+Bugfix: Fixed several memory leaks associated with filetype-dependent popup menus and tooltips
+Bugfix: In Window popup menus, &quot;view by text/name&quot; never displayed a checkmark
+Bugfix: Drawers opened from text view windows did not correctly inherit the &quot;view all&quot; attribute
+Bugfix: Corrected minor typo in About window &quot;100%&quot; was lacking the percent sign
+
+V40.28
+Improvement: Major improvement in text view window update - now works the same way as icon window update, only the changed items are redrawn
+Bugfix: In text view windows, it was erronously possible to &quot;snapshot&quot; and &quot;unsnapshot&quot; icons
+Bugfix: In text view windows, no file comments were displayed
+Bugfix: In text view windows, Scalos had problems recognising default tool entries for project icons
+Bugfix: Text icon IDTA_Type returned wrong icon type for WBGARBAGE (Trashcan) icons
+Improvement: Major improvements to SCA_OpenIconWindow(). Now Scalos tries hard to find the appropriate icon for the window to be opened. If an icon is to be found, the window settings are taken from the icon
+Bugfix: Text windows didn't recognise window resize events during reading of icons
+Improvement: Rewrote context-sensitive disabling of menu items
+Added requester to ask user what to do when a project icon without a default tool is encountered
+Added Polish catalog to developer archive, translation by Pawe¸ Szczodry
+Bugfix: Fixed file count routine in filetransclass. The bug caused incorrect calculation of total byte/item count and lead to display of more than 100% completion with nonsense values for &quot;remaining time&quot;
+Improvement: Removed display of every single item copied in filetrans copy/move requester. This optimization greatly improved copying speed
+New feature: Added new method &quot;SCCM_FileTrans_OverwriteRequest&quot; for FileTrans.sca class
+Bugfix: Filetype wasn't set correctly for trashcan
+Bugfix: AsyncWB hook wasn't called correctly for &quot;Empty Trashcan&quot;
+Bugfix: Program name wasn't handed over to execute_command.module on icon double-click
+Bugfix: Improved window clipping, now application-drawn appIcons no longer draw across non-backdrop Workbench window border
+Bugfix: When a drawer window was created in iconified state, it could not be uniconified by double-clicking its parent drawer
+
+V40.27
+Bugfix: In 40.27, WBStartup execution of ARexx type icons was broken
+Bugfix: Window backfill pattern re-layout didn't occur when &quot;backdrop&quot; was turned on and off
+Bugfix: Fixed enforcer hits/crashes during window zoom/resize when &quot;always relayout&quot; was enabled (code tried to use ptn_bitmap after FreeBitMap())
+Bugfix: Added locking mechanism for asynchronous backfill to avoid crashes when windows are closed while async backfill process hasn't finished
+Bugfix: Fixed enforcer hits when CLI project icon contained no default tool
+Bugfix: Cut &amp; Paste didn't work when AsyncWB was installed
+Improvement: Program list now contains full path for each program started instead of only program name
+New feature: Added SCA_ScalosControl() subcommand to get/free list of menu commands
+New feature: Added new FONT and VALIGN attributes to TOOLTIP STRING
+New feature: Added display of estimated remaining time to file copy/move progress dialog
+
+V40.26
+Bugfix: &quot;About&quot; produced 2 enforcer hits when no Scalos logo found
+Bugfix: Splash resizing / text positioning was broken when no Scalos logo was found
+Bugfix: Window process hung when one of the standard modules could not be started
+Bugfix: Snapshotting a window which had no icon created an &quot;.info&quot; instead of an icon with the drawer's name
+Bugfix: Windows with virtual width or height > 32768 could produce problems from graphical screen corruption to system crash
+Bugfix: During file copy operations, icons could be overwritten without warning
+Bugfix: TextInputHook wasn't used to run programs without an icon - instead, it always called execute_command.module
+Bugfix: Automatic disabling didn't work for some main menu items (e.g. &quot;sizetofit&quot; didn't get disabled in backdrop root window)
+New feature: Icon tooltips can now be user-defined in the file type description files. Scalos now supports file type information plugins, e.g. to display size information about image files (we will include two example plugins in the next release)
+
+V40.25
+Added &quot;viewbytype&quot;, &quot;cleanupbyname&quot;, &quot;cleanupbydate&quot;, &quot;cleanupbysize&quot;, and &quot;cleanupbytype&quot; menu commands
+Fixed Enforcer hits which occured when an ARexx program ended that had been started from an icon window, and the icon window had been been closed
+Added support for cyling through icons in window via TAB key
+Rebuilt about window code to make use of the TT layout engine
+Fixed bug in SCA_SortNode() - lists with less than 3 entries were not sorted
+Fixed broken close-window abort recognition during GenerateIcons() icon drawing in window
+The user-defined path for default icons was never used for iconified Scalos window icons. Now it is taken as fall-back if there are no theme-specific icons
+Changed sizing method for splash window
+Added new methods SCCM_AddToClipboard and SCCM_ClearClipboard to root class
+Copy/paste didn't work for volumes/disks - Fixed
+Fixed another source for erroneous error messages during SCCM_FileTrans_Copy and SCCM_FileTrans_Move operations
+Changes in icon font were not recognized in desktop window - Fixed
+The menu &quot;copy&quot; and &quot;paste&quot; commands trashed the destination file name - Fixed
+Fixed some enforcer hits and crashed when selecting some device icons, and then pressing &quot;enter&quot; twice
+Changed location of icons for iconified Scalos window from &quot;ENV:Sys/def_iconify&quot; to &quot;THEME:window/def_iconify&quot;
+LoadWB.scalos now waits until Scalos opens its first window on the Workbench screen before exiting
+Now Scalos first tries to load deficons from &quot;THEME:DefIcons/&quot;. If that fails, the standard path &quot;ENV:Sys/&quot; is used
+Now uses &quot;titlebarimageclass&quot; for iconify image if available
+Changed all makefiles to work with GNU make

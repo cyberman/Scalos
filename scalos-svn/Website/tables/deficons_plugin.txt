@@ -1,0 +1,3 @@
+XXXXX - Deprecated since functionality has been integrated into the Scalos main program
+V45.6 - Bugfix: OpenLibraries was called twice
+V45.6 - Added support for individually enabled/disabled icon types

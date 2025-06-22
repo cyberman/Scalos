@@ -1,0 +1,30 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, distribution">
+
+	<TITLE>Scalos Distribution</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B> Distribution</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+The Scalos archive may be copied and distributed on the condition that it is left <STRONG>complete and unmodified in all its parts</STRONG>.  If you have any questions regarding distribution in a certain manner please consult the <A HREF="Authors.html">development team</A> before going ahead.
+</P>
+<P>
+You may charge only a nominal fee for the re-distribution of Scalos (equivalent to the cost of a floppy disk) without the permission of the <A HREF="Authors.html" TARGET="Section">authors</A>
+</P>
+<P>
+Inclusion on magazine cover CDs <B>is allowed</B>, as long as the <A HREF="Authors.html" TARGET="Section">authors</A> are notified before the CD goes to duplication.  However distribution of Scalos and its associated extras (modules, plugins, website contents) on a packaged CD-ROM or set of floppy disks <B>is not allowed!</B>
+</P>
+</BODY>
+</HTML>

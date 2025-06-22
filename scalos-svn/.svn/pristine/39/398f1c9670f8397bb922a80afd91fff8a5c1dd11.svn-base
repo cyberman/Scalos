@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, plugin">
+
+	<TITLE>Scalos Plugin</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT WIDTH=100%><nobr><FONT COLOR=white><B>Scalos Plugin</B></FONT></nobr></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE WIDTH=95% BORDER=0 ALIGN=CENTER>
+	<B>PLUGIN</B>
+		<UL>
+			<LI><B>filename:</B> wbrexx.plugin</LI>
+			<LI><B>author:</B> [jurgen@scalos.co.uk]</LI>
+			<LI><B>type:</B> [OOP] Window</LI>
+		</UL>
+	<BR>
+	<B>INSTALLATION</B>
+		<DL><DD>
+		Run the supplied Install Script. -or-
+		Copy the #?.plugin file to the <TT>Scalos:Plugins/OOP/</TT> directory.<BR>
+		Start up the main Scalos Preference program and select the 'Plugins' page.  Click the 'New' button and then use the file selector icon to the right-end of the string gadget to select you new plugin file from the <TT>Scalos:Plugins/OOP/</TT> directory.
+		</DL></DD>
+	<BR>
+	<B>DESCRIPTION</B>
+		<DL><DD>
+		Although Scalos has its own arexx port this plugin adds a Workbench 3.5+ compatible AREXX interface to Scalos internals.
+		This allows OS3.5+ arexx scripts to be run under Scalos, producing the same results.
+		</DD></DL>
+	<BR>
+	<B>USAGE</B>
+		<DL>
+			<DD>
+			Please consult the manual for information on the supported commands and how to use them.  The latest manual updates will be available at http://manual.scalos.co.uk.  Find the page in the index under "Arexx - Workbench".
+			</DD>
+		</DL>
+</TABLE>
+</BODY>
+</HTML>

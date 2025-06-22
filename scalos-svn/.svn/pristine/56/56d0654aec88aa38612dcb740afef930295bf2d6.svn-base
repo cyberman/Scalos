@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, plugin">
+
+	<TITLE>Scalos Plugin</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT WIDTH=100%><FONT COLOR=white><H2><B> Scalos Plugin</B></H2></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE WIDTH=95% BORDER=0 ALIGN=CENTER>
+	<B>PLUGIN</B>
+		<UL>
+			<LI><B>filename:</B> volumegauge.plugin</LI>
+			<LI><B>author:</B> Jürgen Lachmann [juergen_lachmann@t-online.de]</LI>
+			<LI><B>type:</B> [OOP] Windows Sub-class</LI>
+		</UL>
+	<BR>
+	<B>INSTALLATION</B>
+		<DL><DD>
+		Copy the #?.plugin file to the <TT>Scalos:Plugins/OOP/</TT> directory.<BR>
+		Start up the main Scalos Preference program and select the 'Plugins' page.  Click the 'New' button and then use the file selector icon to the right-end of the string gadget to select you new plugin file from the <TT>Scalos:Plugins/OOP/</TT> directory.
+		</DL></DD>
+	<BR>
+	<B>DESCRIPTION</B>
+		<DL><DD>
+		VolumeGauge adds an OS3.5 style gauge to all root volume windows.  You fill find the gauge in the left window border.  The gauge displays how much space is available on the volume.
+		</DD></DL>
+	<BR>
+	<B>USAGE</B>
+		<DL>
+			<DD>
+			Once installed, the plugin functions transparently.  No user interaction is required.
+			</DD>
+		</DL>
+</TABLE>
+</BODY>
+</HTML>

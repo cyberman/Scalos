@@ -1,0 +1,48 @@
+V40.11
+Bugfix: generating thumbnails for newicons caused invalid memory accesses
+
+V40.10
+Improvement: added suport for transparent colors with non-zero index
+
+V40.8
+Bugfix: CoerceMethod() in OM_NEW could lead to enforcer hits if object could not be created
+
+V40.7
+Bugfix: Added size checking for icon BitMaps, to fix a major memory trashing bug triggered by thumbnailed icons
+Improvement: icons can now be scaled
+
+V40.6
+Improvement: Finished conversion from ASM to C, compiles with both SAS/C and GCC
+
+V40.5
+Improvement: Changed library from &quot;struct Library&quot; to &quot;struct ClassLibrary&quot;
+
+V40.4
+Improvement: Improved cleanup code: FreeClassList() now calls RemLibrary() for each datatype
+
+V40.3
+Bugfix: Fixed possible Enforcer hit in Expunge()
+
+V40.2
+Improvement: More changes for enhanced compatibility for icons with borders
+
+V40.1
+Bugfix: Removed IDTA_InnerLeft and IDTA_InnerTop checks to enable frames around masked icons
+
+V39.24
+Bugfix: Fixed reversed check for IOFREELAYOUTB_ScreenAvailable in idtm_freelayout
+
+V39.22
+Bugfix: Fixed wrong register for GetCyberMapAttr() Attribute parameter
+
+V39.21
+Improvement: Some instance data is now longword aligned
+
+V39.20
+Improvement: Added Semaphore protection for memory pools
+
+V39.19
+Improvement: All memory allocations are now being done via memory pools
+
+V39.13
+Improvement: Added transparency flag checking

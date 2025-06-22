@@ -1,0 +1,50 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, welcome">
+
+	<TITLE>Scalos Welcome</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><nobr><FONT COLOR=white><B>Welcome</B></FONT><nobr></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+The Amiga line of personal computers offers a unique combination of versatility
+and usability.
+</P>
+<P>
+This guide introduces you to our Scalos desktop replacement for
+the Amiga computer.  Using Scalos you'll be able get things done easier and faster
+using the GUI to control ther Amiga using a mouse to select graphic symbols in the
+form of icons, or small pictures, and list-like menus.  The Scalos desktop is easy
+to learn because these icons and menus are displayed automatically.  You do not
+have to memorize a long list of commands to accomplish a task.
+</P>
+<P>
+If you work your way through this guide it will show you how to do the most common
+tasks, some advice on doing things better and points out some of the exciting new
+features Scalos brings to your desktop compared to the old Amiga Workbench.
+</P>
+<!--
+If your looking for the more technical aspects of Scalos you may find it easier
+to jump straight to the <A HREF="InformationLocator.html">"Information Locator"</A> section.
+-->
+</P>
+<P>
+<UL>
+	<LI><A HREF="WhatsOnDesktop.html">What's On Your Desktop</A>
+	<LI><A HREF="WhatsNew.html">What's new In Scalos?</A>
+	<LI><A HREF="BackingUp.html">Backing Up Your Old Setup</A>
+</UL>
+</P>
+</BODY>
+</HTML>

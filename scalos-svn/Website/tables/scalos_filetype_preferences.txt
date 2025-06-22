@@ -1,0 +1,79 @@
+V40.24
+Bugfix: pasting unselected or selected icon attribute failed to update icon preview
+Improvement: number of find hits is now displayed. In filetypes listtree, string matches are now marked with fill pen. Drawback: DOS-style patterns are no longer supported to find filetypes
+Improvement: added preview of menu icon images to listview
+
+V40.23
+internal version only)
+
+V40.22
+Bugfix: icon is updated correctly when filetypes recognition list is sorted via drag-drop
+Improvement: Search panel can now be unhidden via popup menu
+Improvement: In filetype search panel, forward and backwards buttons allow jumping to next and previous match
+
+V40.21
+Improvement: Replaced &quot;search&quot; entries in popup menu by MUI group. Filetype search work works incrementally
+
+V40.20
+Bugfix: search filetypes list with &quot;Find next&quot; didn't work
+
+V40.18
+Improvement: extended DefIcons functionality to cover classification of WBDISK objects, i.e. USB disks, DVDs or SMB network volumes are now recognized automatically
+
+V40.17
+Improvement: Automatically use Zune instead of MUI if present. Fixes crashes with prefs pugins with AFA OS installed.
+Improvement: added capability to search for filetype by name.
+
+V40.16
+Improvement: thumbnail menu image is now optionally loaded from &quot;THEME:prefs/plugins/filetypes&quot;.
+V40.15
+Bugfix: enforcer hit creating a new filetype
+
+V40.14
+Improvement: Added menu command to manually initiate thumbnail cache cleanup
+Improvement: Selecting an entry on the &quot;Recognition&quot; page automatically selects matching entry on the &quot;Actions&quot; page
+
+V40.13
+Improvement: Added uder-selectable icon images for filetype-specific popup menus
+Improvement: Added new attribute PREVIEWPLUGIN for filetype-specific thumbnail generators
+
+V40.12
+Improvement: Added new internal command &quot;createthumbnail&quot;.
+Improvement: Added functionality to create new filetype-specific icons, and edit them via information.module.
+
+V40.11
+Improvement &quot;Open&quot; and &quot;save&quot; requester are only allocated once. This way, directory and file name for &quot;open&quot; and &quot;save as&quot; are remembered until preferences are closed.
+Improvement: Added editor for deficons prefs. Filetype recognition is now fully configurable.
+
+V40.10
+Bugfix: dropping below other entries wasn't possible at the correct locations.
+
+V40.9
+Improvement: Added support for new menu commands &quot;showdefault&quot; and &quot;viewbydefault&quot;
+
+V40.8
+Improvement: Added checking of MUI MCCs required by prefs plugins
+
+V40.7
+Improvement: Changed background of prefs page to MUII_PageBack
+
+V40.6
+Improvement: Replaced Assembler library startup code by C. No functional changes
+
+V40.5
+Improvement: Added menu option and tooltype to hide all empty filetype entries.
+
+V40.4
+Improvement: Added font preview to TTTFONT editing window
+
+V40.3
+Bugfix: Changing the &quot;create icons&quot; menu item had no effect
+Improvement: Added TrueType font support for ToolTips (new TTFONT attribute for STRING)
+
+V40.2
+Improvement: Added icon for iconified state
+Bugfix: Fixed handling of internal &quot;modified&quot; flag
+Improvement: Added lamp indicator for &quot;modified&quot; flags
+
+V40.1
+Initial release

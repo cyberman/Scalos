@@ -1,0 +1,71 @@
+V45.32
+Improvement: width of volume gauge is now adjusted to match width of window close gadget
+
+V45.31
+Bugfix: Removed some possible sources for semaphore deadlocks
+Bugfix: WBCTRLA_DuplicateSearchPath failed to return inherited path of parent process under MorphOS. The code tried to find the Scalos initial process named &quot;Workbench&quot;, and that didn't work with MorphOS
+
+V45.30
+Improvement: Replaced dedicated code by new SCA_OpenDrawerByName library function (requires Scalos V41.x)
+
+V45.29
+Bugfix: Replaced LockIBase()/UnlockIBase() by Forbid()/Permit(), to avoid deadlocks while layers are locked (Lasso, drag&drop)
+
+V45.28
+Improvement: Replaced Assembler library startup functions by C code. No functional changes
+
+V45.27
+Bugfix: Fixed enforcer hits when text window icons were renamed with AsyncWB (Added translation of text icon types in ChangeWorkbenchSelectionA() )
+
+V45.26
+Improvement: Added several undocumented WorkbenchControl() tags, WBCtrl doesn't fail, however, not all values are used
+Improvement: MaxCopyMem can now be changed via WorkbenchControlA() calls
+
+V45.25
+Improvement: Changed &quot;OpenDrawerByName()&quot; to make use of the Scalos iconobject datatypes
+
+V45.24
+Improvement: Removed some dependencies on undocumented internal Scalos data structures
+
+V45.23
+Improvement: Added support for V45 WBOPENA_Show and WBOPENA_ViewBy tags to OpenWorkbenchObjectA emulation
+
+V45.22
+Bugfix: The AMTYPE_APPWINDOW AppMessages generated in AppWindow.c had wrong mn_Replyport
+
+V45.21
+Improvement: Added support for &quot;No Color Icons&quot; and &quot;No NewIcons&quot; workbench prefs settings
+
+V45.20
+Improvement: Avoid excessive Scalos root window updates with AddHiddenDevice/RemHiddenDevice
+
+V45.19
+Improvement: Added support for (undocumented) CloseWB/OpenWB hook list
+Improvement: Added support for (undocumented) set/clear icon.library global screen
+
+V45.18
+Improvement: Added support for getting and setting delete, copy and text input hooks (undocumented)
+
+V45.17
+Bugfix: VolumeGauge was not being checked
+Bugfix: WB prefs are now checked each time a new device window is opened
+
+V45.16
+Bugfix: No longer installs patches if Scalos is running in preview mode
+
+V45.15
+Improvement: Added proper handling for WorkbenchControl() tags WBCTRLA_SetTypeRestartTime and WBCTRLA_GetTypeRestartTime
+Improvement: Changed priority to -89
+
+V45.14
+Improvement: After WBCTRLA_AddHiddenDeviceName and WBCTRLA_RemoveHiddenDeviceName, now does SCCM_IconWin_Update on root window
+
+V45.13
+Bugfix: When opening drawer windows, DDVM_BYICON now gets translated into IDTV_ViewModes_Icon
+Added Improvement: full Support for WBCTRLA_GetDefaultStackSize and WBCTRLA_GetProgramList, using new SCA_ScalosControl() call
+Bugfix: HiddenDeviceList entries now get ln_Type=0x67 so Workbench prefs/IPrefs correctly removes old entries from list
+Bugfix: Added additional argument checking to myWorkbenchControlA()
+Improvement: Added Semaphore protection for HiddenDeviceList
+Bugfix: Some other small fixes
+Improvement: Hidden device list completely supported (needs devicefilter.plugin to actually hide devices). Hidden devices read from workbench prefs file (scalos_helper.c)
+Bugfix: Fixed Malfunction of AddAppWindowDropZoneA() with WBDZA_Box

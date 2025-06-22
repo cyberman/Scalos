@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+     <TITLE>Scalos</TITLE>
+
+	<META NAME="author" CONTENT="Stefan Sommerfeld & Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, contents">
+</HEAD>
+
+    <FRAMESET FRAMEBORDER=0 FRAMESPACING=0 BORDER=0 ROWS="35,*">   
+        <FRAME NAME="ConHeader" SRC="ContentsHeader.html" NORESIZE SCROLLING=NO MARGINHEIGHT=0 MARGINWIDTH=0>
+        <FRAME NAME="ContentsList" SRC="ContentsList.html" NORESIZE SCROLLING=AUTO MARGINHEIGHT=10 MARGINWIDTH=10>
+    </FRAMESET>
+
+<NOFRAMES>
+
+<H4 ALIGN=CENTER>
+You require a modern frames capable browser to read this documentation.  Please upgrade!
+<BR></H4>
+</NOFRAMES>
+</FRAMESET>
+</HTML>

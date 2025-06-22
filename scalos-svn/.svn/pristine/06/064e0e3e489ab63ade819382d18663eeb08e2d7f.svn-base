@@ -1,0 +1,54 @@
+V39.26
+Bugfix: failed to save window state if Persistant_Windows initially wasn't present
+Bugfix: updating saved window state failed if file &quot;Persistant_Windows-old&quot; was present
+
+V39.25
+Improvement: changed saving of current state to make it bullet proof. Now new file is written under name Persistant_Windows-new, then existing file is renamed to Persistant_Windows-old, and if everything worked, new file is renamed to Persistant_Windows and old file Persistant_Windows-old is deleted
+
+V39.24
+Improvement: plugin now automatically recognizes when Scalos has finished starting up, and will start re-opening windows. Preferences variable &quot;StartDelay_Seconds&quot; is no longer used
+
+V39.23
+Improvement: Plugin is now able to store size and position of Scalos windows
+
+V39.22
+Improvement: Added support for browser mode windows
+
+V39.21
+Improvement: persist now skips opening any Scalos window if shift key is pressed
+
+V39.20
+Replaced dedicated code by new SCA_OpenDrawerByName library function (requires Scalos V41.x)
+
+V39.19
+Improvement: Replaced Assembler library startup functions by C code. No functional changes
+
+V39.18
+Improvement: Changed &quot;OpenDrawerByName()&quot; to make use of the Scalos iconobject datatypes
+
+V39.17
+Improvement: &quot;Persistant_Windows&quot; file no longer is deleted during initialisation. The advantage is, if Scalos crashed before the first window gets re-opened, the Persistant_Windows file is untouched. As soon as the first window opens, the Persistant_Windows file is rewritten.
+Improvement: The re-opened windows won't get activated (works with Scalos V40.22+)
+
+V39.16
+Bugfix: Disabled some Printf() calls
+
+V39.15
+Improvement: Reversed order in which windows are reopened
+
+V39.14
+Improvement: Changed name of prefs file from &quot;ENVARC:Scalos/Persist.config&quot; to &quot;ENV:Scalos/Persist.prefs&quot;
+Improvement: &quot;Use_SCA_Iconify&quot; now defaults to &quot;1&quot; if scalos.library version is at least 40
+
+V39.13
+Improvement: Name of persistant windows status file is now configurable in &quot;ENVARC:Scalos/Persist.config&quot;
+
+V39.12
+Improvement: When re-opening drawer windows, DDVM_BYICON now gets translated into IDTV_ViewModes_Icon
+
+V39.11
+Improvement: When re-opening window in iconified state, now immediately adds entry in persist file (no SCCM_Window_Open will occur, so otherwise no entry would be generated at all)
+
+V39.10
+Improvement: Prefs file may contain comment lines beginning with &quot;#&quot;. Empty lines in prefs file will be ignored
+Improvement: Iconified windows are remembered and re-iconified on startup

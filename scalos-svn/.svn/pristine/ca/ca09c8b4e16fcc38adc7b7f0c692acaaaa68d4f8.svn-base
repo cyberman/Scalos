@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, plugin">
+
+	<TITLE>Scalos Plugin</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT WIDTH=100%><FONT COLOR=white><H2><B> Scalos Plugin</B></H2></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE WIDTH=95% BORDER=0 ALIGN=CENTER>
+	<B>PLUGIN</B>
+		<UL>
+			<LI><B>filename:</B> wb39.plugin</LI>
+			<LI><B>author:</B> Jürgen Lachmann [jurgen@scalos.co.uk]</LI>
+			<LI><B>type:</B> [OOP] System Library Patch</LI>
+		</UL>
+	<BR>
+	<B>INSTALLATION</B>
+		<DL><DD>
+		Copy the #?.plugin file to the <TT>Scalos:Plugins/OOP/</TT> directory.<BR>
+		Start up the main Scalos Preference program and select the 'Plugins' page.  Click the 'New' button and then use the file selector icon to the right-end of the string gadget to select you new plugin file from the <TT>Scalos:Plugins/OOP/</TT> directory.
+		</DL></DD>
+	<BR>
+	<B>DESCRIPTION</B>
+		<DL><DD>
+		This plugin provides the missing functionality to enable the use of OS3.5+ tools.  The missing functions of the workbench.library v44 are emulated by Scalos instead.<BR>
+		The plugin also adds the OS3.5 WB style volume gauge to the left window border (exactly the same as the <TT>volumegauge.plugin</TT> for OS3.0/3.1).  So users of this plugin <B>do not</B> require <TT>volumegauge.plugin</TT> to be installed!<BR><BR>
+		You may set gauge preferences using:<BR>
+		<UL>
+			<LI><B>OS3.5</B> - "TweakWB" or "WBCtrl" program from Aminet</LI>
+			<LI><B>OS3.9</B> - the supplied "WBPrefs" program.</LI>
+		</UL>
+		</DD></DL>
+	<BR>
+	<B>USAGE</B>
+		<DL>
+			<DD>
+			Once installed, the plugin patches the system to provide the new functions in workbench.library.  No user interaction is required.
+			</DD>
+		</DL>
+</TABLE>
+</BODY>
+</HTML>

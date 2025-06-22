@@ -1,0 +1,102 @@
+V40.20
+Improvement: added preview of menu icon images to listview
+
+V40.19
+Improvement: redesigned layout for better overview
+Improvement: added Workbench popup menu to default menu preferences
+Improvement: added copy/cut/paste functionality for easier menu configuration
+Improvement: &quot;Save As&quot; dialog uses path of &quot;Open&quot; dialog as default
+
+V40.18
+(internal version only)
+
+V40.17
+Improvement: Automatically use Zune instead of MUI if present. Fixes crashes with prefs pugins with AFA OS installed
+Improvement: thumbnail menu image is now optionally loaded from &quot;THEME:prefs/plugins/menu&quot;
+
+V40.16
+Improvement: Added menu command to manually initiate thumbnail cache cleanup
+Improvement: Added user-selectable icon images for popup menus
+Improvement: popup menus that are nowadays configurable via filetypes prefs are now hidden by default, to avoid confusion
+Bugfix: Selecting a new &quot;internal command&quot; from list didn't update string gadget
+
+V40.15
+Improvement: Added new internal command &quot;createthumbnail&quot;
+Improvement: &quot;reset to defaults&quot; now generates a complete, localized menu, instead of an empty one
+Improvement &quot;Open&quot; and &quot;save&quot; requester are only allocated once. This way, directory and file name for &quot;open&quot; and &quot;save as&quot; are remembered until preferences are closed
+Improvement: Added support for new menu commands &quot;showdefault&quot; and &quot;viewbydefault&quot;
+
+V40.14
+Improvement: Added checking of MUI MCCs required by prefs plugins
+
+V40.13
+Improvement: Changed background of prefs page to MUII_PageBack
+
+V40.12
+Improvement: Replaced Assembler library startup code by C. No functional changes
+
+V40.10
+Bugfix: Fixed handling of internal &quot;modified&quot; flag
+Improvement: Added lamp indicator for &quot;modified&quot; flags
+Bugfix: Menu command &quot;Merge&quot; erroneously cleared the existing entries before importing the new ones
+
+V40.9
+Bugfix: Changing the &quot;create icons&quot; menu item had no effect.
+
+V40.8
+Improvement: Added icon for iconified state
+
+V40.7
+Improvement: Moved core functionaility to &quot;MenuPrefs.prefsplugin&quot;
+
+V40.6
+Bugfix: Removed memory leak in CLI startup code
+
+V40.5
+Bugfix: Popup button for IconWindow command entries now only accepts directories
+Bugfix: Closing command popup ASL requester with &quot;Ok&quot; button failed to enter filename into Listview element
+Improvement: command popup ASL requester now defaults to &quot;Scalos:Plugins/Menu/&quot; directory for menu plugins
+
+V40.4
+Bugfix: Several bugfixes that affect renaming of menu items. 
+Improvement: For Workbench commands, stack size and priority are taken from icon, if available
+
+V40.2
+Bugfix: Added checking of menu level and number of menu items. It is no longer possible to add a new menu to a SubMenu, or to add more than 64 MenuItems to a menu, or to add more than 32 Entries to a sub menu
+
+V40.1
+Rewritten from scratch in C
+
+V39.22
+Improvement: Added &quot;Copy&quot;, &quot;Cut&quot;, &quot;Paste&quot; menu commands
+
+V39.21
+Improvement: On startup, now automatically reads old &quot;Menu.prefs&quot; if &quot;Menu13.prefs&quot; not found and no filename given
+
+V39.20
+Improvement: Changed locale strings to CatComp #?.cd #?.ct
+Improvement: Added &quot;About&quot; requester
+Improvement: Added new &quot;viewbydate&quot; command to the menus
+Improvement: Added new &quot;viewbysize&quot; command to the menus
+
+V39.19
+Improvement: Added new popup menu for AppIcons
+
+V39.18
+Bugfix: &quot;WBArgs&quot; checkbox now enabled for ARexx commands
+
+V39.17
+Improvement: Added new &quot;sizetofit&quot; command to the menus
+
+V39.16
+Improvement: Added new &quot;clearselection&quot; command to the menus
+
+V39.15
+Improvement: Added new &quot;shutdown&quot; command to the menus
+Improvement: Added new &quot;formatdisk&quot; command to the menus
+
+V39.14
+Bugfix: Fixed all drag&amp;drop problems
+
+V39.13
+Bugfix: Fixed string mismatch in commandlist

@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, plugin">
+
+	<TITLE>Scalos Plugin</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="Images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT WIDTH=100%><FONT COLOR=white><H2><B> Scalos Plugin</B></H2></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE WIDTH=95% BORDER=0 ALIGN=CENTER>
+<TR><TD>
+	<B>PLUGIN</B>
+		<UL>
+			<LI><B>filename:</B> .plugin</LI>
+			<LI><B>author:</B> Stefan Sommerfeld [zerocom@aliendesign-gbr.de]</LI>
+			<LI><B>type:</B> [OOP] Screen Titlebar</LI>
+		</UL>
+	<BR>
+	<B>INSTALLATION</B>
+		<DL><DD>
+		Run the supplied Install Script. -or-
+		Copy the #?.plugin file to the <TT>Scalos:Plugins/OOP/</TT> directory.<BR>
+		Start up the main Scalos Preference program and select the 'Plugins' page.  Click the 'New' button and then use the file selector icon to the right-end of the string gadget to select you new plugin file from the <TT>Scalos:Plugins/OOP/</TT> directory.
+		</DL></DD>
+	<BR>
+	<B>DESCRIPTION</B>
+		<DL><DD>
+		The Scalos desktop screen titlebar may be configured using the main Scalos Preference program.  This plugin adds an additional placeholder, %ev, which can be used to display the value (a string) of the variable in the titlebar.  This can be used in conjuntion with another command which could have its output re-directed to a ENVironment variable in the Startup-Sequence or User-Startup-sequence BEFORE Scalos is run.
+		</DD></DL>
+	<BR>
+	<B>USAGE</B>
+		<DL>
+			<DD>
+			<TT>%ev&lt;env_variable_name&gt;?</TT><BR>
+			<BR>
+			The question mark must be within 200 characters of %ev. Replace <TT>&lt;env_variable_name&gt;</TT> with whatever variable name you want to display the contents of.  The variable path/name can also contain spaces, the name is taken as everything from the %ev to the '?' symbol.
+			</DD>
+		</DL>
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

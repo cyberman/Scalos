@@ -1,0 +1,33 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, modules">
+
+	<TITLE>Scalos Modules</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>Modules</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<!--
+Any updated modules simply have to provide a drop in replacement for the HTML files below.
+Additional images are placed in the Images/ subdirectory
+-->
+
+<P>
+<A HREF="Module-executecommand.html">Execute Command</A><BR>
+<A HREF="UnderConstruction.html">Delete</A><BR>
+<A HREF="UnderConstruction.html">Rename</A><BR>
+<A HREF="Module-information.html">Information</A><BR>
+<A HREF="Module-systeminfo.html">System Information</A><BR>
+</P>
+</BODY>
+</HTML>

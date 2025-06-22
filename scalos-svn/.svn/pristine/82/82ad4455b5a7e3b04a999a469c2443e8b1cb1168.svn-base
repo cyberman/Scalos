@@ -1,0 +1,8 @@
+==id $Id$
+==copyright ©1999-2002 The Scalos Team
+==base _ScalosPluginBase
+*==basetype struct Library *
+==bias 30
+==public
+const struct ScaClassInfo *SCAGetClassInfo() ()
+==end

@@ -1,0 +1,1 @@
+V40.5 - Adapted to changed OpenDrawerByName() function, now uses iconobject.library instead of icon.library

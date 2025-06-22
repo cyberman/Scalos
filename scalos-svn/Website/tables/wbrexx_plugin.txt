@@ -1,0 +1,55 @@
+V39.22
+Bugfix: in non-emulation mode, an allocated signal was never freed
+
+V39.21
+Improvement: Added support for &quot;HELP PROMPT&quot;
+
+V39.20
+Bugfix: &quot;menu invoke&quot; always required a window, even for menu commands that do not work on windows, like &quot;WORKBENCH.ABOUT&quot;
+
+V39.19
+Replaced dedicated code by new SCA_OpenDrawerByName library function (requires Scalos V41.x)
+
+V39.18
+Improvement: Replaced Assembler library startup functions by C code. No functional changes
+
+V39.17
+Improvement: Changed &quot;OpenDrawerByName()&quot; to make use of the Scalos iconobject datatypes
+
+V39.16
+Improvement: Removed some dependencies on undocumented internal Scalos data structures
+
+V39.15
+Improvement: Added &quot;MENU INVOKE WINDOW.CLEANUPBY.NAME/DATE&quot; &quot;/SIZE/TYPE&quot; functions
+Improvement: Added &quot;ICON MOVE IN/OUT&quot; functions
+Improvement: Added &quot;MENU INVOKE WINDOW.RESIZETOFIT&quot; function
+
+V39.14
+Improvement: Added &quot;ICON ACTIVATE UP/DOWN/LEFT/RIGHT&quot; functions
+Improvement: Fixed order of which icons get select with &quot;ICON CYCLE NEXT/PREV&quot; function
+
+V39.13
+Bugfix: Fixed bug in AddMenuItem() and AddKeyboardCommand() which could lead to crashes when trying to add items with already existing names
+
+V39.12
+Improvement: Now supports adding menu subitems and new menus. Using this new feature requires Scalos V40.20
+
+V39.11
+Bugfix: Fixed serious initialisation problem in Scalos preview mode, leading to crash on any keyboard input
+
+V39.10
+Bugfix: No longer initialises if Scalos is running in preview mode
+
+V39.9
+Bugfix: Changed priority to -79 in order to make it work for text windows
+Bugfix: &quot;ICON MAKEVISIBLE&quot; didn't always work correctly for text windows
+
+V39.8
+Bugfix: Fixed several bugs in the GETATTR function
+Improvement: Added missing MENU and KEYBOARD functions
+
+V39.7
+Bugfix: Forgot to UnLock() lock in FindWindowByName()
+
+V39.6
+Improvement: Changed matching algorithm in FindWindowByName(), important for all WINDOW commands

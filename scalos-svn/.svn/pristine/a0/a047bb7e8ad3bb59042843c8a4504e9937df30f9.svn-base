@@ -1,0 +1,212 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, preferences">
+
+	<TITLE>Scalos Preferences - Pattern</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>Pattern Preferences</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+With this program you can configure background pictures for the screen, desktop and windows.  It consists of two pages for your configuration.
+<BR><BR>
+<B>NOTE:</B> If problems should occurr with background pictures, please see <A HREF="FAQ.html">Frequently Asked Questions</A> section.
+<BR><BR>
+Please ensure you have <B>no</B> Workbench backdrop pattern selected in the <B>original</B> WBPattern preferences program.  This is because Scalos uses its own pattern backdrop system, the patterns for the old Workbench will still be loaded but not seen by you, thus wasting your valuable memory.
+</P>
+
+<A NAME="patternlistpage">
+<BR>
+<H3><B>Patternlist Page</B></H3>
+
+<P>
+The first allows you to compile a list of pictures, assigning a number to one or more of them for easy reference.
+Using this number you will be able to assign the pictures to specific windows on the <A HREF="#defaultspage">Defaults Page</A>.
+If multiple pictures have the same number, one of the pictures will be choosen randomly.  This will allow you to have random
+dekstop pictures, random window backdrops etc. without the need for additional utilities/patches in your startup-sequence!
+</P>
+
+<BR>
+<CENTER>
+<IMG SRC="images/window_patternprefs" WIDTH=465 HEIGHT=375>
+</CENTER>
+<BR>
+
+<UL>
+	<LI><B>Pattern List</B> [listview]<BR>
+	Pictures added to the datatbase are listed with their assigned number and  file path & name.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Pattern Viewer</B> [button]<BR>
+	Clicking on the button will load and display a portion of the currently highlighted pattern in the listview tothe buttons left.  Expanding the window size will reveal more of the picture.  Also use of the re-size bar inbetween the listview and pattern preview enables adjusting of the width.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>New/Delete pattern</B> [buttons]<BR>
+	 Add a new picture. After that you should assign a number to it.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Tiled/Fit Size</B> [cycle menu]<BR>
+	Tiled: The picture will be rendered as tiles. (Like original Workbench does)<BR>
+	Fit-Size:The picture will be resized to the dimension of the new window.You <B>MUST</B> have set GUIGfx check box 'on'.
+	<BR><BR>
+	</LI>
+
+	<LI>
+     <B>No remap</B> [check box]<BR>
+	The picture's colors will not be remapped to the actual Screen colors.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Use GUIGfx</B> [check box]<BR>
+	If this option is activated, Scalos uses the math algorithms of the GUIGfx.library. This means fast and high quality remapping to Screen dimensions and colors in all resolutions.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Pen Precision</B> [slider]<BR>
+	Indicates the precision to be use by Scalos in assigning the color pens.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>GUIGfx Options</B><BR>
+     "Use GUIGfx" check box has to be enabled to use these additional options..<BR>
+	<UL>
+		<LI>
+		<B>AutoDither</B> [check box]<BR>
+		If the picture loses too many colors in the remapping process, some colors will be dithered.
+		<BR><BR>
+		</LI>
+
+		<LI>
+		<B>Colorweight</B> [slider]<BR>
+		How many color pens is the picture allowed to set measured as a percentage of the total available pens for the screen.
+		<BR><BR>
+		</LI>
+
+		<LI>
+		<B>Dithering</B> [cycle]<BR>
+		Sets the Dithermode to None, Floyd Steinberg or Random.
+		<BR><BR>
+		</LI>
+
+		<LI>
+		<B>Ditheramount</B> [slider[<BR>
+		Sets the weight of the dither (only when above Dithering cycle is set to "Random").
+		<BR><BR>
+		</LI>
+	</UL>
+	</LI>
+</UL>
+
+<A NAME="defaultspage">
+<BR>
+<H3><B>Defaults Page</B></H3>
+
+<P>
+Here you can set the defaults for the background pictures in Scalos.
+</P>
+
+<BR>
+<CENTER>
+<IMG SRC="images/window_patternprefs2" WIDTH=465 HEIGHT=375>
+</CENTER>
+<BR>
+
+<UL>
+	<LI>
+	<B>Asyncron layout</B> [check box]<BR>
+	Pictures will be loaded and rendered while the windows opens (Like original Workbench). If this function is 'off', pictures will always be loaded before opening the windows.
+	<BR><BR>
+	</LI>
+
+	<LI>
+     <B>Use friendbitmap</B> [check box]<BR>
+	The picture is present twice in memory for best speed. This option has no effect if V43 picture.datatype or GUIGfx are used.
+	<BR><BR>
+	</LI>
+
+	<LI>
+     <B>Always relayout</B> [check box]<BR>
+	If "Fit size" is set, the picture will be scaled everytime the window's dimensions change.
+	<BR><BR>	
+	</LI>
+
+	<LI>
+	<B>Randomize everytime</B> [check box]<BR>
+	Usually Pictures with the same number will be randomly selected as soon as the configuration loads. If this option is set, the picture will be selected as soon as a window with the same number assignement is opened.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Asyncron-Task priority</B> [slider]<BR>
+	You can set the CPU priority for the Task <B>if</B> "asyncron layout" is set to 'on'.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Desktop</B> [slider]<BR>
+	Number of the Picture for the main window.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Screen</B> [slider]<BR>
+	Number of the picture for the Scalos-Screen.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>Window</B> [slider]<BR>
+	Number of the picture for the Scalos-Windows.  You may also set a specific pattern for a drawers contents using the <A HREF="Tooltypes.html">tooltypes</A> facilities.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>TextMode</B> [slider]<BR>
+	Number of the picture for the Scalos-Windows in Text Mode.
+	<BR><BR>
+	</LI>
+</UL>
+
+<HR WIDTH=95%>
+<A NAME="tooltypes">
+<H3><B>Tooltypes</B></H3>
+
+<P>
+The Pattern Prefs program recognises the following additional tooltypes, as well as the standard preferences tooltypes (CREATEICONS, ACTION).
+</P>
+
+<UL>
+	<LI>
+	<B>NOPREVIEW</B><BR>
+	No pattern image preview will be displayed to the right of the pattern list page.
+	<BR><BR>
+	</LI>
+
+	<LI>
+	<B>AUTOPREVIEW</B><BR>
+	Clicking on a picture a preview will be displayed automatically, obviously this has effect only if NOPREVIEW is not set.
+	<BR><BR>
+	</LI>
+</UL>
+
+</BODY>
+</HTML>

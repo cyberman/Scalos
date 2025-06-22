@@ -1,0 +1,29 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, Thanks">
+
+	<TITLE>Scalos Thankyous</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B> Thankyou</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+Thanks to the following people for their help, contributions and support throughout development of Scalos - past present and future...
+</P>
+
+<P>
+nobody at the moment.
+</P>
+
+</BODY>
+
+</HTML>

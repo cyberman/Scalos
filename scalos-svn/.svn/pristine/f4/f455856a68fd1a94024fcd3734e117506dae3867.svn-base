@@ -1,0 +1,51 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, preferences">
+
+	<TITLE>Scalos Preferences</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>Preferences</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+Scalos makes use of the old Workbench preference programs and their settings were possible.  However, some of the old configuration tools did not offer enough scope and so we have provided new preference programs to bring you many new features.
+If there is no new preference program listed below, continue to use your existing preference programs located in <TT>"Sys:Prefs/"</TT>.
+<BR>
+</P>
+
+<P>
+Please discontinue use of the following preference programs:
+<UL>
+	<LI>NewIconsPrefs</LI>
+	<LI>WBPattern</LI>
+</UL>
+</P>
+
+<P>
+All new Scalos preference programs currently require <A HREF="MUI.html">MUI</A> to run.  Please ensure this is installed before installing the Scalos package if possible.
+The current preferences documented here are:
+</P>
+
+<UL>
+	<LI><A HREF="Pref_Main.html">Scalos Main Preferences</A></LI>
+	<LI><A HREF="Pref_Pattern.html">Pattern Preferences</A></LI>
+	<LI>Palette Preferences</LI>
+	<LI>Filetypes Plugin Preferences</LI>
+</UL>
+
+<P>
+To configure the look and feel of the context-sensitive popup menus make use of the "PopUpMenu" preference program, usually installed in the <TT>"Sys:Prefs/"</TT> directory of your computer.
+</P>
+
+</BODY>
+</HTML>

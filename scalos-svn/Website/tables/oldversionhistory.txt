@@ -1,0 +1,510 @@
+V40.24
+Fixed broken ARexx menu command support
+Major improvement of Tooltip layout engine
+Added tooltips for several Scalos gadgets, including the status bar images
+Fixed menu bug where every menu item got a hotkey mark. Now only the menu items which have got hotkeys are shown with hotkey marks
+Icon positions were messed up during &quot;cut&quot;, &quot;copy&quot; and &quot;paste&quot; operations - Fixed
+Changed file name for default device icons from &quot;&lt;devicename&gt;.info&quot; to &quot;def_&lt;devicename&gt;.info&quot; in order to match OS3.9 behaviour
+Changed file name for default volume icons from &quot;&lt;volumename&gt;.info&quot; to &quot;def_&lt;volumename&gt;.info&quot; in order to match OS3.9 behaviour
+Added missing SHADOWPEN vertical line to the left of the window iconify image
+The assign &quot;THEME:&quot; isn't touched any more if it exists prior to Scalos startup
+The assign &quot;Scalos:&quot; is created (pointing to PROGDIR:) on startup if it doesn't exist
+Tooltips are no longer displayed if ICandy == 0
+
+V40.23
+Improved handling of &quot;cut&quot; icons (shadowed display got corrupted). Needs iconobject.datatype 40.7
+Fixed bug that caused Scalos to crash when an icon was removed during drag &amp; drop (e.g. an AppIcon was removed by its application)
+Changed default setting for icon frame type from MF_FRAME_BUTTON to MF_FRAME_NONE
+Moved special pointer icons (&quot;forbidden&quot;, &quot;copying&quot;, &quot;makelink&quot;) from ENV:Scalos/ to THEME:PointerIcons/
+Environment variable &quot;scalos/icandy&quot; is recognised if set before Scalos startup. ATM, icandy &lt; 2 turns off splash screen and window status bars. If not set, &quot;Scalos/icandy&quot; gets set with a default value of &quot;2&quot;
+Changing &quot;Fullbench&quot; and &quot;Poptitle&quot; now works on-the-fly and doesn't require rebooting anymore
+Locale (language) preferences can now be changed on-the-fly, no reboot required anymore
+Fixed erronous message &quot;This drawer cannot be opened&quot; when trying to open a drawer which is already open
+Icon position now always is set to NO_ICON_POSITION for default icons loaded via DefIcons
+Changed default for Workbench &quot;backdrop&quot; to TRUE
+Changed tool tip placement - now tool tips are displayed below mouse pointer if space allows
+Added optional process priority field for filetype specific popup menu commands
+Bugfix in FileCommands.c: since ExNext() result ERROR_NO_MORE_ENTRIES was erronously remembered as error, an incorrect error reason could be displayed when a &quot;real&quot; error occurred
+
+V40.22
+Added optional process priority field for filetype specific popup menu commands
+Bugfix in FileCommands.c: since ExNext() result ERROR_NO_MORE_ENTRIES was erronously remembered as error, an incorrect error reason could be displayed when a &quot;real&quot; error occurred
+Bugfix with &quot;Show All&quot; windows: icon list was read before window was opened, leading to problems with icon layout (invisible icons)
+Fixed problems with file type-specific popup menus and STACK parameter
+Finished conversion of Scalos Pattern Prefs from ASM to C
+First implementation of new filetype-specific popup menu system
+Removed obsolete scalos.library function SCA_RemapBitmap()
+CheckMouseIcon() didn't take window borders into account, i.e. clicking on window border could cause icon to be selected
+Text icon font changes now take effect immediately, a reboot is not required any more
+Fixed problem in wbl.c - spawned processes incorrectly inherited the ConsoleTask pointer
+Now SCCM_IconWin_Redraw also refreshes window frame and status bar
+Added image &quot;THEME:Window/StatusBar/ShowAll&quot; to status bar, which visualises the &quot;Show All Files&quot; window setting
+Fixed bug introduced by optimized pen allocation
+Improved pen allocation in LockScalosPens() - pens which are members of dri_Pens are no longer allocated a second time
+Upon startup, Scalos should give a warning requester if not all defined pens could be allocated
+Finished converting cleanup code to C
+Fixed bug in the scalos.library expunge code which was trying to FreeMem() an incorrect library base pointer when quitting Scalos
+When &quot;Quit Scalos&quot; is requested, memory is flushed before checking scalos.library open count, so unused libraries still resident in memory no longer prevent Scalos from closing
+Added optional background image for tooltips &quot;THEME:TooltipBackground&quot;
+Added optional background image for window status bar &quot;THEME:Window/StatusBar/Background&quot;
+Added forgotten &quot;PDTA_DestMode, PMODE_V43&quot; in about.c and GadgetBarImageClass.c. Now the entries for the Scalos processes in &quot;PicTD&quot; prefs are no longer required
+Fixed a serious bug in the new C SCA_MoveNode() function which caused Scalos to crash when trying to &quot;cleanup&quot; a window which had already been cleaned up
+Fixed an icon drag bug: When an icon was clicked with LMB and the mouse button held for several seconds without moving the icon, a DisplayBeep() was triggered when the mouse button was released
+Many minor changes to allow Scalos to compile with GCC
+Replaced handmade CLI startup detaching code by standard cback.o and detach.o mdoules
+Corrected error in scalos_lib.sfd - order of parameters for SCA_WBStartTags() was incorrect
+When icons were selected purely via keyboard, the &quot;IconActive&quot; variable was not updated and selected icons could not be opened by pressing &quot;return&quot;
+When trying to open an disk/drawer icon via wb39/ARexx, under certain circumstances the Scalos main task could hang, waiting for a message reply - Fixed
+When prefEnableSplash was turned off after splash window has opened, the splash window never closed - Fixed
+After removing an entry from the hidden device list, that device used to appear multiple times on the Scalos screen - Fixed
+When AppIcon was replaced via AppChange, Scalos tried to free invalid memory while removing AppIcon - Fixed
+ScalosMain() was called with seglist in d1 instead of d0, leading to enforcer hits or crash on exit when started from workbench via icon double-click
+
+V40.21
+Fixed lockup problem when a window opened or closed during drag/drop operations
+Fixed problem in scalos library code - Expunge() never got called
+Fixed init problem with prefTextModeTextAttr.ta_Name, after unsuccessful startup, Scalos tried to FreeVecPooled() static string
+Added safeguard to AllocVecPooled() and FreeVecPooled() against being called with MemPool of NULL
+SCCM_DeviceList_Generate now works fully asynchronous way, avoiding most sources of hangs connected to weird file systems
+Finished converting Scalos startup and shutdown code to C
+DefIcons support now integrated into Scalos, including automatic reload of DefIcons.prefs after external changes. Filetypes.plugin and Deficons.plugin are now obsolete
+Programs started by Scalos were never removed from the internal program list - Fixed
+Now displays message on screen title when user tries to double-click a drawer icon without associated directory
+ToolTip sometimes didn't show used/total/percent correctly for disk icons - Fixed
+
+V40.20
+Dragged icons were corrupted on screens with interleaved bitmaps - Fixed
+Dragging icons with text didn't always work, depending on icon text colour settings - Fixed
+UnSnapshot function was thoroughly broken - Should now again work as expected
+Now supports adding submenus and new menus via SCA_NewAddAppMenuItem()
+The Rename() patch now tries to update (i.e. remove) the old object's icon
+CopyCommand() now quietly returns OK if source of copy operation cannot be found, so copying of orphan icons (icons w/o associated objects) should work now
+Plugged memory leak when reloading menu prefs
+
+V40.19
+Snapshot/Unsnapshot didn't free Lock on icons - Fixed
+Unsnapshot failed to move icon to wt_LateIconList - Fixed
+ReLayoutIcons() forgot to update IDTA_TextPenShadow and IDTA_TextPenOutline pens - Fixed
+SCA_ScreenTitleMsg() was broken and couldn't display the last message - Fixed
+Fixed problem in DragDropBobs.c: newiconobject.library didn't return image mask for special icons because IDTM_Layout was only called for normal image and IDTM_Mask_Selected was requested - Fixed
+Fixed problem with MorphOS and SameLock() NULL Locks in Functions.c. Now it should be possible to open SYS: volume
+
+V40.18
+Undid most changes in DragDropBobs.c from 40.17. Now frames around icons work in a more compatible way, together with 40.2 icon datatypes
+Commands &quot;rename&quot;, &quot;execute&quot;, &quot;newdrawer&quot; now support global TextInputHook
+Built .sfd files for all Scalos components. All pragma and proto includes and .fd files are now created from those .sfd files
+Several window backfill functions didn't check properly for non-existing background images (FileTransfer, Splash) - Fixed
+INF_File was not set for text icons when file system returned non-standard fib_DirEntryType. Now INF_File is always set if fib_DirEntryType &lt; 0
+The PenArray delivered by the workbench OpenScreen patch always contained -1 in the first entry, rendering it pretty useless - Fixed
+Adapted to now (NDK3.9) officially supported Workbench hooks (CopyHook, DeleteHook, SetupCleanupHook)
+Now requires includes Release 45.1 to compile
+&quot;Empty Trash&quot; menu command now uses DeleteHook if available
+When changing icon attributes (e.g. border), AppIcons didn't get refreshed properly - Fixed
+Automatic icon update on file system notification didn't work properly for left-out icons - Fixed
+
+V40.17
+Added separate pens for selected icon text, icon text outline, and icon text shadow
+Several changes in DragDropBobs.c to enable frames around masked icons. Requires latest icon datatypes!!!
+Device icons got a name of &quot;&quot; (empty string) when tooltype SCALOS_NOTEXT was found, whereas other icons got NULL - Fixed
+When Scalos tries to quit and there were still foreign windows on WB screen, a retry requester occurs. After clicking &quot;Retry&quot;, Scalos tried to free PenShareMap more than once - Fixed
+Non-DOS disk icons are now ghosted (just like WB3.9)
+Many menu items (e.g. &quot;Open&quot;, &quot;Information&quot;) are now disabled for non-DOS disks
+Unreadable disks are now labelled as &quot;DF0:Unreadable&quot; instead of &quot;DF0:????&quot;
+OpenWorkBench() return ULONG instead of Workbench screen address in case of success - Fixed
+Window status bar text now always uses text window font
+Many changes and fixes in FileCommand.c (File moving/copying code). Moving objects to a different volume (copy-and-delete) now works
+Added timeout (default=10s) to file transfer counting
+Added Win***s-like &quot;Copy&quot;, &quot;Cut&quot;, &quot;Paste&quot; menu commands to transfer files
+Added workaround kludge for broken &quot;delete.module&quot; implementations that rely on wa_Name being empty for directories
+Fixed a memory trashing bug in CLIStart(). Only occurred when file name was longer than default tool name
+LeaveOutIcon() trashed the CurrentDir of the Scalos window task - Fixed
+Scalos window tasks now have their directory names appended to the task name, e.g. &quot;Scalos_Window_Task &lt;Tools&gt;&quot;
+(old) SCA_RemoveAppObject() failed to remove icons in wt_LateIconList, leading to crashes with MUI applications on CloseWorkBench()/OpenWorkBench() - Fixed
+Added new pen for status bar text
+Popup menus now can also be opened by keyboard (Right Alt + Right Amiga)
+SCCM_IconWin_CheckUpdate did not recognize changes between default icon and non-default icon (e.g. an icon associated to an object was deleted - display didn't change) - Fixed
+Added optional THEME:FileTransBackground background image to copy/move progress window
+Display of window drop marks can now be set to 3 modes - none, non-backdrop windows only, always
+Added GBTDTA_SoftStyle to set text style for GadgetBarTextClass gadgets
+
+V40.16
+Scalos.c/RefreshTextWindow didn't check if window exists - Fixed
+Scalos.c/ReportError didn't propagate RESULT_UserAborted if the user clicked the &quot;Abort&quot; button. Should be fixed now
+Major rewrite of FileTransfer class. Redesigned copy/move progress window with progress gauge and cancel button
+Fixed another bug in window backfilling - filled area was exactly 1 pixel too small in x- and y-direction
+With window scrollbar arrows, the detection of shift key was reversed - Fixed
+Changed scrolling step for window scrollbar arrows to 10 pixel
+Added SCCM_IconWin_AddToStatusBar, SCCM_IconWin_RemFromStatusBar, and SCCM_IconWin_UpdateStatusBar methods to make status bar interfacing easier
+More changes in OpenWorkBench() / CloseWorkBench(). Now also uses icon.library V44+ ICONCTRLA_SetGlobalScreen tag. Closing/reopening Scalos (e.g. via screen mode change) should now work
+Rewrote OpenWorkBench() / CloseWorkBench() patches in C. Problems with wrong colors after OpenWorkBench() should now be fixed
+Added support for WB3.9-compatible (undocumented) CloseWB hook. Now e.g. AmiDock iconifies automagically on CloseWorkbench() and uniconifies afer OpenWorkBench()
+With status bar enabled, Scalos window heights grew
+Fixed broken FreePatternNode() - now reloading pattern prefs should work again
+Finally fixed long-standing bug in icon update code that sometimes lead to duplicate icons
+Disk without icons now get default icon of type WBDISK instead of WBKICK
+Fixed problem with removed nodes in SCCM_DeviceList_Generate, leading to corrupted device icon list
+Added file version information to tooltips
+Implemented global copy and delete hooks for compatibility with AsyncWB
+Fixed inverted NoRemap checking in backfill functions
+Finished converting all menu functions to C
+Fixed wrong SCA_FreeNode() parameter in DevListClass_Generate()
+LockScalosPens() produces lots of enforcer hits when no palette prefs could be found - Fixed
+Finished converting all IDCMP handlers to C
+Completed converting window background rendering code to C
+Menu command &quot;backdrop&quot; didn't work - Fixed
+Fixed missing Argument for WaitReply() in A5. This resulted in crashes when running modules with simple refresh windows each time a window was iconified and re-opened - Fixed
+
+V40.15
+INF_FIle was not set for backdrop icons - Fixed
+Devices are now counted and displayed separately during D&amp;D
+Changed screen pop-title algorithm so it should always get switched on if necessary
+Changed rendering of Logo in splash window back from DTM_DRAW to blitting functions
+Fixed error in DevListClass_Filter() - missing parentheses lead to wrong exception calculation
+
+V40.14
+Changed path for status bar images to &quot;THEME:Window/StatusBar/&quot;
+Added SCA_NoStatusBar attribute to SCA_OpenWindow() library function and SCALOS_NOSTATUSBAR tooltype to suppress status bar display on a single window
+Fixed wrong position for &quot;iconify&quot; gadget (overlapped zip gadget)
+Horizontal scroller height was too small - Fixed
+Added special detection of Screen titlebar to circumvent problem with MagicMenu which lead to screen bar staying visible in spite of cleared SHOWTITLE flag
+Added &quot;Typing&quot; symbol to status bar
+Icon selection by typing icon name didn't work for AppIcons and device icons - Fixed
+Removed LockIBase() in Window.c/QueryObjectUnderPointer(), hopefully avoiding window lockups
+Converted automatic Screen bar switching code to C (see Scalos_Cx.c). Added additional checks for locked Layers to avoid deadlocks
+Added two new preference variables, prefWindowHScroll and prefWindowVScroll for the default distances of scrolling icon windows by the keyboard (main_prefs.s, variables.h, imports.i, exports.i)
+Added parts of cleanup code converted to C to the source files (cleanup.c, main_subroutines.s)
+Added two missing includes to scalos_structures.h file (graphics/gels.h and workbench/startup.h)
+Can use shift+cursor keys in icon windows to scroll by a whole page (well, inner height and width of icon window - IconWindowClass.c)
+Can also use Return to open active icon in icon windows (IconWindowClass.c)
+Fixed problem with reading Workbench preferences and then showing Scalos main window in wrong mode/sizes (WindowClass.c)
+Icon menu didn't get enabled when icon was selected via keyboard input (first letter(s) of icon name) - Fixed
+Replaced blitting function in Splash.c by DTM_DRAW
+Fixed old problems with pen allocations - ObtainPen() didn't check for success
+
+V40.13
+During D&amp;D, window dropmarks are no longer erased when the mouse is over the icon, but remain visible until the mouse leaves the window
+Added SCALOSCTRLA_GetEmulationMode tag for ScalosControl()
+Now MenuItems get disabled if they have SubItems and every SubItem is disabled
+Since redrawing of partially overlapped icons seems to work well, I disabled the strict icon overlap checking while D&amp;D
+Added support for AppIcons sending select/unselect notification messages and WBAPPICONA_NotifySelectState tag
+CLIStart() didn't work with WBPROJECT icons - Fixed
+Icon window crashed after D&amp;D when redrawing previously obscured icons - Fixed
+Sometimes IDCMP_INTUITICKS messages were not replied - Fixed
+Automatic change of default window patterns failed when switching between icon and text mode. Pattern numbers sometimes were treated as unsigned instead of signed numbers - Fixed
+Added new Tags SCALOSCTRLA_GetTypeRestartTime and SCALOSCTRLA_SetTypeRestartTime for ScalosControl()
+Menu commands &quot;snapshotwindow&quot; and &quot;snapshotall&quot; stayed disabled forever. Fixed name compare error in Prefs.c/CompareCommand()
+Replaced remaining 64bit integer arithmetic code by C version
+Finished converting &quot;Title.sca&quot; to C
+Updated &quot;SCA_Title&quot; autodocs for &quot;Title.sca&quot; class
+Finished converting &quot;FileTransfer.sca&quot; to C
+Replaced fixed version/revision strings in about window by text macros &quot;%v&quot; and &quot;%r&quot;.
+Added feature: Icons may now be selected by typing the first character(s) of their names, just as in WB 3.9
+Added feature: Cursors key can be used to select icon right/left/below/above the currently selected one
+Finished converting &quot;DeviceList.SCA&quot; to C
+
+V40.12
+SCA_WBStart() didn't work for icons with &quot;CLI&quot; or &quot;REXX&quot; tooltypes - Fixed
+Wbstartup sometimes skipped icons with free positions (Unshapshot) - Fixed
+Finished converting Root class to C
+Now all window, menu and wbl processes inherit the original workbench path
+Added support for WBAPPMENUA_CommandKeyString (OS3.9) and separator bars to SCA_NewAddAppMenuItem()
+Finished converting TextWindow class to C
+Finished converting IconWindow class to C
+Finally fixed long-standing problems with simultaneous multiple window updates (Enforcer hits, icons appearing twice, etc.)
+Fixed problem reading large directories containing icons with both fixed and free positions. Icons with &quot;free&quot; positions were placed at the end of each block read, and could be overlapped by an icon read later with a fixed position
+When converting WindowClass to C, I (Juergen) somehow dropped one line of code and forgot to clear a window's UserPort before closing the window. So it could happen that IntuiMessages in the wt_IconPort already had got freed by Intuition on closing the corresponding window, leading to corrupted messages - Fixed  
+
+V40.11
+In Icon windows, icons without associated objects were not displayed with &quot;Show all files&quot; setting - Fixed
+Text windows now show &quot;Trashcan&quot; in size column for trashcan drawers
+Icons of type WBDISK are hidden in text windows with &quot;Show only icons&quot;
+Major changes in text window directory scanning. Now icons without associated object are displayed in text windows with &quot;Show only icons&quot;
+Text windows now show &quot;Drawer&quot; in the size column for drawers
+Changed number format for file sizes to &quot;%lU&quot;, using localised display format
+Finished converting window class to C
+Finished converting text icon class to C
+Deleting left-out object now always updates &quot;.backdrop&quot; files
+Left-out icons got the &quot;put away&quot; menu item disabled when updated (e.g. by adding tooltypes) - Fixed
+Windows can now be scrolled with the arrow keys (only if no icons are selected in window)
+Did some changes to the asm class macros to make the class engine more &quot;C-friendly&quot;
+Moved Scalos .catalog files in archive from catalogs/&lt;language&gt;/ to catalogs/&lt;language&gt;/Scalos/
+Now .catalog files are ignored if their version is &lt;40, avoiding trouble with wrong messages
+Added distinct pens for the dragging info text
+Additional checks on plugin initialisation - Now erroneously added menu plugins should no longer cause Scalos to crash on startup
+CloseWorkBench() from VisualPrefs Task didn't work - Fixed
+CloseWorkBench() will not close Scalos while there are active &quot;Scalos_Async_Backfill&quot; processes
+
+V40.10
+Repaired bug in updateicon which sometimes caused icons to appear in incorrect windows
+Duplicating/cloning items now pops up the file copying progress window
+Dragging multiple icons now shows one or two text lines under pointer telling how many files and drawers are being dragged
+Fixed severe bug in wbl.c: WBNode's were allocated with AllocVecPooled() and freed with FreeVec()
+Added a varargs version of SCA_ScreenTitleMsg()
+Added flag to switch between Flag: old dragging (all icons visible) and new &quot;icon stack&quot;
+Added new SCA_ScalosControl() tags SCALOSCTRLA_GetOldDragIconMode and SCALOSCTRLA_SetOldDragIconMode
+IconWinCheckUpdate() now correctly updates INF_DefaultIcon flag and INF_SupportsLeaveOut attribute
+Missed a CurrentDir() when renaming objects, leading to a directory lock getting never UnLock()ed
+When D&amp;D copying or moving icons, &quot;Replace All&quot; and &quot;Abort&quot; now should work correctly
+Message strings &quot;xxx already exists&quot; are now different when moving and copying objects
+When moving icons inside window and new position overlaps other icon, the moved icons now jump back to their original positions
+
+V40.9
+THEME:SplashBackground was never freed, leaving a lock on it - Fixed
+CLI and ARexx default tools icons didn't work in text windows - Fixed
+Enabled deadlock detection for lasso operations
+Additional check for NULL wt_LateIconList in cleanup()
+Text windows now again display &quot;#?.info&quot; files (icons)
+Forbid drag-copying or -moving icon into own sibling window or on sibling icon to avoid move errors or endless recursion
+Fixed multiple problems with text window updates
+Added semaphore locking to protect from two or more Scalos tasks opening or closing windows at the same time
+Fixed broken &quot;copy by dragging on drawer icon&quot;
+Added additional checking to prefs file notification
+
+V40.8
+Worked around semaphore deadlock in SetIconMenuOnOff(). This one occured when copying multiple directories between text windows
+Copying/moving of (left-out) drawers, tools, or projects from main window to any drawer window didn't work - Fixed
+Dragging a device icon into an icon window (copying device into directory) no longer results in requester &quot;DEVICE: already exists...&quot;
+Bug #29: Dragging a device icon into an icon window where a drawer with the name of the device (w/o &quot;:&quot;) already existed: Nothing happened - Fixed
+Left-out icons no longer show up in text icon windows
+&quot;leave out&quot; and &quot;put away&quot; now correctly update text windows
+Increased size of text window &amp; tooltip date and time fields from 16 to 80 bytes
+Added date/time string length checking to ScaFormatDate()
+Fixed a race condition between DrawDrag() and DragEnter() that could block window when trying to auto-remove icons
+Finally fixed icon masking problem with PAL Hires-Laced screen. When "Auto Remove Icons" was turned on, dragged icons left garbage at their original position until finally dropped
+Problem finally solved without setting friend BitMap to NULL
+Added preferences selectable pens for ToolTip text and background
+Due to an incompatibility in Palette.prefs, I renamed it to &quot;Palette13.prefs&quot;. Scalos uses old &quot;Palette.prefs&quot; if no &quot;Palette13.prefs&quot; found. To create new prefs file, either copy old &quot;Palette.prefs&quot; to new &quot;Palette13.prefs&quot; or load Palette prefs editor and use &quot;Save&quot; button to generate new &quot;Palette13.prefs&quot;
+Added check for deleting files of an undefined DirEntryType
+For SoftLinks, ToolTips showed name of link target instead of link name - Fixed
+
+V40.7
+Fixed corrupt logo and text in about and splash windows by setting all allocated bitmaps to have no friend bitmap
+Added check for copying files of a non-specific DirEntryType. Copies files correctly across Samba network. Deleting files seems to work OK with the current code
+Dropped Popupmenu.library for icon ToolTip display and added own layouting and rendering code
+Moved ToolTip display to separate task
+Added AttemptLockLayerRom() around icon ToolTip display routine in order to avoid deadlocks
+Due to Mike's request, increased minimum window width by 20
+Added &quot;scalos/icandy&quot; environment variable on startup and set contents to &quot;2&quot;
+Changed every copyright string to &quot;(C)1999-2001 The Scalos Team&quot;
+Added &quot;About&quot; function to Menu and Palette preferences
+Changing palette prefs now closes and reopens Scalos, no matter if the &quot;DisableCloseWorkbench&quot; flag is set
+&quot;put away&quot; command didn't work with icons without associated objects - Fixed
+&quot;Scalos Menu&quot;: added new menu commands &quot;viewbysize&quot; and &quot;viewbydate&quot;
+&quot;Disk.info&quot; icons of type WBDISK will no longer appear inside drawer windows
+Switching window view mode while window is reading icons no longer causes window to close
+SCCM_IconWin_RemIcon now updates window's virtual size and adjusts sliders
+
+V40.6
+Double-clicking tool icons in text windows didn't start execute command. Recognition of default icons in text windows didn't work when starting programs - Fixed
+Found an icon masking problem with PAL Hires-Laced screen. When &quot;auto remove icons&quot; was turned on, dragged icons left garbage at their original position until finally dropped. Problem (mask BitMap and icon BitMap having different format, recognisable by different &quot;BytesPerRow&quot; values for equal width) at least partially solved by setting friend BitMap to NULL if (Depth <= 8)
+Empty lines in &quot;.backdrop&quot; files should be ignored now
+CloseWorkBench() from IPrefs Task didn't work - Fixed
+Text windows sometimes swallowed first character of file comment - Fixed
+&quot;Replace All&quot; now works when drag-copying multiple objects
+&quot;Select contents&quot; now deselects all icons in non-selected windows
+&quot;Clear selection&quot; now deselects all icons in all windows
+Plugin libraries are now flushed on Scalos exit
+Fixed possible problem with missing ScaWindowTask parameter on FreeIconList()
+
+V40.5
+CheckMouseIcon() didn't work with negative coordinates - Fixed
+Text windows initially opened with do_CurrentX < 0 in icon displayed icon text at incorrect position - Fixed
+When reading a directory, icons are no longer checked if they overlap each other
+Converted SCA_OpenIconWindow() to C
+
+V40.4
+Enabled &quot;snapshot window&quot; and &quot;snapshot all&quot; for root window again
+Changed locking in DrawDrag() - first call. When &quot;Auto remove icons&quot; was enabled, icons sometimes didn't get ghosted properly due to DRAGFLAGF_WindowLocked set
+Changed initial value for unused oldDir Locks from NULL to $ffffffff, to avoid trouble with pr_CurrentDir = NULL (at the end of functions, CurrentDir() never got reset to initial value when that value was NULL)
+AmigaDos menu commands failed to skip trailing '&quot;' if command name is surrounded by '&quot;', e.g. &quot;SYS:xyz&quot; executed with '&quot;' as first argument
+AmigaDos menu commands now inherit the workbench path
+
+V40.3
+ReadIcon() didn't respect the &quot;show only icons&quot; setting for text windows, so all files appeared after automatic window update
+Changed detection for WMFLAG_IsVirtualSize (sizetofit menu command enabling), now also enabled if window is larger than necessary to hold icons
+Screen menu items are now enabled/disabled each time SCCM_IconWin_SetVirtSize is applied (i.e. after any change in window size)
+Forgot to set &lt;rild_DiskWriteProtected&gt; Flag in ReadTextWindowIconList(), so all text icons were treated as if on a write-protected disk
+
+V40.2
+With at least OS3.9, you can easily eject removable media with the following menu command (AmigaDos, don't forget to enable &quot;WB Args&quot;): &quot;PARK %p EJECT&quot;. We've tested it with CD-ROMs and it seems to work okay, so...
+Fixed more problems when running AmigaDOS menu commands without a path
+SnapshotWindow() sometimes wrote icon to the wrong directory - Fixed
+Added wt_UpdateSemaphore locking for &quot;update&quot; command
+
+V40.1
+Due to extended library functions, bumped version to 40.1
+ReadDatatypesImage() returned the original BitMap (PDTA_BitMap) instead of the remapped one (PDTA_DestBitMap)
+Splash window didn't adjust logo when window was resized due to long message - Fixed
+CheckMouseIcon() didn't work when &quot;Non-masked click area&quot; was checked - Fixed
+BltMaskBitMapRastPort() used incorrect MinTerm so Masking didn't work correctly. (e.g. logos in splash and about window on non-cybergraphics screen)
+
+V39.234
+Added SCA_ScalosControl() call to scalos.library. Only 3 tags are supported as yet - the documentation is still missing
+About and Splash window may load different logo images &quot;THEME:ScalosSplashLogo&quot; and &quot;THEME:ScalosAboutLogo&quot;. If those files are not found, both windows fall back to &quot;THEME:ScalosLogo&quot;
+Due to an incompatibility in menu.prefs, it has been renamed to &quot;menu13.prefs&quot;. Scalos uses old &quot;menu.prefs&quot; if no &quot;menu13.prefs&quot; found. To create the new prefs file, either copy old &quot;menu.prefs&quot; to new &quot;menu13.prefs&quot; or load old &quot;menu.prefs&quot; in menu prefs editor and use &quot;Save&quot; button to generate new &quot;menu13.prefs&quot;.
+Added new popup menu class for AppIcons. Don't forget to add your own entries to the new appicons popup menu
+&quot;System Info&quot; button in About window is disabled if sysinfo module cannot be found
+Opening new icon windows in iconified state could lead to each icon appearing twice after uniconifying window - Fixed. Now wt_LateIconList is cleared at the beginning of ReadIconList()
+Enforcer hits in about window when no scalos logo could be loaded - Fixed
+RunMenuCommand() didn't work with CLI (=AmigaDos) commands without a path, i.e. only filename specified - Fixed
+Icon tooltips no longer pop up when non-Scalos window is active
+Icon position for iconified Scalos windows can be specified in window icon with SCALOS_ICONIFIED_XPOS and SCALOS_ICONIFIED_YPOS
+
+V39.233 - BETA released!
+AppIcon menu commands now support all WB3.5+ AMCLASSICON_... AppMessage class codes (e.g. Benchtrash information/snapshot/unsnapshot works)
+Due to common requests, bob functions now don't use chip memory if port &quot;FBlit&quot; is available
+AppIcons always got IDTV_TextMode_Normal (no outline, no shadow) - Fixed
+ARexx menu commands now may have selected items as arguments
+
+V39.232
+Enabling/disabling popup menus now works correctly with nested sub-menus
+Scalos now does an &quot;Update all&quot; instead of a &quot;Redraw&quot; when detecting changed main prefs
+Softlinks sometimes could not be copied due to incorrect parent directory - Fixed
+Fixed nasty bug in AllocVecPooled()/FreeVecPooled(): a6 was overwritten
+In text windows with &quot;Show only Icons&quot;, non-existing objects (i.e. icons without corresponding objects) are no longer displayed (e.g. &quot;disk&quot;)
+Disabled &quot;Leave Out&quot; for default icons
+Changed locking in TestPopup() to prevent deadlocks
+Bug 4: Crash when executing ARexx menu command - Fixed
+No tooltips are displayed for an icon after clicking or double-clicking it
+Menu command &quot;sizetofit&quot; now also shrinks windows if appropriate
+
+V39.231
+Text windows with &quot;Show only Icons&quot; displayed data for icons instead of objects - Fixed
+Bug 13: Drawers inside of text windows no longer open always in text mode, but use the drawer icon settings instead - Fixed
+checkmouseicon() and QueryObjectUnderPointer() now take &quot;Non-masked click area&quot; setting into account
+Fixed possible race condition with QueryObjectUnderPointer() by extending window list and wt_IconSemaphore locking
+AppIcons now have popup menus (currently the same as tool icons) if &lt;in_SupportFlags&gt; is not 0
+Tooltips now recognise iconified scalos windows
+Iconified window appIcons get the &quot;WBAPPICONA_SupportsOpen, TRUE&quot; attribute
+Fixed error in SCA_NewAddAppIcon() - WBAPPICONA_Supports... tags didn't work
+
+V39.230
+No icon tool tips are displayed if icon has tooltype &quot;SCALOS_NOTOOLTIPS&quot;
+Added new menu commands &quot;sizetofit&quot; and &quot;clearselection&quot;
+Scalos now passes a copy of the window lock as wa_Lock and wa_Name=NULL when no icons are selected (now OS3.9 Find works just as with Workbench)
+Fixed a couple of problems with the new tooltip function
+
+V39.229
+Fixed bug in QueryObjectUnderPointer() - didn't work correctly if Workbench screen wasn't the front-most screen
+Added check for ST_LINKFILE, ST_LINKDIR, ST_SOFTLINK before calling isLink()
+(OLD) After updating left-out (backdrop) icon, updating the associated disk icon created a new backdrop icon instead of refreshing the old one - Fixed
+Replaced IDCMP_VANILLAKEY handling by IDCMP_RAWKEY in order to receive &quot;key up&quot; events
+Drag'n'drop indicators (copy etc.) are now updated immediately when pressing or releasing qualifier key
+About window now supports optional background image &quot;THEME:AboutBackground&quot;
+Added support for wheel mouse (icon/text window scrolling)
+Text windows didn't get refreshed properly after deleting icons - Fixed
+Icon tooltypes sometimes were not recognised correctly - Fixed
+Additionally, there is an unfinished and experimental new feature we're calling &quot;Icon tool tips&quot;. If you position your mouse pointer over an icon and hold it there for a few seconds, an information window pops up. The window clears as soon as you move the mouse (this is currently done via popupmenu.library)
+
+V39.228
+Changed method of soft link detection to a more system-friendly one
+
+V39.227
+Scalos no longer tries to load appchange'd AppIcons when their name contains invalid characters, i.e. &quot;:/&quot;
+Scalos now uses AddPart() to add the name of the AppIcon to the &quot;Default icons&quot; path, to make sure there is always a &quot;/&quot; between path and file name
+Converted WBLtask to C. The &quot;Unable to load your tool...&quot; requester now offers to select a different tool via ASL requester
+&quot;Leave Out&quot; didn't work for icons without associated files or drawers - Fixed
+Icon menu items weren't enabled correctly in text windows - Fixed
+&quot;View All&quot; wasn't recognized when initially opening text windows - Fixed
+Softlinks are now displayed with underlined names. This feature only works with iconobject.datatype 39.33 and later. (Saw that feature in Workbench 3.9 (with BoingBag 1) and immediately liked it.)
+Text windows now distinguish between &quot;Show All Files&quot; and &quot;Show Only Icons&quot;
+
+V39.226
+Splash window: added 10s timeout when waiting for update message reply
+AppIcons now support the WBAPPICONA_Supports... tags
+Icon menu items are now enabled/disabled according to the icons properties, e.g. for icons on read-only media &quot;delete&quot; and &quot;rename&quot; are disabled
+Splash window now supports optional background image &quot;THEME:SplashBackground&quot;
+Fixed Enforcer hit in file/directory copying code when FileTransClassInstance was NULL
+CopyCommand didn't work with DestName != NULL (to perform &quot;Copy As&quot; function) - Fixed
+Objects can now get duplicated (cloned) via drag'n'drop into same window with the Control key held down
+Window.c/QueryObjectUnderPointer() could crash if PtrLayer->Window was empty (NULL) - Fixed
+Path assign &quot;THEME:&quot; is set on program start to &quot;Scalos:themes/default&quot;
+
+V39.225
+Fixed enforcer hits/crash opening window popup menu with empty (NULL) ws_Name
+MoveCommand() no longer complains when trying to move non-existent object, e.g. an icon without an associated file
+
+V39.224
+Dropped drop zone rendering in separate layers and returned to complement drawing due to lack of performance
+Logo gets loaded by datatypes.library from THEME:ScalosLogo
+Defined C names for all library bases
+Region didn't get freed in class.c/SameWindow() if no icon was moved - Fixed
+Additional check for NULL window pointer in Scalos.c/LassoInit()
+Moving icons in the same window with &quot;AutoRemove Icons = Off&quot; didn't work properly because registers were trashed in main_subroutines.s/checkposition - Fixed
+
+V39.223
+Revision numbers reverted after some internal discussion :)
+Removed locking with DragDropSemaphore due to deadlock problems
+Changed rendering of window/icon drop zones from complement drawing to separate layers (in Requesters), hopefully eliminating all problems with garbage left in windows
+Changed to utilise CatComp and its automatically generated locale header files. All localised string are now in &quot;Scalos.cd&quot;. Tested with CatComp 44.6
+
+V39.222x25
+Fixed crash when icon window was closed or iconified while reading icons and the drawer contained more than 20 icons
+(OLD) Fixed another icon window cleanup bug. Icons were incorrectly positioned under certain conditions so that icon text could overlap other icons
+Lasso selection didn't respect window limits when selecting icons - Fixed
+CLIStart() crashed with type WBTOOL icons - Fixed
+(OLD) SCA_OpenIconWindow() didn't work with SCA_Iconify tag - Fixed
+Lasso didn't correctly calculate window left and top offsets - Fixed
+Popup menus now have two title lines, with the type of object in the first line and the name of the object in the second
+File move and copy routiones rewritten from scratch. Extensive error checking when moving/copying objects. Added a equester when trying to overwrite existing objects while moving/copying
+Created locking mechanism (via DragDropSemaphore) to prevent window updates during drag'n'drop
+Renaming left-out icons will no longer lose their position
+Changed window refresh after file system notify: icon update is held back until 2s after last update request. Fixes lengthy repeated icon window updates after changing many items (e.g. &quot;Select All&quot;, then &quot;UnShapshot&quot;)
+Implemented drag threshold, i.e. icons have to be moved more than 4 pixels until the drop zone indicator is drawn. Note that the 4-pixel amount will be made user changeable within Preferences
+When modifying icons, icons used to disappear if no associated file existed - Fixed
+Icons just left out did not disappear from desktop when volume (disk) was removed - Fixed
+Icons could be left out multiple times, leaving several lines in &quot;.backdrop&quot; file - Fixed
+Bug 25: Drag'n'drop didn't copy drawer icon left out on the desktop - Fixed
+
+V39.222x24
+Bug 22: (OLD) &quot;.backdrop&quot; files are now updated when renaming objects - Fixed
+Fixed OLD bug in root_handlemessages - stack could be corrupted if message without handler routine was encountered. Possibly also fixes long-standing bug #21. Will check though...
+Text mode windows used to show &quot;#?.info&quot; files when UseExAll was off - Fixed
+(OLD) Fixed enforcer hits/alerts with &quot;Leave Out&quot; and &quot;Put Away&quot;
+(OLD) &quot;Leave Out&quot; didn't work if &quot;.backdrop&quot; had a length of 0 bytes - Fixed
+
+V39.222x23
+Rename.module, newdrawer.module and delete.module now trigger window updates on completion
+Bug 16: On completion of rename.module, objects are checked if they are renamed and window names are adjusted if necessary - Fixed (finally!)
+Lasso selection now only affects visible icons (same behaviour as Scalos 1.2d)
+Hopefully fixed multiple text window refresh problems
+Removed forced drag'n'drop source window update
+Window drop box was drawn incorrectly for text windows - Fixed
+Added new text window methods: SCCM_TextWin_BeginUpdate, SCCM_TextWin_EndUpdate
+Changed text window method SCCM_IconWin_RemIcon from no-op to working icon removal
+Fixed serious bug in GetTextIcon_Fib(): Drop on text window icon caused many enforcer hits
+Drag'n'drop onto text icon drawers didn't work - Fixed
+IconWinCheckUpdate() now also works with text windows
+Converted text window icon reading code to C
+Text windows displayed date &amp; time incorrectly: last digit was shown twice - Fixed
+Text window columns are now always wide enough to show the column title (e.g. empty drawer in text mode only used to show the last column spanning all window width)
+IconActive flag didn't get updated correctly when lasso-selecting icons - Fixed
+Left mousebutton click toggles icon selection state when shift is pressed
+
+V39.222x22
+Text mode windows used incorrect font - Fixed. Inserted missing SetFont() in DrawTextGadgets()
+Special indicator bobs were broken with system bob routines - Fixed
+
+V39.222x21
+ReadIconList() failed when called from different WindowTask - Fixed
+Icons in backdrop windows could be dragged to overlap each other - Fixed
+In drag'n'drop operations, the first argument (file/drawer) didn't get freed - Fixed
+Prefs option &quot;Hide hidden files&quot; now hides files starting with &quot;.&quot; (only in those functions converted to C)
+Added a check for an update on source in drag'n'drop copy/move operations
+Changed drag'n'drop special indicator handling:<br>Special bobs initially added to separate list instead of adding to srgh_boblist and then moved to special bob list<br>drgh_boblist protected by semaphore to prevent DrawDrag() until InitDrag() finishes
+Icon drop marks during menu popup didn't get erased properly in simple-refresh windows - Fixed
+Fixed directory reading bug with empty file names or files called just &quot;.info&quot;
+Special drag'n'drop indicators are now always drawn solid
+Fixed an introduced bug in DragDropBobs.c: BlitTrans() handled masks incorrectly when width was a multiple of 16
+Bob functions now don't use chip memory if CyberGfxBase is available
+Bug 17: Text window column headers flicker when MMB is held down and mouse is moved - Fixed
+Removed layout bug in iconwindow cleanup (icons did overlap)
+Lasso() now always uses Screen->MouseX/MouseY coordinates
+No more offsets between mouse position and lasso corner!
+
+V39.222x20
+Scalos now uses 3 (optional) special icons in ENVARC:Scalos/. They show up when performing a drag'n'drop operation:<br>&quot;forbidden.info&quot; - displayed when no drop allowed<br>&quot;copying.info&quot; - displayed when icons will be copied<br>&quot;makelink.info&quot; - (currently unused)
+Copying icons can be forced (where otherwise icons would be moved) when you keep the Ctrl qualifier key pressed when you drop the icons. The qualifier will be made user-definable via prefs
+While popup menus are shown, the corresponding icons are highlighted
+You don't need to explicitly select a Scalos window to display the window popup menu or some icon popup menus - just point your mouse and hit RMB
+Finally managed to convert all the drag'n'drop bob stuff to C

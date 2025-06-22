@@ -1,0 +1,144 @@
+15-04-2001
+modules
+We've uploaded the DefIcons plugin. It's a replacement for the filetypes plugin and lets Scalos display a default icon for files without icons, depending on their file type. It requires OS3.5 or above. Get the plugin from the <a href="downloads.php#modules">Downloads page</a>.
+08-04-2001
+modules
+I'm gonna rename this the &quot;Persistant Windows News Page&quot;! The persistant windows plugin has been updated again. Some minor changes to the prefs file, and now, iconified windows are remembered and re-iconified on startup.<br><br>Note from Juergen: Persistant_Windows files are *not compatible* with older versions, so all windows have to be opened manually after upgrading. Also, re-opening iconified windows currently looks rather ugly. I tried to use SCA_OpenIconWindow() with the SCA_Iconify tag but it seems to be broken, so I open the window just as usual and after 2 seconds, iconify it. Get the current release (V39.10) from the <a href="downloads.php#modules">Downloads page</a>.
+02-04-2001
+modules
+The persistant windows plugin has been updated again. Removed enforcer hit when trying to open non-existent drawer. Also, it now tries to read &quot;ENVARC:sys/def_XXXdisk&quot; when requested to open window for XXX: device or the associated volume. Note that it does not yet read Scalos prefs or use the default icons path. This is planned for one of the next releases. Get the current release from the <a href="downloads.php#modules">Downloads page</a>.
+18-03-2001
+modules
+The persistent windows plugin has been updated. It now checks for the existence of the device before attempting to open the directory windows. This should stop the requesters appearing if you had a window open on a device, but the device is no longer there. Also added is the ability to configure the delay between opening windows during boot-up. Get it from the <a href="downloads.php#modules">Downloads page</a>.
+16-03-2001
+website
+We've added the following sub-domains as quick jumps to sections of the scalos.co.uk website:<br>http://about.scalos.co.uk<br>http://news.scalos.co.uk<br>http://download.scalos.co.uk<br>http://bugs.scalos.co.uk<br>http://ideas.scalos.co.uk<br>http://developer.scalos.co.uk
+16-03-2001
+status
+In addition to the above sub-domains, you can now access the online Scalos manual by going to <a href="http://manual.scalos.co.uk/" target="_blank">http://manual.scalos.co.uk</a>. Please note that this is not the final manual. We are currently fixing bugs and adding new features, so the manual is likely to change. There may be broken links in there, and I apologise for that, but I've tried to get it as correct as possible given our time constraints (most of us are at university, and are developing Scalos in our spare time).
+14-03-2001
+status
+We're currently testing a new version of the executable that has a number of bug fixes in it. We can't say any more, and we can't say when you'll get it, because it needs testing thoroughly first. We'll keep you posted though.
+11-03-2001
+website
+New website uploaded. Not much of a difference, just an easier way of navigating the site, and some new graphics.
+20-01-2001
+modules
+JumpHome by Emil Oppeln Bronikowski allows you to open your muFS home directory in Scalos by simply running this program. Put it in your WBStartup, or have it on a custom button bank, etc. You can get it from <a href="http://www.trogsoft.com" target="_blank">Trogsoft's web site</a>.
+15-01-2001
+modules
+Mike Carter has updated the Execute Command module which fixes a path problem with the shell launched from it. It's on the <a href="downloads.php#modules">Downloads page</a>.
+13-01-2001
+releases
+We've uploaded a new <b>BETA</b> release of the Scalos executable! This is version 1.2d. Get it from the <a href="downloads.php">Downloads page</a> now!
+03-01-2001
+status
+The iconsystem beta files have been updated once more. The third release fixes possible enforcer hits when running OS3.5 and checking out badly generated icons.
+31-12-2000
+bugfixes
+A bug has been fixed in the volume gauge. This affected both the WB39.plugin and volumegauge.plugin. Iconifying your directory windows should not cause any problems now.
+30-12-2000
+status
+The icon system beta archive has been updated. Reported icon corruption should now be fixed thanks to a replacement icon mask function (no longer using the icon.library of OS3.5+).
+30-12-2000
+modules
+The &quot;WB3.9&quot; plugin has been updated. It now loads in OS3.5+ volume gauge preferences as set in the Workbench prefs. Also, more system checks have been added to make it more stable. Get it from the <a href="downloads.php#modules">Downloads page</a>. Note: Users of this plugin do not require the volumegauge.plugin to be installed. If you do have it installed - remove it.
+30-12-2000
+modules
+A new implementation of the icon system! Beta files (experienced users please test) for new icon handling in Scalos. Includes support for traditional Amiga icons, New Icons and the OS3.5 icon format. Thanks once again to J&uuml;rgen for his time in developing these.
+28-12-2000
+modules
+A new plugin! &quot;VolumeGauge&quot; adds an OS3.5 style gauge to all root volume directory windows. Grab it from the <a href="downloads.php#modules">Downloads page</a>.
+26-12-2000
+modules
+To replace the SnapDesktop plugin, we've uploaded &quot;Persistent Windows&quot; to the <a href="downloads.php#modules">Plugins section</a>. This plugin will keep a record of all directory windows opened by the user, then restore them if a crash or reboot occurs! Handy eh? Also, the SAS/C source code is available from the <a href="developers.php#examples">Developers page</a>.
+26-12-2000
+modules
+SnapDesktop Beta removed. We've replaced it with a much better implementation! See above...
+24-12-2000
+modules
+We've uploaded a new plugin (WB3.9) to the <a href="downloads.php#modules">Downloads page</a>. It provides Scalos with some missing functions for OS 3.5/9 users that will now allow some other software to work correctly, for example, AmiDock. Enjoy!
+09-12-2000
+status
+The beta of the <a href="manual/index.html">online manual</a> has a work-in-progress FAQ. If you've anything you'd like to add to it, please <a href="mailto:Scalos@VFEmail.net?SUBJECT=Scalos manual FAQ">e-mail us</a>. We'll make sure it's updated regularly.
+02-12-2000
+website
+We've added a new section to the Downloads page. It's called &quot;Extras&quot; and contains some extra bits and pieces, like scripts, boot pictures etc. Basically, things that won't fit into any other category, but that we feel are useful to you. <a href="downloads.php#extras">Visit the &quot;Extras&quot; section now!</a>.
+01-12-2000
+status
+Mike Carter has started writing the online manual for Scalos. You can <a href="manual/index.html">read the current version here</a>. Please note that it is no way a final version! We are still working on this! Hopefully, it will form the basis of a new integrated help system for Scalos.
+29-11-2000
+modules
+SnapDesktop BETA archive released. This allows you to snapshot opened windows and return to the same state after a reboot - <a href="downloads.php#beta">Visit the Downloads page</a>.
+29-11-2000
+status
+New Scalos developer kit update - now on version 3. This release contains support for Amiga E and has updated includes - <a href="developers.php#archives">Visit the Developers page</a>.
+29-11-2000
+support
+<a href="http://www.trogsoft.org" target="_blank">TrogSoft</a> have released a replacement &quot;makedir&quot; shell command, called &quot;makeDdir&quot;, which not only creates a new directory, but will also open it on the desktop thanks to Scalos. It's available from <a href="http://www.trogsoft.org/products/info.shtml?p=makeddir" target="_blank">here</a>.
+25-08-2000
+modules
+Whoops! The link for the new Execute Command module (V1.1) was broken. It's sorted now though, so go ahead and download it today! - <a href="downloads.php#modules">Downloads page</a>
+25-08-2000
+status
+Seems to be the time for apologising... The recent upload of the preferences.library had buggy 020 and 040 versions. The 68000 version seems OK, but we'll test it a bit further. Please use the 68000 version or go back to a previous version of the library.
+21-08-2000
+status
+Dave McMinn has managed to update the preferences.library user and developers archives. Also, the new autodoc has been created and is included within the archive - <a href="developers.php#archives">Developers page</a>
+21-08-2000
+modules
+Mike Carter has updated the Execute_Command.module to V1.1. However, this is only a BETA version and there may be some bugs within. Please make sure you backup any important data before installing any new software - Update 04-12-2000: New, full version released, so BETA has been removed - <a href="downloads.php#modules">Download</a>
+21-06-2000
+status
+LoadWB and Preferences.library have been converted to 'C' language for easy updating and bugfixing. Work has begun on porting the assembler version of Scalos to the 'C' language now. It could take some time with over 560kb of pure source code for one file!<br><br>With summer holidays (for some) coming up, development could speed up a little too :)
+21-06-2000
+status
+The link to the delete.module source code is now fixed. Sorry for the inconvenience.
+10-06-2000
+status
+The Glowicons you see on this site are courtesy of <a href="mailto:micks99@gmx.net">Mick</a>. We thank him for the use of these icons and encourage you all to visit his <a href="http://go.to/opusgibar/" target="_blank">website</a> for some absolutely superb icons!
+26-05-2000
+status
+Sorry, but the archive for the Scalos-FileTypes_Plugin was corrupt. This has now been fixed. Check out the <a href="downloads.php#modules">Downloads</a> page.
+23-05-2000
+bugfixes
+OS3.5 icon code completed. Beta testing to commence on Wednesday. All screenmodes appear to be working during Alpha tests.
+21-05-2000
+status
+Source code for PPC processor, Titlepens and XTWindows plugins released. The Filetypes plugin is now being hosted on this website. All source code has now been passed to us. Check out the <a href="developers.php#examples">Developers</a> page.
+21-05-2000
+status
+PPC processor plugin for Scalos title bar released. Allows you to display your PPC CPU and clock speed.
+09-05-2000
+status
+Updated the bug report form. Click <a href="reportbug.php">here</a> to tell us about any new bugs you may have found.
+24-04-2000
+bugfixes
+Enforcer hits caused by the popupmenu library have been addressed and fixed. Version 9.07 of the library is now <a href="http://www.boing.nu/pm" target="_blank">available</a> and will also be uploaded to Aminet soon.
+07-04-2000
+bugfixes
+OS3.5 icon support steps forward a bit more. Sorted all the problems with icon datatypes: corrupt images with CGX4, 'black' images when rendering onto a native screen with CGX, wrong rendering of complemented images on deep screens, pen locking problems and the dreaded enforcer hits with OS3.5 and AppIcons.
+06-04-2000
+status
+Scalos mailing list address has changed slightly due to the eGroups.com &amp; Onelist.com merger. Update your address book to avoid future problems should the existing address cease to forward emails!
+05-04-2000
+status
+The latest release of the Scalos Developer archive (V2) is now <a href="developers.php#archives">available</a>. This will be updated soon with more 'C' source code examples and fixed/updated autodocs.
+29-03-2000
+status
+Scalos developer archive to be re-released very soon (hopefully).
+29-03-2000
+status
+<b>We are looking for one more full time 68k assembler coder</b> to help comment the huge main Scalos program and also fix bugs. Send your offer to <a href="mailto:Scalos@VFEmail.net">Scalos@VFEmail.net</a>.
+28-03-2000
+press
+Scalos v1.2b is featured on AmigActive's cover CD as the main program! Now users without internet access can also get a look-in.
+10-03-2000
+modules
+New &quot;Window-Tidy.module&quot; by Simon Hitchen. A very handy module that allows window organising on the desktop from the click of a button/menu option.
+06-03-2000
+bugfixes
+Icon corruption on CGX4 screens can be fixed by downloading the latest V4 pre-release archive from the <a href="http://www.vgr.com/v4/" target="_top">Cybergraphics web site</a>.
+05-03-2000
+status
+<img src="gfx/misc/news_press.gif" width="31" height="10" alt="Press"> Amiga Format reports that Scalos V1.2b is FREEWARE. Download it now from the <a href="downloads.php#distributions">Downloads</a> page.

@@ -1,0 +1,48 @@
+V40.10
+Improvement: replace GetDTAttrs() call by series of GetAttr(). Now datatypes.library is no longer used.
+
+V40.9
+Bugfix: CoerceMethod() in OM_NEW could lead to enforcer hits if object could not be created.
+
+V40.8
+Improvement: icons can now be scaled.
+
+V40.7
+Bugfix: saving of interior window offsets (dd_CurrentX/dd_CurrentY) didn't work.
+
+V40.6
+Improvement: Finished conversion from ASM to C, compiles with bith SAS/C and GCC
+
+V40.5
+Improvement: Changed library from &quot;struct Library&quot; to &quot;struct ClassLibrary&quot;
+
+V40.4
+Improvement: Enhanced cleanup - now does RemLibrary() on iconobject.datatype
+
+V40.3
+Improvement: Improved cleanup code: FreeClassList() now calls RemLibrary() for each datatype
+
+V40.2
+Bugfix: Fixed possible Enforcer hit in Expunge()
+Bugfix: More changes for enhanced compatibility for icons with borders
+
+V40.1
+Bugfix: Removed IDTA_InnerLeft and IDTA_InnerTop checks to enable frames around masked icons
+
+V39.24
+Bugfix: Fixed mean bug in clLayout - somehow two lines had disappeared
+
+V39.23
+Bugfix: Fixed serious bug in clWrite
+
+V39.22
+Improvement: Some instance data is now longword aligned
+
+V39.21
+Improvement: Added Semaphore protection for memory pools
+
+V39.20
+Improvement: All memory allocations are now being done via memory pools
+
+V39.15
+Bugfix: Fixed missing drawerdata in some icons

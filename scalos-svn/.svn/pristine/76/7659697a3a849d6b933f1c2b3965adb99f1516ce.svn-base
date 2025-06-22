@@ -1,0 +1,838 @@
+<HTML>
+<!-- Hand Done HTML By M!ke Carter -->
+
+<HEAD>
+	<META NAME="author" CONTENT="Stefan Sommerfeld & Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation">
+
+	<TITLE>Scalos V1.2a</TITLE>
+</HEAD>
+
+<BODY TEXT=black BGCOLOR=white>
+<PRE>
+                     ...................................................
+                     :                                                 :
+                        S A T A N i C   D R E A M S   S O F T W A R E
+                     .                                                 .
+                     :                                                 :
+                     : ...    presents    .oO Scalos v1.2 Oo.      ... :
+                     :                                                 :
+                     :               ... The Workbench Replacement ... :
+                     :                                                 :
+                     :.................................................:
+</PRE>
+<H3 ALIGN=CENTER>
+<B>© Copyright 1996 - 1998 by ALiENDESiGN<BR>
+© Copyright 1999 - 2000 by Satanic Dreams Software</B><BR>
+Last Update : April 26th 1999<BR>
+<HR WIDTH=97% NOSHADE>
+</H3>
+
+<TABLE WIDTH=100%>
+<TD WIDTH=65%>
+<P>
+<IMG SRC="images/quote-start.png" ALIGN=CENTER>
+The Workbench is getting rather old and has many missing features which can't be implemented by just using patches.
+It's time to start over from scratch. Scalos fulfils the greatest needs (no multitasking, bad
+configurability), with the best compatibility and similarity to the trusty Workbench.
+<IMG SRC="images/quote-end.png" ALIGN=CENTER></P>
+    
+<B>Features of Scalos:</B><BR>
+<UL>
+<LI>99.9% Workbench replacement.
+<LI>complete Multitasking, each directory window has its own Task
+<LI>Icon-Datatypes System with NewIcon and OS3.5 support
+<LI>CybergraphX and 24bit Datatypes support
+<LI>each directory window may have its own background-Pattern
+<LI>automatic directory window contents refresh
+<LI>editable menus (with ToolsDaemon and Parm Import)
+<LI>new Palette and Pattern preferences programs
+<LI>optimized pattern-routine with scaling
+<LI>configurable context sensitive Popup-Menus
+<LI>API and PlugIn System for 3rd party developers
+<UL>
+<CENTER><I>and much more ...</I></CENTER>
+
+<TD WIDTH=5% BACK="images/vertical-divider.png">  <! --- not working yet, TAG??? -->
+
+<TD WIDTH=30%>
+<A HREF="">Usage</A><BR>
+<A HREF="">Registration</A><BR>
+<A HREF="">Distribution</A><BR>
+<A HREF="Liability.html">Liability</A><BR>
+<A HREF="">Features</A><BR>
+<A HREF="">Emulation Mode</A><BR>
+<A HREF="">FAQ</A><BR>
+<A HREF="">About MUI</A><BR>
+<A HREF="">Support Programs</A><BR>
+<A HREF="">Plugins And Modules</A><BR>
+<A HREF="">Supported Software</A><BR>
+<A HREF="">New Versions</A><BR>
+<A HREF="">Developers</A><BR>
+<A HREF="">Authors</A><BR>
+<A HREF="">Thanks</A><BR>
+<TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
+@node "Authors" "Authors"
+@{b}AUTHORS:@{ub}
+
+Main-Author: --------------
+
+      Stefan Sommerfeld
+       Kaulbachstr. 3
+       14612 Falkensee
+           Germany
+
+   Phone  : +49-[0]3322-202452
+    E-Mail: zerocom@aliendesign-gbr.de / zerocom@cs.tu-berlin.de
+       WWW: http://www.aliendesign-gbr.de
+
+
+Modules Authors: -----------
+
+ MUI-Modules: Torsten Bach
+              lsi@aliendesign.net
+
+ ClassAct-Modules: Eric Sauvageau
+                   merlin@thule.no
+
+ GadTools-Modules: Sebastian Bauer
+                   sebauer@t-online.de
+
+ xtwindows.plugin and filetypes.plugin : David Rydh 
+                                         dary@lindesign.se
+
+ MUI Information.module (WBInfo) : Eric & Ulrich Hambuch
+                                   eric@tro.net / pixar@gmx.net
+
+For any questiones, sugguestions and bugreports for Scalos please join the mailinglist. Search on www.egroups.com for Scalos and request to become a member from there.
+
+@endnode
+
+
+@node "Developer" "Developers"
+@{b}DEVELOPERS:@{ub}
+
+ Scalos has a huge API. If you are interested in programming for Scalos or to support in in any way, please request the developer documentation from the @{"Author" link "Authors" 0}.
+
+@endnode
+
+@node "Distribution" "Distribution"
+@{b}DISTRIBUTION:@{ub}
+
+ Scalos is Shareware. The archive may be copied and distributed at the condition to let it complete and unmodified in all its parts.
+
+ You may charge only a nominal fee for the redistribution of Scalos, equivalent to the cost of a floppy disk, (5DM in Germany) without permission of the @{"Author" link "Authors". Excluded from these restricttions are floppy disks enclosed to magazines and CD-ROMs.
+
+@endnode
+
+@node "Installation" "Installation"
+
+@{b}INSTALLATION:@{ub}
+
+
+@{u}Automatic Method:@{uu}
+
+    The easyest way is to install Scalos using the included installation script. The script will not overwrite any existing file! If the registered version is to be installed you have the option to use Scalos as a complete Worckbench replacement. In this case the original "LoadWB" command will be renamed in "LoadWB.orig" and replaced by the "LoadWB.Scalos" command, copied in C: as "LoadWB".
+    
+    The LoadWB.Scalos command is completely compatible with the original one. It will start Scalos in the Emulation Mode. If something should go wrong, the original Workbench will be started instead.
+    
+
+                            *** OR ***
+
+
+@{u}Manual Method:@{uu}
+
+    Copy the directories Classes, Libs and Devs from the Scalos directory to the corresponding SYS: directories.
+    Copy the MUI-Class (libs/mui/mcpframe.mcc) in the MUI:Libs/MUI directory.
+    Copy the contents of the Locale directory in Locale:.
+    Create a new directory named Scalos.
+    Copy all remaining files in the Scalos directory.
+    To tell Scalos where is located its home path, you have to specify it in @{"Path Preferences" link "pathprefs" 0}.
+
+
+@{u}Registered Users:@{uu}
+
+    Copy the Scalos Keyfile in S:.
+    If you want to use Scalos as Workbench replacement you have to rename the "LoadWB" command in c: to "LoadWB.orig" and copy there the "LoadWB.Scalos" command as "LoadWB".
+     
+
+@{u}Unregistered Users:@{uu}
+
+    Please don't try to use Scalos as Workbench replacement. If Scalos doesn't find the keyfile, the emulation mode will be simply ignored and the programm won't work properly.
+    
+@endnode
+
+@node "Introduction" "Introduction"
+
+@{b}INTRODUCTION:@{ub}
+
+    The Workbench is getting rather old and many missing features can't be implemented just using patches. It's time to start over from the scratch. Scalos fulfils the greatest needs (no multitasking, bad configurability), with the best compatibility and similarity.
+    
+@{b}Features of Scalos:@{ub}
+
+    - 99.9% Workbench reaplacement.
+    - complete Multitasking, each window has its own Task
+    - Icon-Datatypes System with NewIcon Support
+    - CybergraphX and 24bit Datatypes Support
+    - each window may have its own background-Pattern
+    - automatic windows contents refresh
+    - editable menus (with ToolsDaemon and Parm Import)
+    - new Palette and Pattern Preferences programs
+    - optimized pattern-routine with Scaling
+    - configurable Popup-Menus
+    - big API and PlugIn System
+
+    and much more ...
+
+@endnode
+
+
+@node "Muifo" "MUI Info"
+@{b}MUI:@{ub}
+
+   The Scalos preferences programs and some of its modules use MUI - MagicUserInterface
+          (c) Copyright 1993-97 by Stefan Stuntz
+
+       MUI is a graphic User Interfaces creation and support system. Using a preferences-program the user of a @{b}MUI@{ub}-Application is enabled to change the appearance of programs according to his personal taste.
+
+       MUI is distributed as Shareware. To obtain a complete program-package, including many examples and more information about registering, you should search in local Bulletin Boards or in Public Domain Disks for a file named muiXXusr.lha (XX stands for the latest version number).
+       
+   You can register also directly, sending 30.- DM or 20.- US$ to the following address:
+   
+                        Stefan Stuntz
+                   Eduard-Spranger-Straße 7
+                        80935 München
+                           GERMANY
+
+         Phone: +49-89-313-1248
+         E-Mail: stuntz@sasg.com
+            WWW: www.sasg.com 
+
+@{i}NOTE
+
+ The "Scalos" main program needs no MUI, only the preferences programs need MUI 3.6 or better.
+
+@endnode
+
+@node "Registration" "Registration"
+@{b}REGISTRATION:{ub}
+
+    To have fully access to all features in Scalos you should register. The following limitations exist in the unregistered version:
+   
+@{b}Limitations:@{ub}
+
+     - The @{"Emulation mode" link "emulationmode" 0} is not available, for i. Scalos will simply ignore the activation of the Emulation mode and switches it off.
+     - The "About..."-window will open just after the strat. This is a "stress-requester".
+     
+    The Registration fee is 30DM or 20 US$). You will receive a Keyfile for Scalos. All minor updates are free. In the case of grater updates there will be an upgrade-fee for a new keyfile. The next grater udate will be Scalos2, but by now there are still no plans about it.
+    
+    For more information about the registration start the RegTool which is in the Scalos archive or go to http://www.vapor.com.
+    In poland it's possible to register with AIRI.
+
+@endnode
+
+@node "Requirements" "Requirements"
+ @{b}SYSTEM REQUIREMENTS:@{ub}
+
+  - Kickstart Version 3.0 or better
+  - MC68020 CPU or better
+  - @{"MUI" link "Muifo" 0} (Magic User Interface) V3.6 or better (for the configuration programs)
+
+  Not absolutely necessary:
+  - NewIcons V3 (V4 recommended): for the NewIcons support
+  - popupmenu.library for the PopupMenus
+  - guigfx.library and render.library for extended functions with Backgroud Pictures
+
+  More Informations at: @{"Supported Software" link "supportsoft" 0}
+
+@endnode
+
+@node "updates" "New Scalos Versions"
+@{b}- Where can I get Scalos?@{ub}
+
+  The most updated Versions is present in our WWW-Page: http://www.aliendesign-gbr.de
+
+  or:
+
+  @{u}Uphold The Law@{uu}
+   (ALiENDESiGN wHQ)
+
+      Sysop : Ramses && Paso
+   Nodes 1,2: +49-(0)30-44730311 (USR V34+ Modem, Node1: X2)
+   Nodes 3,4: +49-(0)30-44730312 (Euro ISDN)
+
+      Username: update
+      Passwort: update
+
+  Of course the current Version is present in Aminet and in the Aminet-CDs.
+
+@endnode
+
+@node "supportprograms" "Support Programs"
+@next "Thanks"
+@{b}- Additional programs:@{ub}
+
+
+   @{fg shine}OpenLocation:@{fg text}  With this Program you can open the window of a particular directory.
+
+
+   @{fg shine}OpenDrawer:@{fg text}  Like OpenLocation, but without GUI. To be used only from the Shell.
+
+
+   @{fg shine}FreePens:@{fg text}  This program shows the free pens for the present Screen.
+
+
+@endnode
+
+@node "Thanks" "Thanks"
+@prev "supportprograms"
+@{b}Thanks:@{ub}
+
+
+"Thanks" to the following people:
+
+    - Vincent Schoettke for the quick english translation of the guide
+      sorry, I include the ATO one.
+
+    - Torsten Bach, Sebastian Bauer and Eric Sauvageau for the Modules
+
+    - David Rydh for the plugins
+
+    - Eric & Ulrich Hambuch for the information.module
+
+    - ATO for the translations
+
+    - all Betatesters for their Bugreports
+
+    - Joachim Thomas for the english and italian docs translation
+
+    - Stefan Stuntz for his MUI
+
+    - all registered User for the support
+
+    - T.F.A for the super ASM-One V1.29 and Genetics for the coolest ASM-One update ever made! (ASM-Pro rules!)
+
+    - Commodore for the Amiga, one of the best Computer ever built
+
+    - Amiga International for the rebirth of Amiga.
+
+
+This guide was translated with the help of the @{"Amiga Translators Organization" link "ATO" 0}.
+@endnode
+
+@node "Usage" "Usage"
+@{b}IMPORTANT NOTES FOR SCALOS:@{ub}
+
+    To use Scalos as Workbenchemulation please refer to the indications in chapter @{"Installation" link "installation" 0}.
+
+    Scalos works with all known Commodities and Hacks, except Programs and Functions that directly modify the Workbench. (for i. Tools-Daemon)
+
+@{b}   Owners of registriered Versios of Scalos are not allowed to distribute the Keyfile for any reason. In this case the Author will take legal proceedings!@{ub}
+
+@endnode
+
+@node "features" "Features"
+
+    Scalos in general works lke the old Workbench. If problems should arise, you should look up the Workbench Manuals. Thanks to its Multitasking design Scalos is able to perform new actions while prior ones are still working. Many preference programs have been changed with the aim of adding better functionality to Scalos.
+
+@{b} Preference Programs:@{ub}
+       @{" Pattern " link "pattern" 0}
+       @{" Menu    " link "menu" 0}
+       @{" Palette " link "palette" 0}
+       @{" Scalos  " link "scalosprefs" 0}
+
+    Moreover Scalos offers many additional Functions:
+       @{" ToolTypes " link "tooltypes" 0}
+       @{" Default Icon Path " link "deficonspath" 0}
+       @{" AppChange " link "appchange" 0}
+
+@endnode
+
+@node "tooltypes" "ToolTypes"
+
+    When Scalos opens an Icon, its ToolTypes are tested, trying to recognize them.
+
+      SCALOS_PATTERNNO=<number> : The window owned by the Icon with this Tooltype, will be opened with a background image matching the number. (About Pictures and Numbers please see {"Pattern Preferences" link "pattern" 0})
+
+      SCALOS_NOTEXT : The Icon will be drawn without Text.
+
+      SCALOS_NODRAG : The Icon will not be draggable. Its position will be fixed.
+
+@endnode
+
+@node "deficonspath" "Default Icon Path"
+
+    If Scalos is unable to load a Disk Icon, the icon that has been selected in the default icon path in @{"Path Preferences" link "pathprefs" 0} will automatically be loaded. the Name of the Disk will be used. The best aexample is the RAM Icon. To obtain this you have only to copy the icon in the Icon Path as "RAM.info" or "Ram Disk.info". All functions will automaticallly be performed on this Icon (for i. Fix).
+
+@endnode
+
+@node "appchange" "AppChange"    
+
+    This function is well known by MCP users. Since this function does no more work due to the chain of Patches (besides its not 100% compatibility), it has been rewritten from the scratch for Scalos.
+
+    AppChange, before displaying an Appicon (for i. iconifying a program), tests the existence of an Icon with this name in the Icon Path (see @{"Path Preferences" link "pathprefs" 0}) or in "ENV:Sys/", replacing it.
+
+@endnode
+
+@node "emulationmode" "Emulation mode"
+
+@{b} Emulation Mode:@{ub}
+
+    Scalos works also as a Workbench replacement. In this case the 'emulation mode' has to be set. See @{"Installation" link "Installation" 0} for more info. 
+
+    Changes if 'Emulation mode' is on:
+
+   
+     - Scalos uses the Workbench Screen for its windows instead opening a new one.
+
+     - AppIcon, AppMenuItem, AppWindow functions are redirected to Scalos
+
+     - all Programs placed in "WBStartup" will be started
+
+     - The Screen will be reopened in case of changes in ScreenMode and Palette settings
+
+
+@{i}NOTE:  Emulation Mode is only possible if you own a registered version of Scalos! @{ui}
+
+@endnode
+
+@node "plugins" "PlugIns and Modules"
+
+@{b} PlugIns and Modules@{ub}
+
+    In the Scalos Archive you can find also some Modules and PlugIns.
+
+    Modules: (all modules are present in both MUI and ClassAct versions)
+
+       Execute_Command, Rename, NewDrawer, Delete, Empty_Trashcan : All will be loaded automatically by Scalos when needed. The modules are equivalent to the original Workbench functions.
+
+    PlugIns :
+
+       Menu-PlugIns : (To be set in @{"Menu Configuration" link "menu" 0})
+
+          sorted_cleanup : This is a replacement for the "Clean Up" function. All icons will be sorted by Name, drawers on top.
+
+       OOP-PlugIns : (To use them you have to list them in @{"Plugin Preferences" link "pluginprefs" 0})
+
+          title_freepens : Adds the "%wp" option to the Screen Title, indicating the still free color pens.
+
+          xtwindows : with this Plugin activated, holding the "ALT" key while doubleclicking an Icon, the icon's window will close. Pressing "SHIFT" while closing a window, its parent window will be opened.
+
+@endnode
+
+@node "supportsoft" "Supported Software"
+
+    Scalos supports some Expansion Libraries for additional functions.
+
+     NewIcons : For rendering NewIconsin Scalos you need newicon.library:
+        - Aminet ( util/wb/newiconsv4.lha )
+
+     PopupMenu Library : Needed for the PopupMenus.
+        - Aminet ( util/libs/pmuser.lha )
+
+     GUIGfx Library : Better handling of Background Pictures.
+
+@endnode
+
+@node "pattern" "PatternPrefs"
+
+@{b} Pattern Configuration:@{ub}
+
+    With this program you can configure background pictures for screens and windows. It consists of two pages: on the first you can set a list of pictures, assigning a sequential number to one ore more of them. Using this number you will be able to combine the pictures to specific windows. If more pictures have the same number, one of them will be choosen randomly.  
+
+    - Patternlist - Page
+
+       New/Delete : Add a new picture. After that you should assign a number to it.
+
+         Tiled:    The picture will be rendered as tiles. (Like original Workbench does)
+         Fit size: The picture will be resized to the dimension of the new window.You *MUST* have set GUIGfx on.
+
+       No remap: The picture's colors will not be remapped to the actual Screen colors.
+
+       Use GUIGfx: If this option is activated, Scalos uses the math algorithms of the GUIGfx.library. This means fast and high quality remappings to Screen dimensions and colors in all resolutions.
+
+       Pen Precision: Indicates the precision to be use by Scalos in assigning the color pens.
+
+     - GUIGfx Options: 
+      "Use GUIGfx" has to be enabled to use this options.
+
+        AutoDither : If the picture loses to many colors in the remapping process, some colors will be dithered.
+
+        Colorweight: How many color pens is the picture allowed to set?
+
+        Dithering: Sets the Dithermode.
+
+        Ditheramount: sets the weight of the dither. (only for "Random")
+
+
+    - Defaults:
+     Here you can set the defaults for the background pictures in Scalos.
+
+       asyncron layout: Pictures will be loaded and rendered while the windows opens (Like original Workbench). If this function is 'off', pictures will always be loaded before opening the windows.
+
+       Use friendbitmap : The picture is present twice in memory for best speed. This option has no effect if V43 picture.datatype or GUIGfx are used.
+
+       Always relayout: If "Fit size" is set, the picture will be scaled everytime the window's dimensions change.
+
+       Randomize everytime: Usually Pictures with the same number will be randomly selected as soon as the configuration loads. If this option is set, the picture will be selected as soon as a window with the same number assignement is opened.
+
+       Asyncron-Task priority: You can set the CPU prioriry for the Task if "asyncron layout" is set.
+
+       Desktop: Number of the Picture for the main window.
+
+       Screen: Number of the picture for the Scalos-Screen.
+
+       Window: Number of the picture for the Scalos-windows.
+
+       TextMode: Number of the picture for the Scalos-windows in Text Mode.
+
+    Tooltypes:
+     The Pattern configuration program supports some tooltypes.
+
+       NOPREVIEW: No preview will be displayed on the list page.
+
+       AUTOPREVIEW: Clicking on a picture a preview will be displayed automatically, obviously this has effect only if NOPREVIEW is not set.
+
+
+@{i}NOTE: If problems should occurr with background pictures, please see @{"FAQ" link "faq" 0}.@{ui}
+
+@endnode
+
+@node "palette" "PalettePrefs"
+
+@{b} Palette configuration program:@{ub}
+
+    With this program the palette used by Scalos can be configured, including the colors for particular color pens. programs like "MagicWB-Daemon" or "PatchPens" are no more necessary.
+
+    The list includes all colors that Scalos should set as the Screen opens.
+    
+     WBColors: In this windows all colors of the current Workbench are displayed. One or more colors can be dragged to the main list.
+
+     Pen Adjust: Here specific colors can be assigned to particular pens. Simply drag and drop a color from the main list to the desired pen. The first 9 Pens are usually set by the Workbench Palette.
+
+       Halfshine/halfshadow Pens: These are the MagicWB colors lightgrey/darkgrey.
+
+       Text outline Pen: Color for Text outline if  the Icontext Mode is set on "Outline" or "Shadow". (see @{"Icon Configuration" link "iconprefs" 0})
+
+       Drawer/File text Pens: Colors if Text Mode is set.
+
+       Background Detail/Block Pens: No effect by now.
+
+@{i}NOTE:  Modifying the first 9 color Pens does't work with CyberGraphX V3 and Scalos in Emulation mode, due to an error in the CybergraphX emulation. @{ui}
+
+@endnode
+
+@node "menu" "MenuPrefs"
+
+@{b} Menu Configuration:@{ub}
+
+    Here you configure the menus to be used by Scalos, both main menu and PopUp menus. For the latter Scalos needs the popupmenu.library.
+    All menus are subdivided in "Menu", "Menu Item" and "Commands". To every Menu Item can be assigned a Command List that will be elaborated sequentially. Moreover to every Menu Item may be assigned a HotKey.
+        
+    Commands:
+
+      Command: Saclos internal Command. Clicking on the magnifier will open a window with all available Commands.
+
+      Workbench: The Program will be strated from the Workbench. Moreover you can set if the program should take activated Icons as Arguments. The Stack value is used only if no Icon was found for the program.
+
+      AmigaDos: The Program wil be started from the Shell. If "WB Args" is set, wird the Argument "%p" will be replaced by the path of the activated Icons. The Program will startet with the specified Stack value.
+
+      IconWindow: Scalos opens the window of the specified path.
+
+      Arexx: Starts an Arexx-Script.
+
+      PlugIn: Starts a Scalos Menu-PlugIn.
+
+    If a Menu Item with empty name is specified, Scalos displays a separator line.
+    It's possible to Drag&Drop an Icon in the Configuration Window. All values will be set accordingly. Entries may be dragged across the list.
+    
+
+@{i}NOTE:  To use PopUpmenus, popupmenu.library has to be installed!@{ui}
+
+@endnode
+
+@node "scalosprefs" "ScalosPrefs"
+
+@{b} Scalos Configuration Program:@{ub}
+
+    With this program you may change a lot af configurations of scalos. Due to the variety of the settings, many configurations will be effective only after rebooting the system.
+
+    @{"Icons" link "iconprefs" 0}
+    @{"Bobs" link "bobprefs" 0}
+    @{"Title" link "titleprefs" 0}
+    @{"Text Mode" link "textmodeprefs" 0}
+    @{"Paths" link "pathprefs" 0}
+    @{"Standard Sizes" link "defsizeprefs" 0}
+    @{"PlugIns" link "pluginprefs" 0}
+    @{"Miscellaneous" link "miscprefs" 0}
+    @{"NewIcons" link "newiconprefs" 0}
+
+@endnode
+
+@node "iconprefs" "Icons"
+
+@{b} Icon Configuration:@{ub}
+
+    Here has to be configured the appearance of the Icons.
+
+    - Icon-Image    
+        Normal/Selected: Clicking here a window appears with all available borders. They can be selected, dragged and dropped to the "Normal" and "Selected" fields.
+
+        Left/Right/Top/Bottom: Sets the distance of the Icon Image from the border.
+
+        Text Mode:
+          Normal: The Text below the Icon will be displayed normally as on the old Workbench.
+
+          Outline: The Text will be outlined with the color specified in @{"ScalosPalette" link "palette" 0}. Im  the Workbench Font Configuration, "Text+Backgr." has to be set to off.
+
+          Shadow: The Text will be provided with a Shadow. The Shadow color is specified in @{"ScalosPalette" link "palette" 0}. In the Workbench Font Configuration, "Text+Backgr." has to be set to off.
+
+        Image <-> Text Sapce: Space, specified in pixels, between the Icon and its Text.
+
+@endnode
+
+@node "bobprefs" "Bobs"
+
+@{b} Bob Configuration:@{ub}
+
+    Bobs (BlitterOBjectS) will be created when an Icon is moved.
+
+     - Bob Method
+          Drag :
+            "Image only": Only the Image of the icon, not the text below, will be moved..
+
+            "Image + Text": The icon will be moved as it is displayed on the window.
+
+          Bobroutine:
+            "System" : Scalos uses the functions implemented in AmigaOS for the Bobs.
+
+            "Custom" : A custom Routine (faster and flicker free) will be used. "Custom Bobs" will be set automatically for Screens with more than 8Bits, due to the System's limitation to max 8Bit resolution Bobs.
+
+     - Bob Look
+          Scalos can display transparent Bobs.
+
+          Look: Sets the transparency mode to be used. 
+            for ex. solid/transparent : always solid, only over the as "transparent/solid over" selected Icon types it will be displayed transparent.
+
+          Transparents: The transparency Effect usually is obtained ghosting the Icon. On Screens with resoltions over 8Bit (15/16/24 bit) Scalos is able to draw Bobs transparent without ghosting them.
+            Real/Transp.: Woks only when "Custom Bobs" is set.
+
+     - transparent/solid over
+          Here can be selected where bobs have to be drawn transparent or solid.
+
+
+@{i}NOTE:  To use "SuperGELs" in CyberGraphX V3 the "Bobroutine" has to be set on "System". Transparency effekts don't work, due to missing functions, with SuperGELs.@{ui}
+
+@endnode
+
+@node "titleprefs" "Title"
+
+@{b} Title Configuration:@{ub}
+
+     Here you can configure the Screen and Window Titles. A title is made up by the text and some Command Codes that will be replaced by Scalos. The Command Codes begin with the "%" character. To obtain a "%" in your text, you have to use two "%".
+
+     RootWindow: This is the window that opens after a double-click on a disk Icon.
+
+     Refreshrate: The value specifies the waiting time between every update of the title.
+
+     Refresh only on memory change: Scalos test if there were changes in the memory before updating the title.
+
+@endnode
+
+@node "textmodeprefs" "Text Mode"
+
+@{b} Text Mode Configuration:@{ub}
+
+     In this page you can find the configurations for the Text Mode.
+    
+     Font: Font to be used by Scalos in Text Mode. If left empty Scalos uses the topaz Font.
+
+     Listcolumns: The columns will be ordered int this sequence. It's possible to toggle the display of single columns doubleclicking on them.
+
+@{i}NOTE:  Scalos has to be restarted to apply changes in the font selection.@{ui}
+
+@endnode
+
+@node "pathprefs" "Paths"
+
+@{b} Path Confguration:@{ub}
+
+     Here all Scalos' standard paths can be configured.
+
+     Default Icons: Path for Scalos Standard Icons. (see @{"Icon Path" link "deficonspath" 0})
+
+     DiskCopy: Scalos needs the Path for the DiskCopy Program when a DiskIcon is dragged on another one.
+
+     WBStartup: All Programs in this Path will be started automatically when Scalos is et in @{"Emulation Mode" link "emulationmode" 0}.
+
+     Scalos Home:  Needed to load Modules und PlugIns.
+
+@endnode
+
+@node "defsizeprefs" "Default Sizes"
+
+@{b} Default Sizes Configuration:@{ub}
+
+     Default Windowsize: To be used if no Icon with Size Informations about the window is available.
+
+     Cleanup Spaces: Values for the "CleanUp" Function.
+
+@endnode
+
+@node "pluginprefs" "PlugIns"
+
+@{b} PlugIn Configuration:@{ub}
+
+     Here you create a list of plugins to be used by Scalos (In this case only OOP-plugins). Menu-PlugIns can be configured in @{"Menu Configuration" link "menu" 0}. If the Plugin has been recognized the name and description will be displayed.
+
+@{i}NOTE:  To apply changes in the List, the system has to be restarted.@{ui}
+
+@endnode
+
+@node "miscprefs" "Miscellaneous"
+
+@{b} Miscellaneous:@{ub}
+
+     Auto Remove Icons: Icons will be removed from windows as you start moving them.
+
+     Hardemulation: Scalos modifies some private functions in workbench.library for providing the original Icon-Informationswindow. This option works only if Scalos is in @{"Emulation Mode" link "emulationmode" 0}.
+
+     Non-masked click area: If this option is set, an Icon will not be actived if clicked in the transparent area. (for ex. NewIcons)
+
+     Menu CurrentDir: If this option is set, the window's directory will be assigned to programs started from the Workbench. Otherwise it will assigned to its own directory.
+
+     MMB move: The window contents may be moved using the middle mouse button.
+
+     WindowPopup title only: PopupMenu for windows can be opened only on window's title bars.
+
+     FullBench: Screen-Titles removed and Main Window set Full Size.
+
+     Default Icons saveable : The icons which Scalos generates if "show all files" is enabled, can now be saved using "snapshot".
+
+     load DefDisk first : Try to read the icons first from the DefIcons Path before using disk info.
+
+     Mac-like selection : This function aktivates a multiselection method used on MacOS or Win95. If you've selected multiple icons you don't have to hold down shift to drag them. Clicking on an already activated icon will not deselect all other icons.
+
+     Drop start : Now you can drop icons on a tool icon to start the tool. e.g you drop a picture over a picviewer, Scalos will now start the picview and show the picture.
+
+     Hide hidden files : If this function is activated all files or directories where the "hide" flag is set will not be shown.
+
+     pop screen title : If FullBench is enable the screen title will re-appear if the mouse is on the top screen edge.
+
+     Windowtype:
+       simple refresh: faster and less memory demanding, some more flickering.
+
+       smart refresh: in general slower but no flicker.
+
+     - Delays:
+         WBStartup - DOWAIT: if a program, present in the WBStartup doesn't end in the specified time, Scalos ask if it has to ignore it.
+
+         DiskIcon Refresh: Scalos tests for new or removed disk after the time speciefied here.
+
+@endnode
+
+@node "newiconprefs" "NewIcons"
+
+@{b} NewIcons Configuration:@{ub}
+
+     NewIcons are founded upon the standard Icon format. All Icon informations are stored in the Tooltypes. The adventage of NewIcons in Scalos is the own color palette for every Icon and the fast display, especially in 16 and 24 bit.
+
+     Transparent: NewIcons displayed in transparent mode, if set also in NewIcons. Scalos creates the Mask before displaying on the Workbench.
+
+     Precision: This precision setting is used by Icons' color pens distribution.
+
+
+@endnode
+
+@node "faq" "FAQ"
+
+@{b} Frequently Asked Questions:@{ub}
+
+     1 General Problems
+     2 Problems with the unregistered version
+     3 Problems with the registered version
+
+     1 General Problems
+
+        1.1  Scalos displays "Couldn't open iconobject.library" when the library exists in the Libs: directory.
+            Supplied Datatypes may be not correctly installed.
+            you should test if:
+             - "amigaiconobject.datatype" and "iconobject.datatype" exist in Classes/Datatypes/ ?
+             - Classes/Datatypes correctly assigned to Libs:?
+             - "AmigaIconObject" in Devs: (Multiassigns not accepted!) ?
+             - mcpgfx.library installed ?
+        1.2  After installation of Scalos MCP's SysIHack dont'works correctly.
+            You need a newer version of MCP. The installed mcpgfx.library is not compatible with MCP version V1.30 or less.
+            Solution: install again old mcpgfx.library or look for newer MCP version.
+
+        1.3  No background pictures loaded, though they are correctly selected.
+            This may be caused by old Datatypes. Try to reinstall the Datatypes from the Workbench disk, or the actual version of V43 picture.datatypes.
+
+        1.4  Many of my Icons display more than once on the screen, while on the workbench all seems ok.
+            The Workbench filters double displayed icons, Scalos does not. Solution:  please edit the ".backdrop" file and clear double lines.
+
+        1.5  Background images not scaled.
+            GUIGfx option not set or guigfx.library and/or render.library not installed.
+
+        1.6  Standard NewIcons display with borders.
+            This may be caused by a missing function of the newicon.library in NewIcons V3. You should use at least NewIcons V4.
+
+        1.7  Left out icons of programs (AppIcons) aren't transparent.
+            That's because of conficts with the newicons patch. You should remove it.
+
+        1.8  Working with CD's causes crashs or Scalos doesn't work correctly.
+            Most Filesystems doesn't support the ExAll function correctly. Disable "Use ExAll" in Scalos prefs.
+
+        1.9  Scalos needs much chip ram for every window.
+            Scalos needs normally more chip ram than the WB, but IPrefs loads it's patterns too. Remove all pictures in WBPattern.
+
+        1.10  Problems with CyberGraphX 3 or 4 and BitmapCache.
+             Sometimes NewIcons will be displayed trashed if the BitmapCache feature is enabled. This bug is fixed in CyberGraphX 4.2.
+
+     2 Problems with the unregistered version
+
+        2.1  Not all started Programs open on  the Scalos-Screen.
+            Unfortunately this Problem cant't be solved completely. Scalos sets its own Screen as standard Screen. Not all programs will open there.
+
+        2.2  Dropping icons in programs (with AppWindow) doesn't work.
+            This will only work in Emulation mode.
+
+     3 Problems with the registered version
+
+        3.1  If I try to start Scalos in Emulation Mode it always crashes or the "about..." window does appear.
+            Your Keyfile may be corrupt or not correctly installed. Please contact immediately the @{"Author" link "Authors" 0}!
+
+
+        3.2  Scalos doesn't start any program in the WBStartup.
+            @{"WBStartup Path" link "pathprefs" 0} may be set wrongly or Scalos not started in @{"Emulation Mode" link "emulationmode" 0}.
+
+        3.3  Scalos crashes while starting all WBStartup programs.
+            Maybe you've the program "Cyberpatcher" in your WBStarup. Please remove it there and start it in the startup-sequence.
+
+@endnode
+
+@node "ATO" "ATO"
+
+   This software was translated with the help of ATO, the Amiga Translators
+   Organization. ATO is a non-profit organization that translates for the
+   Amiga community. The following members were involved:
+
+   English:
+     Joachim Thomas and Sönke Tesch
+
+   Italian:
+     Joachim Thomas & Francesco Mancuso
+
+   Amiga Translators Organization - http://ato.vapor.com/ato/
+                                    mail: ato-info@ato.vapor.com
+
+
+@endnode
+
+</HTML>

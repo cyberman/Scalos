@@ -1,0 +1,33 @@
+# $Date$
+# $Revision$
+#############################################################
+TOPLEVEL	=	$(shell pwd)
+
+include		config.mk
+include		rules.mk
+
+##############################################################################
+#
+# Project subdirectories
+#
+
+SUBDIRS	=	main       \
+		libraries  \
+		datatypes  \
+		Plugins    \
+		Prefs      \
+		Modules    \
+
+##############################################################################
+
+.PHONY: all install clean nodebug
+
+all: all_subdirs
+
+clean: clean_subdirs
+
+install: install_subdirs
+
+nodebug: nodebug_subdirs
+
+

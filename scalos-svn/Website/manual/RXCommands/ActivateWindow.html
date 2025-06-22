@@ -1,0 +1,98 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, arexx">
+
+	<TITLE>Scalos Arexx</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="../images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><nobr><FONT COLOR=white><B>Arexx Command</B></FONT></nobr></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="../images/headingbar"></TD>
+</TR>
+</TABLE>
+<BR>
+
+<H3>NAME</H3>
+<DL><DD>ACTIVATEWINDOW</DD></DL>
+
+<H3>SYNOPSIS</H3>
+<DL><DD>
+ACTIVATEWINDOW <var>[WINDOW] &lt;ROOT&#124;Drawer name&gt;</var>
+</DD></DL>
+
+<H3>FUNCTION</H3>
+<DL><DD>
+This function will make a specified window the currently active window on the desktop.
+An active window is generally used by other arexx commands to work on.  So it is
+usually required to use this command to get the correct window activated before
+calling anything else which is going to manipulate files etc.
+</DD></DL>
+
+<H3>INPUTS</H3>
+<DL><DD>
+<var>WINDOW</var>
+<P>
+Either <var>ROOT</var> to activate the desktop window (where volume icons,
+AppIcons, and left-out icons live) or the fully qualified name
+of a drawer window to activate which must be already open.
+</P>
+</DD></DL>
+
+<H3>RESULTS</H3>
+<DL><DD>
+-
+</DD></DL>
+
+<H3>EXAMPLE</H3>
+<DL><DD>
+<pre>
+/* Activate the root window */
+ADDRESS workbench
+ACTIVATEWINDOW root
+
+/* Activate the &quot;Work:&quot; partition's window if already open*/
+ACTIVATEWINDOW &quot;Work:&quot;
+</pre>
+</DD></DL>
+
+<H3>ERRORS</H3>
+<DL><DD>
+<UL>
+<LI>10 - If the named window cannot be activated.  Can occur if window is not already opened on the desktop.</LI>
+</UL>
+</DD></DL>
+
+<H3>NOTES</H3>
+<DL><DD>
+<P>
+You can only activate windows which belong to Scalos, windows which are showing
+directory contents as icons or text.
+</P>
+<P>
+If you choose to have a window activated that is not the desktop window you must
+make sure that the window name is given as a valid filesystem path name. For
+example &quot;Work:&quot; is a fully qualified name, and so is &quot;SYS:Devs/Monitors&quot;.
+&quot;Prefs/Env-Archive&quot; would not be a valid window name. A valid name
+always contains the name of a volume, a device, or an assignment.
+</P>
+</DD></DL>
+
+<H3>BUGS</H3>
+<DL><DD>
+None
+</DD></DL>
+
+<H3>SEE ALSO</H3>
+<DL><DD>
+<A HREF="ChangeWindow.html">CHANGEWINDOW</A>, <A HREF="MoveWindow.html">MOVEWINDOW</A>, <A HREF="Window.html">WINDOW</A>, <A HREF="WindowToBack.html">WINDOWTOBACK</A>, <A HREF="WindowToFront.html">WINDOWTOFRONT</A>, <A HREF="ZoomWindow.html">ZOOMWINDOW</A>
+</DD></DL>
+
+</BODY>
+
+</HTML>

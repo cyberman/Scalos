@@ -1,0 +1,61 @@
+<HTML>
+
+<BODY TEXT=black BGCOLOR=white BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>Modules</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<H2>Execute Command</H2>
+
+<P>
+To execute a command with CLI parameters from the desktop you use the "Execute Command" module.  To launch the module you can either select the menu item from the Scalos-Screen pull-down menu;  Or use the keyboard shortcut <B>RIGHT-AMIGA + E</B>.  If you double click a file on the desktop which doesn't have an associated icon file (a file sharing the same name but with the additional ".info" extension), the "Execute Command" window will also be opened: and the name of the file you double clicked on is placed in to the string gadget automatically. 
+</P>
+
+<P>
+<CENTER>
+<IMG SRC="images/mod_execom1" ALT="Execute Command Window" WIDTH=412 HEIGHT=111>
+</CENTER>
+</P>
+<P>
+The "Execute Command" window offers a number of options to the user.  The most common action is to enter a command line and execute it.
+<BR><BR>
+<CENTER><IMG SRC="images/mod_execom2" ALT="String Gadget" WIDTH=338 HEIGHT=35></CENTER><BR>
+Use the string gadget to enter you command line.  You may use the standard Amiga clipboard to cut, paste and copy text to and from the string gadget.
+<BR><BR>
+<IMG SRC="images/mod_execom3" ALT="File Requester Button" WIDTH=29 HEIGHT=25>
+If you have forgotten the location of the command you wish to run, a file requester is available.  Press the file image button to the right of the command string gadget toopen the requester.  Use this to navigate the devices mounted on your system and select the required file.  
+<BR><BR>
+To save typing filenames into the string gadget, simply drag the icons from the desktop on to the string gadget and release the mouse button.  If there is already text in the string then the icon filename will be appended to the string - additional spacing to seperate filenames is automatically added.
+<BR><BR>
+<CENTER><IMG SRC="images/mod_execom4" ALT="Numerical Gadget" WIDTH=137 HEIGHT=27></CENTER><BR>
+You may adjust the amount of Stack allocated to the command when executed using the numerical gadget in the bottom centre of the window.  Two arrow gadgets to the right of the numerical gadget allow quick increment and decrement of the current stack value.
+</P>
+
+<P>
+<IMG SRC="images/mod_execom5" ALT="History Pop-up Button" WIDTH=26 HEIGHT=23>
+Until your machine is rebooted, the last ten command lines you've entered (along with its associated stack value) is saved in a history list.  To get access to the history list - hit the pop-up gadget to the right of the command string gadget.  Double click on the required command line and it will replace the contents of both the command line and stack value.
+</P>
+
+<P>
+<IMG SRC="images/mod_execom6" ALT="Shell Shortcut" WIDTH=59 HEIGHT=54>
+A shortcut to launching a new shell is achieved by clicking on the larger animated icon on the left of the "Execute Command" window.  The main window will close and a shell window will open.
+</P>
+<BR>
+
+<H3>Other Uses</H3>
+<P>
+Along with executing a command line the module also interprets other lines entered.  If you enter a...
+</P>
+
+<UL>
+<LI><B>Directory path</B> a corresponding window will open and display its contents on the desktop.</LI>
+<LI><B>Web address</B> will be sent to your prefered web browser (using the OpenURL package available on Aminet) for browsing.</LI>
+</UL>
+
+</BODY>
+
+</HTML>

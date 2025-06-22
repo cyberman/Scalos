@@ -1,0 +1,121 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, arexx">
+
+	<TITLE>Scalos Arexx</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="../images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><nobr><FONT COLOR=white><B>Arexx Command</B></FONT><nobr></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="../images/headingbar"></TD>
+</TR>
+</TABLE>
+<BR>
+
+<H3>NAME</H3>
+<DL><DD>CHANGEWINDOW</DD></DL>
+
+<H3>SYNOPSIS</H3>
+<DL><DD>
+CHANGEWINDOW <var>[WINDOW] &lt;ROOT&#124;ACTIVE&#124;Drawer name&gt; [[LEFTEDGE] &lt;new left edge
+position&gt;][[TOPEDGE] &lt;new top edge position&gt;] [[WIDTH] &lt;new window
+width&gt;] [[HEIGHT] &lt;new window height&gt;]</var>
+</DD></DL>
+
+<H3>FUNCTION</H3>
+<DL><DD>
+This function will attempt to alter the size and position of the specified window.
+</DD></DL>
+
+<H3>INPUTS</H3>
+<DL><DD>
+<var>WINDOW</var>
+<P>
+Either &quot;ROOT&quot; to resize/move the Workbench root window (where volume icons and
+AppIcons live), &quot;ACTIVE&quot; to change the currently active Workbench window or
+the fully qualified name of a drawer window to change. Note that the drawer
+window must already be open.
+</P>
+<P>
+If no <var>WINDOW</var> parameter is specified, this command will try to operate on the
+currently active Workbench window.
+</P>
+LEFTEDGE
+
+New left edge window position.
+
+TOPEDGE
+
+New top edge window position.
+
+WIDTH
+
+New window width.
+
+HEIGHT
+
+New window height.
+
+
+</DD></DL>
+
+<H3>RESULTS</H3>
+<DL><DD>
+-
+</DD></DL>
+
+<H3>EXAMPLE</H3>
+<DL><DD>
+<pre>
+/* Change the root window; move it to position 10,30. * and change its size to 200100 pixels */
+ADDRESS workbench
+CHANGEWINDOW root LEFTEDGE 10 TOPEDGE 30 WIDTH 200 HEIGHT 100
+
+/* Change the currently active window */
+CHANGEWINDOW active 20 40 200 100
+</pre>
+</DD></DL>
+
+<H3>ERRORS</H3>
+<DL><DD>
+<UL>
+<LI>10 - If the named window cannot be changed; this can also happen if you
+specified &quot;ACTIVE&quot; as the window name and none of the Workbench windows is
+currently active.</LI>
+</UL>
+</DD></DL>
+
+<H3>NOTES</H3>
+<DL><DD>
+<P>
+You can only activate windows which belong to Scalos, windows which are showing
+directory contents as icons or text.
+</P>
+<P>
+If you choose to have a window activated that is not the desktop window you must
+make sure that the window name is given as a valid filesystem path name. For
+example &quot;Work:&quot; is a fully qualified name, and so is &quot;SYS:Devs/Monitors&quot;.
+&quot;Prefs/Env-Archive&quot; would not be a valid window name. A valid name
+always contains the name of a volume, a device, or an assignment.
+</P>
+</DD></DL>
+
+<H3>BUGS</H3>
+<DL><DD>
+None
+</DD></DL>
+
+<H3>SEE ALSO</H3>
+<DL><DD>
+<A HREF="ActivateWindow.html">ACTIVATEWINDOW</A>, <A HREF="MoveWindow.html">MOVEWINDOW</A>, <A HREF="Window.html">WINDOW</A>, <A HREF="WindowToBack.html">WINDOWTOBACK</A>, <A HREF="WindowToFront.html">WINDOWTOFRONT</A>, <A HREF="ZoomWindow.html">ZOOMWINDOW</A>
+</DD></DL>
+
+</BODY>
+
+</HTML>

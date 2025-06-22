@@ -1,0 +1,22 @@
+#ifndef _PPCINLINE_SCALOSPREFSPLUGIN_H
+#define _PPCINLINE_SCALOSPREFSPLUGIN_H
+
+#ifndef CLIB_SCALOSPREFSPLUGIN_PROTOS_H
+#define CLIB_SCALOSPREFSPLUGIN_PROTOS_H
+#endif
+
+#ifndef __PPCINLINE_MACROS_H
+#include <ppcinline/macros.h>
+#endif
+
+#include <exec/types.h>
+
+#ifndef SCALOSPREFSPLUGIN_BASE_NAME
+#define SCALOSPREFSPLUGIN_BASE_NAME ScalosPrefsPluginBase
+#endif
+
+#define SCAGetPrefsInfo(which) \
+	LP1(0x1e, ULONG, SCAGetPrefsInfo, LONG, which, d0, \
+	, SCALOSPREFSPLUGIN_BASE_NAME, IF_CACHEFLUSHALL, NULL, 0, IF_CACHEFLUSHALL, NULL, 0)
+
+#endif /*  _PPCINLINE_SCALOSPREFSPLUGIN_H  */

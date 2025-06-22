@@ -1,0 +1,17 @@
+/* BuildArchive */
+/* 02 Jan 2004 12:27:31 */
+/* $Date$ */
+/* $Revision:  */
+/* $Id$ */
+
+LHAName = '../Reserve/Scalos_'
+
+LHAName = LHAName || date("s") || '.tar.gz'
+
+say LHAName
+
+address command 
+
+'tar -cvz -X ExcludeList -f ' || LHAName || ' #?'
+
+'tar -tzf ' || LHAName || ' #?'

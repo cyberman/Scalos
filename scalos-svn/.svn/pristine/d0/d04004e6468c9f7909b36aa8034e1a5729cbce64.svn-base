@@ -1,0 +1,80 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, Installation">
+
+	<TITLE>Scalos Installation</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>Installation</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+Before attempting the installation of Scalos please be aware that you
+will require an installation of <A HREF="MUI.html">MUI</A> with at least version 3.8 which can be found at <TT>[Aminet:util/libs/mui38usr.lha]</TT>
+in order to run the configuration programs.  It is also sensible to ensure
+you have a full installation of at least OS3.0 on your boot partition.
+</P>
+
+<P>
+To install the main Scalos distribution use the supplied installer.  This sets up
+the directory structure, <TT>SCALOS:</TT> assign in your <TT>s:user-startup</TT> sequence and
+copies relevant files to your system boot partition.
+</P>
+
+<P>
+Please consult the <A HREF="FAQ.html">Frequently Asked Questions</A> if you have any problems after installation and rebooting to run Scalos.
+</P>
+
+<BR><BR>
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>Support Libraries</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+In addition to the basic Scalos installation you will be required to install
+the following 3rd party libraries to gain full functionality of some features
+of Scalos:
+</P>
+<BR>
+<TABLE BORDER=0 ALIGN=CENTER>
+<TR><TD BGCOLOR=Gray><B>3rd Party Library</B></TD><TD BGCOLOR=gray><B>Version</B></TD><TD BGCOLOR=gray><B>Download Location</B></TD></TR>
+<TR><TD>GuiGFX</TD><TD>v19</TD><TD><A HREF="http://www.neoscientists.org/~bifat/binarydistillery/guigfxlib.shtml">TEK neoscientists</A></TD></TR>
+<TR><TD>Render</TD><TD>v30</TD><TD><A HREF="http://www.neoscientists.org/~bifat/binarydistillery/renderlib.shtml">TEK neoscientists</A></TD></TR>
+</TABLE>
+
+<BR><BR>
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>MUI Custom Classes</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+The various MUI modules for Scalos make use of an array of custom classes (known as MCCs).  It
+is sensible to have them all installed on your system to avoid problems.  Where
+possible keep them updated when a new release appears on Aminet.  Some classes
+are not posted on the Aminet network, you can find them at "The Unoffical MUI Custom Class List" (TUMULT) <A HREF="http://www.amiga.dk/tumult/tumult.html">http://www.amiga.dk/tumult/tumult.html</A>
+</P>
+<BR>
+<TABLE BORDER=0 ALIGN=CENTER>
+<TR><TD BGCOLOR=Gray><B>MUI Custom Class</B></TD><TD BGCOLOR=gray><B>Version</B></TD><TD BGCOLOR=gray><B>Download Location</B></TD></TR>
+<TR><TD>TransferAnim</TD><TD>v1.5</TD><TD><TT>Aminet:dev/mui/MCC_TransferAn.lha</TT></TD></TR>
+<TR><TD>BetterString</TD><TD>v11.3</TD><TD><TT>http://sahl.mondo.dk/duff/MCC_BetterString.LZX</TT></TD></TR>
+</TABLE>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,11 @@
+V1.6
+Bugfix: Startup crashes under MorphOS should now be fixed
+
+V1.4
+The functionality to wait until Scalos opens its first window on the workbench screen can now be suppressed with NOWAIT
+
+V1.3
+LoadWB now waits until Scalos opened its first Window on the workbench screen. This is to avoid problems with Birdie
+
+V1.1
+Added options: &quot;-DEBUG&quot;, &quot;DELAY&quot; and &quot;CLEANUP&quot;. They won't do anything, but it will make LoadWB.Scalos more compatible

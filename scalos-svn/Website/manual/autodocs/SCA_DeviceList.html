@@ -1,0 +1,24 @@
+Content-Type: text/html
+
+
+	<HTML><HEAD><TITLE>DeviceList.sca</TITLE></HEAD><BODY BACKGROUND='http://scalos.noname.fr/gfx/backdrop.gif'>
+	
+	<FONT SIZE="5"><B>DeviceList.sca</B></FONT><P><UL>
+	<LI><A HREF="#1">--background</A></LI>
+<LI><A HREF="#2">SCCM_DeviceList_Generate</A></LI>
+<LI><A HREF="#3">SCCM_DeviceList_FreeDevNode</A></LI>
+<LI><A HREF="#4">SCCM_DeviceList_Filter</A></LI>
+</UL><P><UL><UL>
+<A NAME="1"><BR>    </LI><LI><B><FONT SIZE="4">NAME</FONT></B><UL><BR>	--background<BR><BR>    DESCRIPTION<BR>	This class is used to generate a list of all currently available<BR>	devices. The list will be used to load or update diskicons. You may<BR>	use this class to filter the devices.<BR><BR></UL><HR>
+<A NAME="2"><BR>
+<BR>    </LI><LI><B><FONT SIZE="4">NAME</FONT></B><UL><BR>	SCCM_DeviceList_Generate<BR><BR></UL><FONT SIZE="4"><B>    SYNOPSIS<BR></B></FONT><PRE>	DoMethod(obj,SCCM_DeviceList_Generate,APTR NodeList);<BR><BR></PRE>&nbsp;<BR><BR><FONT SIZE="4"><B>    FUNCTION<BR></B></FONT><UL>	Generates the full list of devices.<BR>	Scans through the DosList and adds a ScaDeviceIcon to the<BR>	NodeList for every appropriate device/volume found.<BR>	When finished scanning, applies SCCM_DeviceList_Filter to the<BR>	NodeList of generated icons.<BR><BR></UL><FONT SIZE="4"><B>    INPUTS<BR></B></FONT><UL>	NodeList - pointer to an empty ScalosNodeList<BR><BR></UL><FONT SIZE="4"><B>    SEE ALSO<BR></B></FONT><UL></UL><HR>
+<A NAME="3"><BR>
+<BR>    </LI><LI><B><FONT SIZE="4">NAME</FONT></B><UL><BR>	SCCM_DeviceList_FreeDevNode<BR><BR></UL><FONT SIZE="4"><B>    SYNOPSIS<BR></B></FONT><PRE>	DoMethod(obj,SCCM_DeviceList_FreeDevNode,APTR Node);<BR><BR></PRE>&nbsp;<BR><BR><FONT SIZE="4"><B>    FUNCTION<BR></B></FONT><UL>	Frees anything inside of this node, but not the node itself.<BR><BR></UL><FONT SIZE="4"><B>    INPUTS<BR></B></FONT><UL>	Node - DeviceNode<BR><BR></UL><FONT SIZE="4"><B>    SEE ALSO<BR></B></FONT><UL></UL><HR>
+<A NAME="4"><BR>
+<BR>    </LI><LI><B><FONT SIZE="4">NAME</FONT></B><UL><BR>	SCCM_DeviceList_Filter<BR><BR></UL><FONT SIZE="4"><B>    SYNOPSIS<BR></B></FONT><PRE>	DoMethod(obj,SCCM_DeviceList_Filter,APTR NodeList);<BR><BR></PRE>&nbsp;<BR><BR><FONT SIZE="4"><B>    FUNCTION<BR></B></FONT><UL>	Filters the list of DeviceNodes. You can hide some devices or restore<BR>	the nodelist. Default: all DOS-Devices without a volume will be<BR>	filtered. Checkout the flags field in the DeviceNode structure.<BR><BR></UL><FONT SIZE="4"><B>    INPUTS<BR></B></FONT><UL>	NodeList - pointer to a ScalosNodeList<BR><BR></UL><FONT SIZE="4"><B>    SEE ALSO<BR></B></FONT><UL></UL><HR>
+<A NAME="5"><BR>
+ 
+	</LI></UL><P align="right">
+	Generated on 30th March 2009 by ad2html.pl v0.87 by <A HREF="http://www.philprice.net" TARGET="_blank">Phil Price</A>
+	</BODY></HTML>
+	

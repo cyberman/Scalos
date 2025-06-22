@@ -1,0 +1,57 @@
+V40.11
+Improvement: Automatically use Zune instead of MUI if present. Fixes crashes with prefs pugins with AFA OS installed
+Improvement: thumbnail menu image is now optionally loaded from &quot;THEME:prefs/plugins/palette&quot;
+
+V40.10
+Improvement: Added two new pens for filling of thumbnail backgrounds.
+Improvement: Moved color wheel from separate register page to new pane in main page.
+Bugfix: Context menu only worked over listviews.
+Improvement: All listviews are now user-sortable via mouse-click on column title.
+
+V40.9
+Improvement &quot;Open&quot; and &quot;save&quot; requester are only allocated once. This way, directory and file name for &quot;open&quot; and &quot;save as&quot; are remembered until preferences are closed.
+Improvement: Added checking of MUI MCCs required by prefs plugins
+
+V40.8
+Improvement: Changed background of prefs page to MUII_PageBack
+
+V40.7
+Improvement: Replaced Assembler library startup code by C. No functional changes
+
+V40.6
+Bugfix: Fixed handling of internal &quot;modified&quot; flag
+Improvement: Added lamp indicator for &quot;modified&quot; flags
+Bugfix: Changing the &quot;create icons&quot; menu item had no effect.
+
+V40.5
+Bugfix: Number of allocatable pens was too small by 1. Fixed.
+
+V40.4
+Improvement: Added icon for iconified state
+
+V40.3
+Improvement: Moved core functionaility to &quot;MenuPrefs.prefsplugin&quot;
+
+V40.2
+Bugfix: Removed memory leak in CLI startup code
+
+V40.1
+Improvement: Added display for number of currently allocated and available pens
+
+V40.0
+Re-written from scratch in C
+Improvement: Added separate pens for selected icon text, icon text outline, and icon text shadow
+
+V39.9
+Improvement: Added new pen for status bar text
+
+V39.8
+Improvement: Added new pens for the dragging info text
+
+V39.6
+Improvement: On startup, now automatically reads old &quot;Palette.prefs&quot; if &quot;Palette13.prefs&quot; not found and no filename given
+Bugfix: Corrected wrong message IDs in &quot;Pen Adjust&quot; window, leading to wrong pen descriptions
+
+V39.4
+Improvement: Changed locale strings to CatComp #?.cd #?.ct
+Improvement: Added &quot;About&quot; requester

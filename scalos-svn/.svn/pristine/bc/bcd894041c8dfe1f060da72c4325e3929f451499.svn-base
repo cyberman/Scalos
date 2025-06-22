@@ -1,0 +1,552 @@
+V41.8
+Improvement: File transfer class duration estimate now also displays hours
+Improvement: Updated memory allocator to dlmalloc 2.8.5
+Improvement: Updated sqlite3.library to SQLite3 V3.7.8
+Improvement: Updated sqlite3.library to SQLite3 V3.7.6.3
+Improvement: Updated sqlite3.library to SQLite3 V3.7.6.2
+Improvement: added new menu command to open disks or drawers in a new browser window
+Improvement: Upgraded libpng to 1.5.1
+Improvement: Updated sqlite3.library to SQLite3 V3.7.5
+Bugfix: if new directory couldn't be locked upon creation (&quot;Object in use&quot;), Scalos failed to show drawer icon
+Improvement: if project icon has invalid tool, the pop-up requester now has an option to use the &quot;default tool&quot;, ie. the default tool of the corresponding default icon, as stored in ENV:Sys
+Improvement: If no default tool is present in a project icon, try to get a default icon and if present, use default tool from the default icon
+Improvement: updated libZ to version 1.2.5
+Improvement: updated libcurl (used by updater.module) to version 7.21.3
+Bugfix: on MorphOS, most WMV video thumbnails contained garbage
+Bugfix: corrected various issues with soft links, e.g. after creating a new soft link to an image, it didn't show up correctly inside icon window. Icon windows failed to display underlined soft link names if no icon was present (i.e. for default icons)
+Bugfix: under certain circumstances, glowiconobject set wrong icon size (too small) which caused iconobject.datatype to overwrite allocated memory
+Improvement: Upgraded libpng to 1.4.5
+Improvement: abborting long directory reads via &quot;parent&quot;, &quot;forward&quot;, &quot;backward&quot;, etc. buttons now works as expected
+Improvement: Updated sqlite3.library to SQLite3 V3.7.4
+Bugfix: when icon was dragged over drawer in same window, pop-open window function was broken
+Bugfix: information.module: corrected overflow on device usage percentage calculation
+Bugfix: disabled thumbnail generation in popup windows during drag&amp;drop
+Improvement: Updated sqlite3.library to SQLite3 V3.7.3
+Improvement: Updated sqlite3.library to SQLite3 V3.7.2
+Bugfix: the Rename patch caused attempts to lock an invalid path containing gargabe characters
+Bugfix: with AsyncWB installed, Scalos failed to copy associated icons when copying objects
+Improvement: Updated sqlite3.library to SQLite3 V3.7.0.1
+Improvement: Added support for SQLite3 WAL
+Improvement: Updated sqlite3.library to SQLite3 V3.7.0
+Improvement: Upgraded libpng to 1.4.3
+Bugfix: window history entries are now adjusted correctly when a listed directory is renamed
+Improvement: jpegpicture.pvplugin : now JPG pictures are read in one big chunk. This method uses more memory, but greatly speeds up reading images on some file systems (e.g. MorphOS USB ptp)
+Bugfix: finally implemented complete support for backdrop icons created by MorphOS Ambient (shortcuts.prefs). Now Ambient shortcuts can be correctly added and removed.
+Bugfix: enabled workbench.library WBInfo path for all systems. With this fix, AmigaOS4.x Workbenchstart &quot;Information&quot; button works again with Scalos
+Bugfix: for file copying and link creation, detection of already existing icons didn't work
+Improvement: allow individual icon size constraints and icon scale factor per window
+Bugfix: Windowproperties.module: fixed enforcer hit/crash when saving changes
+Improvement: arbitrary scaling of icons (25%..400%) is now possible
+Bugfix: scaling of newicons always displayed garbage
+Improvement: updated libcurl (used by updater.module) to version 7.20.1
+Bugfix: corrected recognition of active 3D-Layers (&quot;Enhanced Display&quot;) with MorphOS 2.x
+Bugfix: do not check RAM disk for sucfficient space (when copying files) when it returns 0 blocks free (AmigaOS3.x RAM disk always returns 0 free blocks)
+Improvement: added option to select whether drawers in text windows are displayed before files, after files, or with files
+Improvement: Updater.module: added signature check for downloaded versions.txt file
+Bugfix: corrected line height calculation for text windows
+Bugfix: minimum window size is now adjusted, taking control bar and status bar into account
+
+V41.7
+Improvement: Updated libjpeg to libjpeg V8 for Morphos
+Improvement: Updated sqlite3.library to SQLite3 V3.6.23
+Bugfix: added Workaround against &quot;menu-open-lockup&quot; with MorphOS
+Improvement: added check for sufficient space on copy/move operations
+Bugfix: corrected handling of copy/move progress without valid totals count
+Improvement: touching pattern.prefs trigger selection of new random background patterns, even when prefs have not changed
+Bugfix: Reboot button in about window didn't work with MorphOS 1.x
+Bugfix: screen backdrop pattern didn't work
+Bugfix: links to volumes could not be created
+Bugfix: drop menu didnt work when dragging volumes into icon windows
+Bugfix: Undo/Redo function was unable to remove copied (non-empty) directories
+Improvement: added capability to undo/redo closing windows
+Bugfix: sqlite3.library reported read-only state for &quot;RAM:t&quot;
+Bugfix: scalos crashed when drag-copying a disk into an icon window
+Bugfix: thumbnail cache database sometimes was left open if ThumbnailCacheOpen() failed
+Improvement: added user configuration for SQLite3 thumbnail database temporary files directory
+Improvement: implemented large file (4 >GBytes) support for AmigaOS4
+Improvement: added new popup menu for desktop
+Improvement: Updated sqlite3.library to SQLite3 V3.6.22
+Bugfix: fixed GR with AmigaOS4 when user attempted to run a second Scalos instance
+Bugfix: improved DosList locking fixed occasional crash when volumes/devices go away
+Improvement: requester informs user if Scalos is run a second time
+Improvement: requesters informs user if menu preferences cannot be read
+Bugfix: corrected problems with text window striping and window resizing under MorphOS
+Bugfix: with &quot;apply to all selected icons&quot; enabled, popup menu selection always was applied to one icon less than selected
+Improvement: information.module: added Undo/Redo support for object renaming
+Bugfix: information.module: for text windows, icons are not displayed correctly
+Improvement: Updated sqlite3.library to SQLite3 V3.6.21
+Improvement: Upgraded libpng to 1.2.41 (68k)
+Bugfix: worked around a possible GCC bug that caused filetypes prefs to crash on AmigaOS4 when trying to edit an attribute
+Bugfix: In pattern preferences, separate preview right of listview was broken
+Improvement: eliminated separate Rename.module for rename-in-place. Now there is only one Rename.module, rename-in-place can be activated by setting an environment variable &quot;Scalos/RENAMEINPLACE&quot; to any value (e.g. &quot;setenv save Scalos/RENAMEINPLACE 1&quot;)
+Improvement: Updated sqlite3.library to SQLite3 V3.6.20.
+Bugfix: Highlighting window gadgets when mouse pointer was moved over them didn't work with AmigaOS4
+Bugfix: On MorphOS 2.x, main menu entries were never disabled.
+Bugfix: suppress system requester when relabelling a volume
+Bugfix: corrected location of rename gadget for RenameInPlace
+Improvement: Updated sqlite3.library to SQLite3 V3.6.19
+Improvement: Add support for control bar also for standard (non-browser) windows
+Improvement: Windowproperties.module: control bar can be switched off for individual windows
+Bugfix: with AmigaOS4, centered window background images sometimes did not display
+Improvement: Upgraded libpng 1.2.39 to 1.2.40 (68k and MOS)
+Improvement: added new sophisticated text window selection marker
+Improvement: Moved main preferences text window settings to separate page, and added configuration for new selection marker
+Bugfix: popupmenu.library: zoom effect didn't work correctly on MorphOS if &quot;Enhanced Display&quot; was enabled
+Improvement: Updated sqlite3.library to SQLite3 V3.6.18
+Improvement: added new FileTrans subdirectory to default theme
+Improvement: Upgraded libpng 1.2.37 to 1.2.39 (SAS/C and MOS)
+Improvement: Updated sqlite3.library to SQLite3 V3.6.17
+Improvement: enhancements for popup window feature: now works with single-window. Added preferences options to enable/disable popup window feature and to adjust popup delay
+Bugfix: information.module: icon drop zone drop marks were not displayed correctly under MorphOS 2.3
+Improvement: data transfer speed in copy/move progress window is now rounded to two decimals
+Improvement: added support for dynamic window resizing with MorphOS 2.3 Advanced Display Engine
+Improvement: added experimental new feature: drawers and volumes pop up when mouse pointer stays longer than 3 seconds over them during Drag&amp;Drop. All popped up windows automatically close when D&amp;D is finished
+Improvement: added more details to copy/move progress window. Cancel button now had themed image. Copy/move progress window is now sizeable
+Improvement: Copy/move recognizes if destination file system does not support links, and asks the user whether to skip the link(s), copy the link contents, or abort the entire operation
+Bugfix: information.module:crash when trying to replace icon image by dropping another icon on the image
+Bugfix: information.module:drop mark wasn't displayed correctly with MorphOS 2.x and 3D layers enabled
+Bugfix: Under rare circumstances, on startup some left-out icons erroneously appeared inside their directory windows instead of the desktop window
+Improvement: Updated sqlite3.library to SQLite3 3.6.16
+Bugfix: updating left-out icons left the Scalos main window task with an invalid current directory handle
+Improvement: Updated sqlite3.library to SQLite3 V3.6.15
+Upgraded libpng 1.2.36 to 1.2.37 (SAS/C and MOS)
+Upgraded libpng 1.2.35 to 1.2.36 (SAS/C and MOS)
+Improvement: Updated sqlite3.library to SQLite3 3.6.14.2
+Improvement: Updated sqlite3.library to SQLite3 3.6.14.1
+Improvement: icons can now be selected incrementally via keyboard input
+Bugfix: when switching to non-backdrop desktop window, the window was created with 100% transparency (invisible)
+Improvement: added filetype for FLV video
+Improvement: Updated sqlite3.library to SQLite3 V3.6.14
+Bugfix: Extras comment.module didn't increment files via asl requester using ASLFR_DOMULTISELECT tag
+Bugfix: about window gadget tooltips kept appearing over and over
+Improvement: gadget help tooltips in about window no longer pop up immediately when mouse is moved over gadget, but with a short delay
+Improvement: added smooth fade-in and fade-out for Splash and About windows (MorphOS2.x and AmigaOS4.x only)
+Improvement: Updated sqlite3.library to SQLite3 V3.6.12
+Bugfix: in default menu preferences, prefs drawer didn't open due to wrong path
+Bugfix: information.module:wrong icon was displayed for all entries inside a drawer if at least one icon was left-out from this drawer to the desktop
+V41.6
+Improvement: added support for alpha transparency on AmigaOS4 with defpicture.pvplugin
+Improvement: Added general support for persistent storing of sorting direction with new ddFlags values introduced by AmigaOS4
+Improvement: Updated sqlite3.library to SQLite3 V3.6.11
+Improvement: Added support for AmigaOS4 CPU information in title bar
+Bugfix: introduced support for alpha transparency with AmigaOS4 datatypes
+Bugfix: Popup menu for AppIcons didn't work correctl if &quot;apply to all selected icons&quot; was enabled
+Bugfix: Occasional hit with AmigaOS4 moving the mouse over the About window gadgets
+Improvement. informationmodule: now displays name of recognized filetype and icon position.
+Improvement: lots of changes to allow build with latest AmigaOS4.1 SDK
+Improvement: find.module result list can now be copied to clipboard
+Improvement: Updated sqlite3.library to SQLite3 V3.6.10
+Improvement: Updated sqlite3.library to SQLite3 V3.6.8
+Improvement: added different degrees of transparency for active and inactive Scalos windows
+Improvement: Window transparency can be individually configured for each window
+Improvement: added support for transparent Scalos windows - MorphOS 2.x only
+Improvement: replaced the ugly GadTools buttons in About window by themed image buttons. Fallback to simple rctangular buttons is provided
+Improvement: &quot;Reboot&quot; dialog from About window now also supports shutdown (Currently only with MorphOS 2.x)
+Improvement: added option to highlight text of selected icons by a surrounding rectangle with rounded corners, with user-configurable color, borders and corner radius
+Improvement: added new Commodities Exchange module
+Bugfix: finally managed to make dropmarks work again properly with MorphOS 2.x and 3D layers
+Bugfix: after changing standard (non-TT) icon font, icon font always was reset to Topaz/8
+Improvement: tooltips now smoothly fade in and out - MorphOS 2.x only
+Improvement: Cycle and History gadget popup windows now may have configurable background patterns &quot;THEME:Window/ControlBar/CyclePopupBackground&quot; and &quot;THEME:Window/ControlBar/HistoryPopupBackground&quot;
+Bugfix: Fixed major memory leak in video.pvplugin
+Bugfix: Incorrect image reading algorithm in video.pvplugin caused endless loop with certain video format files
+Improvement: find.module history for pattern and contents is now stored persistently. Added Popup menus for history lists
+Improvement: Updated sqlite3.library to SQLite3 V3.6.7
+Improvement: Updated video.pvplugin to use latest libavcodec library (MorphOS only). Now supports more video formats, including several real video format variants
+Improvement: Updated sqlite3.library to SQLite3 V3.6.6.2
+Bugfix: informationmodule: directory size calculation didn't work with large files >2GBytes
+Improvement: Updated sqlite3.library to SQLite3 V3.6.6.1
+Improvement: Updated sqlite3.library to SQLite3 V3.6.6
+Improvement Information.module: Add support for large files (64 bit file size)
+Improvement: Updated sqlite3.library to SQLite3 V3.6.5
+Improvement: Updated sqlite3.library to SQLite3 V3.6.4
+Bugfix: automatic icon positioning didn't work correctly in small windows with lots of icons
+Improvement: file copy buffer size is now configurable via Scalos Prefs
+Improvement: Updated sqlite3.library to SQLite3 V3.6.3
+Bugfix: Added BMF_MINPLANES flag at save BitMap allocations. This solves problem with garbage visible after removing dropmarks with MorphOS 2.x
+Bugfix: Added BMF_MINPLANES flag at FrameImageClass. BitMap allocation. This resolves visual garbage on cycle gadget backgrounds with MorphOS 2.x
+Improvement: Added new find.module
+Improvement: Updated sqlite3.library to SQLite3 V3.6.2
+Bugfix.in SCA_OpenIconWindow() and SCA_OpenDrawerByName() library functions, SCA_ShowAllMode and SCA_ShowAllFiles tags explicitly given now take precedence over any window or icon settings
+Improvement: added new internal command &quot;find&quot;, to be used with upcoming &quot;find.module&quot;
+Bugfix: scalosgfx.library function ScalosGfxFillARGBFromBitMap() didn't set Alpha values correctly for ARGB/RGBA/BGRA input BitMap types
+Improvement: defpicture.pvplugin now supports Alpha transparency for thumbnails (if source image type contains Alpha information)
+Improvement: Trying to quit Scalos in workbench replacement mode now gives a reasonable error message
+Bugfix: USB device with MSD* file system type were not recognized properly
+Improvement: Made several new sqlite3 functions accessible via library calls
+Improvement: Updated sqlite3.library to SQLite3 V3.6.1
+Improvement: Control bar gadgets are now updated on-the-fly, i.e. no more reason to close and re-open a window after changes in control bar gadget preferences
+Bugfix: switching control bar cycle gadgets with mouse wheel didn't work
+Improvement: Added bicubic scaler for improved quality of scaled pictures, e.g. thumbnails
+Bugfix: solved various problems when preferences are reloaded after change, i.e. there should be no more problems saving changed preferences
+Bugfix: plugged several holes in CloneDefIconObject() that could cause crashes, e.g. when desktop was rebuilt after preferences change
+Improvement: Added configurable (both global and per window) checking for overlapping icons
+Improvement: Updated sqlite3.library to SQLite3 V3.6.0
+Bugfix: control bar cycle bar gadget height calculation had a bug which sometimes caused control bar to become way to tall
+Improvement: Added user-configurable images for text window sort order indicators (&quot;THEME:Window/SortAscending&quot; and &quot;THEME:Window/SortDescending&quot;)
+Improvement: while dragging icons, window contents can be scrolled to reveal invisible contents by holding the mouse pointer over the window borders
+Improvement: extended DefIcons functionality to cover classification of WBDISK objects, i.e. USB disks, DVDs or SMB network volumes are now recognized automatically
+Improvement: sorting of text windows can now toggled between ascending and descending order by clicking on the column headers
+Improvement: Updated sqlite3.library to SQLite3 V3.5.9
+Bugfix: Icons without object were handled differently on original directory read than on window update
+Improvement: Added support for shadowed/outline text window icons. Used for highlighing cut icons, and for mouse-over effect
+Improvement: Updated sqlite3.library to SQLite3 V3.5.8.
+Improvement: Worked around a certain type of semaphore deadlock with icon lists. This resolves locked desktop after dragging around some animated icons
+Improvement: Updated sqlite3.library to SQLite3 V3.5.7
+Bugfix: browser window didn't correctly set non-zero window offsets from drawer icon
+Bugfix: control bar gadgets which are hidden due to lack of space were erroneously drawn when corresponding attribute was changed, e.g. when window view mode was switched
+Improvement: sped up text window redraw
+Improvement: added support for text icon highlighted and shadowed state
+Bugfix: Added safeguard against possible division by 0 in popupmenu.library
+Improvement: blurred transparent area now look nicer due to switching from 3x3 to 5x5 blur matrix
+Improvement: for text icons and TTLayout engine, SetSoftStyle() and SetFont() is now only called if really required
+Bugfix: default Pattern wasn't set correctly according to icon's view mode in SCA_OpenIconWindow()
+Bugfix: SCA_OpenDrawerByNameTags() failed to open drawers with no associated icon
+Bugfix: text windows were not updated correctly when files or drawers were added while window was iconified
+Bugfix: window close gadget had to be clicked twice during thumbnail creation
+Improvement: Updated sqlite3.library to SQLite3 V3.5.6
+Improvement: Added caching for default icons, to speed up opening drawer windows with many default icons
+Bugfix: For drag-drop label (&quot;334 files, 12 drawers&quot;), detection of singular/plural message for files (&quot;file&quot; vs &quot;files&quot;) was wrong
+Bugfix: At end of drag&drop, icons in text windows were not deselected correctly
+Bugfix: At end of drag&drop, selected icon count in status bar wasn't updated immediately
+Improvement: Added two new scalos.library functions SCA_LockDrag() and SCA_UnlockDrag()
+Improvement: Icons no longer stay selected after being dragged
+Improvement Information.module: Highlighting of icon drop zones when icons are dragged over them now also works with MUI 4.0
+Improvement Window Properties Module: Selection of window background now has a drop-down list with preview thumbnails
+Improvement: popup menus now have smooth dropshadows
+Improvement: Updated sqlite3.library to SQLite3 V3.5.4
+Bugfix: Status bar never showed &quot;View all&quot; icon when a window was opened
+Bugfix: enforcer hits if &quot;Mark icon under mouse&quot; enabled
+Improvement: updated to libpng 1.2.23
+Improvement Information.module(MUI): Changes volume file system field to float text, in order to prevent window to become extremely wide
+Improvement: Updated sqlite3.library to SQLite3 V3.5.3
+Bugfix: When screen fotn was changed, status bar font wasn't updated for existing windows
+Improvement: background of transparent tooltips is now drawn blurred
+Improvement: added configurable blurring of transparent popup menu background
+Bugfix: Auto-update caused unnecessary icon refresh if date or protection differed between icon and object
+Improvement: Updated sqlite3.library to SQLite3 V3.5.2
+Bugfix: browser text window column width was not adjusted when switching between different directories
+Bugfix: control bar gadget enable status wasn't updated if selected icon(s) were disabled by clicking into different Scalos window
+Bugfix: control window gadgets were not disabled correctly when icon in different window got disabled with double-click
+Improvement: everything now uses newlib.library as C run time on OS4
+Improvement: Modules and Prefs are now also buit with newlib.library
+Improvement: All Plugins, libraries and datatypes are built now with newlib.library for OS4
+Bugfix: fixed OS4 initialization code that could lead to recoverable alerts when quiting scalos or crashes when expunging scalosgfx
+Improvement: show-all, view mode, and window x/y offset are now remembered for each directory inside browser window.
+Improvement: Icon lists are cached for all directories in browser windows (still experimental).
+Improvement: Updated sqlite3.library to SQLite3 V3.5.1 (still experimental).
+Bugfix: EXALL packet was issued once more after ERROR_NO_MORE_ENTRIES had been returned.
+Improvement: thumbnail cache cleanup no longer removes entries on volumes that are (currently) not mounted.
+Bugfix Information.module(MUI): Window no longer expands vertically when switching icon type.
+Bugfix: drawing selected icons in highlighted state erroneously used the unselected Alpha channel.
+Bugfix: type of PNG icons is no longer incorrectly set due to unreasonable icon hunk attributes (e.g. drawer x/y position for &quot;tool&quot; icon).
+Bugfix: for dual PNG icons, only first icon hunk will be loaded, any further icon hunks are ignored.
+Improvement: about window scrolling can now be toggled by clicking anywhere inside window.
+Bugfix: double-clicking icons didn't wiork while thumbnail generation was in progress.
+
+V41.5
+Bugfix: Information.module(MUI): garbage was displayed instead of device handler ID string
+Improvement: Thumbnail cache cleanup now always removes entries for non-existing files
+Improvement: Added menu command to manually initiate thumbnail cache cleanup
+Information.module(MUI): Added new menu option to get size of drawers always or not at startup. A new &quot;InfoAuGetSize&quot; variable will be created into &quot;env:scalos/&quot; and &quot;envarc:scalos/&quot; to always or never get size at startup. Replaced &quot;information.prefs&quot; by &quot;InfoShowiconPath&quot; variable to show/hide icon path at startup
+Information.module(MUI): Added new menu  option to show or hide the icon path gadget. A new &quot;information.prefs&quot; file will be created into &quot;env:scalos/&quot; and &quot;envarc:scalos/&quot; to always or never show icon path gadget after startup. Removed icon object's selecting codes which allowed the similar &quot;hide/show&quot; function
+Improvement: Added support for centered and unscaled background images, and for scaled images with correct aspect
+Improvement: Added support for single-colour or gradient backfill
+Improvement: path for internal datatypes image cache (previously fixed &quot;t:&quot;) is now user-configurable. On startup, all old Scalos files are removed from that location.
+Improvement: About window no longer starts with empty area
+Improvement: Added button to temporaily stop scrolling of about window
+Improvement: amigaiconobj35.datatype can now retrieve ARGB icons if icon.library does support ICONCTRLA_GetARGBImageData[12]
+Bugfix: Color palette wasn't loaded correctly on Scalos startup
+Improvement: Added build number to Scalos version information (Splash + about)
+Bugfix: Delete.module crashed with file names longer than 39 characters
+Improvement: (IconProperties module) Added SCALOS_BROWSERMODE tooltype support.
+Improvement: &quot;view by type&quot; now finally works
+Improvement: &quot;type&quot; column in text windows is now functional
+Bugfix: installer script failed if languaga setting was different from &quot;English&quot;, &quot;Francais&quot;, or &quot;Deutsch&quot;.
+Improvement: optimized text window refresh. Now windows is only redrawn if really required.
+Bugfix: Moving files didn't correctly update &quot;Show All Files&quot; windows
+Bugfix: Changing truetype icons font didn't have immediate effect (required restart)
+Improvement: devicefilter.plugin no longer requires Workbench V44+, i.e. filtering of device no also works with OS3.0 and 3.1
+Improvement: icons won't stay selected after double-click anymore
+Bugfix: added work-around in defpicture.pvplugin to circumvent a problem with some MorphOS datatypes (e.g. GIF and BMP) that cause the last byte of sac_BitMap to be decremented by 1 when the datatypes object is disposed
+Bugfix: never try to open SQlite3 thumbnail database if user-configured thumbnail cache database name is empty
+Bugfix: Added safeguard to avoid crash when OpenDrawerByName() was called with a device name before desktop window was completely initialized. This could happen if insufficient StartDelay_Seconds for persistent window plugin was selected
+Improvement: font preferences about draw mode and background color for icon text are now taken into account
+Bugfix: incorrect parsing of Workbench font preferences caused wrong background pen and draw mode to be used
+Bugfix: added a workaround to defpicture.pvplugin that permits thumbnails to be generated under OS3.0/3.1 and Picasso96
+Bugfix: Information.module failed to close opened libraries on abort due to missing MCC modules
+Bugfix: defpicture.pvplugin opened scalosgfx.library twice
+Bugfix: Dropmenu did ask separately for each one if multiple icons were dropped
+Bugfix: it was not possible to turn off thumbnails
+
+V41.4
+Improvement: Added optional drop menu to allow comfortable selection between copy, move, or create-link operation
+Improvement: Added optional icon images for popup menus
+Bugfix: errors on link creation were never reported
+Improvement: In German translation, replaced all &quot;link&quot; by &quot;Verkn&uuml;pfung&quot;
+Improvement: Added single-window lasso mode, with scrolling window contents
+This mode is invoked by dragging mouse with configurable qualifier key
+Bugfix: Text icon selection was drawn incorrectly if &quot;Name column selects text icons&quot; was on and window was scrolled horizontally
+Bugfix: Text icon lasso selection used to ignore &quot;Name column selects  text icons&quot; flag
+Improvement: Added support for backfilled thumbnail icons, with selectable color and transparency
+Improvement: lifetime of cached thumbnail icons is now configurable for each drawer. Lifetime may now be set to &quot;forever&quot;.
+Improvement: Added option to always generate square thumbnail icons.
+Improvement: Added ability to scale background images without guigfx.library.
+Improvement: Added new parameter options for menu CLI commands. &quot;%w&quot; inserts path name of current window, &quot;%d&quot; inserts device name of argument icons (useful for &quot;eject&quot; tool).
+Bugfix: Corrected naming of Scalos main process &quot;Workbench&quot; - should fix all remaining path inheritance problems.
+Improvement: Added jpegpicture.pvplugin thumbnail generator for JPEG images. Thumbnails are generated 2 to 3 times faster than with default thumbnail generator
+Improvement: Added filetype-specific preview (=thumbnail) generation plugin system. Standard defpicture.pvplugin behaves exactly like previous build-in thumbnail generation
+Improvement: Windows are now updated immediately when drag-drop copying icons, moving icons, or creating links
+Improvement: Borders around tooltip bubbles are now drawn with antialiasing (GFX card required)
+Bugfix: Applying popup menus to all selected icons didn't work with a single icon under the mouse pointer that hasn't been selected before clicking RMB
+Improvement: Added new user setting to always apply popup menus to every selected icon, regardless of qualifier
+Improvement: Added selectable transparency for tooltip bubbles. Improvement: Clicking into startup splash window causes it to close immediately
+Added setting: Switch on/off the displaying of image thumbnails to be shown if they have no icons
+Improvement: SQL tables are initialized each time the database is opened, so the thumbnail database can be safely renamed or deleted anytime, and Scalos creates new database next time a drawer is opened
+Improvement: Moved image scaling and dithering code to shared library scalosgfx.library
+
+V41.3
+Improvement: Little feature added from File Transfert Class about copy of volumes: If a &quot;disk&quot; icon is located from the volume to copy and only if this icon type is &quot;WBDISK&quot;, the destination drawer icon's image to create will be exactly the same, instead to use the &quot;def_drawer&quot; icon's image.
+Improvement: Objects without icons aren't removed automatically from desktop until Scalos main window is updated or until all is updated(&quot;UpdateAll&quot; command).
+Bugfix: A race condition sometimes crashed Scalos when one of the filetype descriptions was updated.
+Improvement: Added new internal command &quot;createthumbnail&quot;. This command manually creates an icon thumbnail for any image and saves it.
+Bugfix: Due to race condition between SetMenuStrip/ClearMenuStrip and OnMenu/OffMenu, enforcer hits could occur on startup. 
+Bugfix: Added MenuSema protection for menu on/off.
+Improvement: (information.module) Added new settings &quot;Start priority&quot;, &quot;Wait until finished&quot;, and wait time (only for tools located in SYS:WBStartup or any subdirectory).
+Improvement: Prefs flag &quot;auto-leaveout&quot; now also has &quot;auto-putaway&quot; functionality, i.e. dragging a left-icon back into its native window automatically issues a &quot;put away&quot; command.
+Bugfix: Text window auto-update failed to recognize changed entries if time difference was less than one minute (ds_ticks was not checked!).
+Bugfix: In striped text windows, background color of selected entries was incorrect.
+Bugfix: changing view mode (show all vs. show only icons) during reading of icons sometimes caused incomplete display of icons.
+Improvement: Added user-selectable layout direction for each icon type, separate for desktop and standard icon windows.
+Bugfix: window area offsets wt_XOffset and wt_YOffset are cleared if window is opened in backdrop mode or is switched to backdrop mode.
+Bugfix: long-standing bug - under certain circumstances, window refresh while icon update was in progress could cause input.device to block, and entire machine to hang.
+Bugfix: removed potential input.device semaphore deadlock while moving window scrollers.
+Improvement: For MorphOS, added patch for WBInfo workbench library function, which doesn't work otherwise.
+Bugfix information.module IsDevice() didn't work on MorphOS with USB memory stick, causing &quot;information&quot; to fail.
+Bugfix: Redesigned recognition of modified preferences files. Fixes all problems recognizing unchanged prefs, and should resolve lockup problems when changed prefs are applied.
+Improvement: Added support for global trashcan to Empty_Trashcan.module, as defined and selected in delete.module.
+Improvement: Initial version of MUI-based Empty_Trashcan.module.
+Bugfix: In text windows, name field width calculation didn't take left window border into account.
+Bugfix: inherited path of parent process was not used under MOS. The code tried to find the Scalos initial process named &quot;Workbench&quot;, and that didn't work with MorphOS.
+Bugfix: pressing RMB while moving around windows caused MorphOS version to stay in &quot;window move&quot; mode until reboot.
+Bugfix from &quot;prefs.c&quot;: Use of screen title mode &quot;Permanently hidden&quot; option didn'twork correctly and was disabled by MCP screen menu.
+Bugfix from &quot;prefs.c&quot;: Use of &quot;Mark Icon Under Mouse&quot; option didn't work, was only availlable after a reboot.
+Bugfix from &quot;IconWindowClass.c&quot;: After change of new icon window font (non TrueType),icons's labels on desktop(devices, left-out icons) weren't updated.
+
+V41.2
+Improvement: Eliminated artificial &quot;MaxWBArgs&quot; (= 64) limit for WBArgs[]. Now number of selected icons is actually counted, and count is used to allocate WBArgs arrays.
+Bugfix: striped text windows wre not refreshed correctly beyond rightmost text icon column.
+Improvement: mcpgfx.library is no longer required.
+Bugfix: File operations with multiple selected sources displayed incorrect remaining time.
+Bugfix. (Rename.module) could not rename orphaned icons (icons w/o object).
+Bugfix: FileTransClass returned wrong error code when an error was encountered while copying objects, and &quot;replace all&quot; has been selected.
+BugFix: (Rename.module) Under &quot;Viewbyicons&quot; view mode, icons name without objects weren't returned. A error DOS was occurred.
+Bugfix: incorrect first WBstart parameter wa_Lock for project icons caused dnetc client to start in command line window.
+Improvement: Thumbnails are now generated in 256 (or less) colors for icons that don't support true color, e.g. glowicons or newicons.
+Bugfix: double-clicking icons during thumbnail generation now works.
+Improvement: Scalos now tries to always generated thumbnails for visible icons first.
+Improvement: Added menu commands &quot;Copyto&quot; and &quot;MoveTo&quot;.
+
+V41.1
+Bugfix: (Execute_Command.c) A wrong path was returned to the path string buffer
+Bugfix: (Execute_Command.c) Fixed window width according to 30% from screen width
+Improvement: (Rename.c) Improved, string gadget is now activated when applying or skipping the renaming command
+Improvement: (Rename.c) Fixed window width according to 30% from screen width
+Improvement: (NewDrawer.c) Fixed window width to 30% from screen width
+Bugfix: Copying a icon image, IconProperties module didn't copy ToolTypes from old icon to the new icon. 
+Improvement: Scalos now can generate thumbnail views of any image in a drawer. For PNG icons, thumbnails can even be saved. Thumbnails currently only work with a Gfx card on a Workbench screen of 65535 or more colors. We hope to get thumbnails working for standard screens, too, in the near future
+Information.c: Removed &quot;SetAttrs&quot; WBPROJECT's type for iconobj when &quot;.info&quot; was stripped from its name(eg. from Textwindows). Function wasn't appropriated for all others icons type
+Improvement: Newdrawer.MUI module 40.4 - Module now uses iconobject system for new default drawer icon, thus PNG icons can be used on AmigaOS3.x
+Bugfix: Added workaround for MorphOS EndNotify problem - after &quot;use&quot; or &quot;save&quot; of Scalos prefs, some window patterns were not refreshed
+Improvement: Added two new scalos.library functions, SCA_GetDefIconObject and SCA_OpenDrawerByName.
+Improvement: Due to additional Scalos library functions, Scalos version was bumped to 41.1
+
+V40.34
+Bugfix: drag-copying a folder onto another folder of same name on desktop, but located on another volume wasn't possible.
+Improvement: Added new menu commands &quot;showdefault&quot; and &quot;viewbydefault&quot;.
+Updated: Installer script according to news default prefs &quot;Pages&quot; and &quot;Modules&quot; themes used by &quot;Scalos Prefs&quot;(since version 40.16).
+Added: MUIA_ExportID for NewDrawer and Execute_Command modules, loading/saving from/to &quot;ENV:MUI&quot; string content(Execute_Command.c only) and CheckMark objects's states.	 
+Added: &quot;MUIA_Window_Width, MUIV_Window_Width_Screen(45)&quot;, for &quot;NewDrawer.module&quot; decreasing window width at startup.
+Improvement: Functions to Iconproperties.module replacing icon by Drag & Drop and replacing icon image by the default icon image. Same functions as Information.module
+Bugfix: Installer script didn't install window, desktop background images and &quot;def_Iconify.info&quot; icon with &quot;expert mode&quot; user level
+Bugfix: name of device icons wasn't updated after formatting the drive
+Improvement: Made localizable string for &quot;NDOS&quot; disks
+Improvement: OpenURL support for Execute_Command.module.
+
+V40.33
+Improvement: Scalos window popup menu is suppressed over depth-arrange gadgets. This allows MorphOS popup menu to work again
+Bugfix: changing selected icon with cursor up/down keys in text windows caused window contents to shift to rightmost position
+Improvement: Heavily improved installer script. Now all required components are installed, and first-time installation works as expected
+Bugfix: Under rare circumstances, icons were positioned incorrectly on desktop
+Bugfix: resizing simple-refresh windows during automatic icon update caused icons to be drawn outside window interior trashing window borders and causing crashes
+Bugfix: Added workaround for WinUAE - Scalos crashed on startup as WB-replacement
+Bugfix: Disk icons were saved with incorrect name
+Bugfix: &quot;unsnapshoticon&quot; didn't work with device icons
+Bugfix: Internal command &quot;cleanup&quot; was broken due to recent cleanup redrawing optimization
+Bugfix: Unsnapshotting multiple icons caused semaphore deadlock
+Bugfix: PNG images with transparent background were not displayed correctly as splash and about logo
+Bugfix: Added checking for mupltiple instances of left-out icons
+
+V40.32
+Improvement: New window title bar's refreshing setting. Screen and window title bars are refreshed separately
+Bugfix: OpenDrawerByName failed to open drawers without icons
+Bugfix: prefAutoCleanupOnResize now is only honored for &quot;view-by-icon&quot; windows
+Bugfix: Added check for NULL ws_Lock in CloseWorkbenchObjectA()
+Bugfix: Fixed leak in IsOpen() which could leave Scalos window list locked on exit
+Bugfix: Added more safeguards against use of invalid ws_Window pointer
+Bugfix: Added locking of WindowSemaphore to CheckUpdate functions, in order to window from being closed until update finished
+Bugfix: Added missing check for NULL iwtUnderPointer
+Improvement: Redesign of popup menu trigger mechanism - used to work with IDCMP_MENUVERIFY, but that didn't work reliably under MorphOS. Now a Scalos InputHandler is installed which watches all input events, and causes popup menus to show up
+Bugfix: &quot;resize to fit&quot; failed to update the icons when increasing window size.
+Improvement: After &quot;unsnapshot&quot; menu command, icon is automatically repositioned (just like &quot;cleanup&quot;)
+Improvement: Added &quot;auto-leavout&quot; feature
+Bugfix: Corrected handling of &quot;INF_SupportsSnapshot&quot; and &quot;INF_SupportsUnSnapshot&quot; flags on automatic icon update
+Improvement: Added new feature &quot;Highlight icon under pointer&quot;
+Improvement: Added PPC CPU types for MorphOS
+Bugfix: Added correct setting of in_SupportFlags for Ambient shortcut icons
+Bugfix: Files were not updated after change of date and time
+Bugfix: Files were not updated after change of protection bits.
+Bugfix: After change of Scalos prefs, text window font (non TrueType) was no longer recognized, and screen font was used instead.
+Bugfix: After unsuccessful try to quit Scalos (because some application still has scalos.library open), creation of new Scalos subprocesses didn't work anymore, e.g. it was not possible to open the &quot;about&quot; window
+Improvement: Drag&Drop transparency with icon alpha channel is now also fully supported when multiple icons are dragged
+Bugfix: Finally found and fixed long-standing bug that caused Scalos to crash on exit (scalos.library expunge function was called twice, and tried to FreeMem() incorrect pointer)
+Improvement: Added variable for support hidden files(via FIBF_HIDDEN) in &quot;DeviceWindowClass.c&quot;,&quot;Class.c&quot;,&quot;ScanDir.c&quot;. Now this support is switchable from &quot;Scalos Prefs&quot;.
+Improvement: Added support for hidden files(via FIBF_HIDDEN).
+Bugfix: Added WBGARBAGE diskobject for &quot;AsyncPasteProg()&quot; function, in &quot;MenuCommand.c&quot;. Now objects can be copied into trashcans via popupmenu command &quot;paste&quot;, before objects were copied into parent of trashcans. 
+Bugfix: simple-refresh window redraw failed when issueing some menu commands, e.g. &quot;open parent&quot;
+Bugfix: renaming left-out icons sometimes caused random memory to be trashed
+Bugfix: renaming left-out icons caused Scalos processes to hang due to semaphore deadlocks
+Bugfix: cured semaphore deadlock that sometimes occured when automatic window update collided with some user action, e.g. opening a popup menu
+Bugfix: with TrueType fonts, having one softlink in a text window caused all entries to be displayed underlined
+Improvement: Added new internal commands &quot;iconproperties&quot; and &quot;windowproperties&quot; (Requires iconproperties.module and windowproperties.nodule)
+Bugfix: drag&drop left garbage on screen if custom bob routines were used and &quot;special&quot; bob (e.g. &quot;forbidden&quot; or &quot;copying&quot;) was visible and was larger than main bob
+Improvement: Added new qualifier during D&D to force moving of file system objects (instead of copying)
+Improvement: Implemented the long-planned &quot;Create link&quot; on D&D feature
+Bugfix: default icons were not shown transparent if D&D &quot;real transparency&quot; wasn't turned on
+Bugfix: When copying icons, the &quot;replace all&quot;, &quot;skip all&quot;, and &quot;abort&quot; buttons of the overwrite request didn't work
+Bugfix: Automatic update of windows caused enforcer hit and crashes if the modified files containes special pattern-matching characters in their names (e.g. &quot;()[]#?|&quot;)
+Bugfix: Long-standing bug that caused Scalos to lockup when an icon was selected while a new window was initially reading its icons
+Bugfix: About dialog sometimes opened with maximum screen width, but without any contents in the scrolling field
+Bugfix: Closing an icon window while it was initially reading its directory caused Enforcer hits and crashed Scalos
+Improvement: Added TrueType font support. TT Fonts can be used for icons, text windows, tooltips, and the &quot;About&quot; window
+Bugfix: Menu selection &quot;leave out&quot; (not from popup menu) caused enforcer hits when issued from &quot;View all&quot; text window
+Improvement: Added CRC checks over prefs files. Now writing a prefs file only causes re-reading of prefs and reinitialization if file contents has actually changed
+Improvement: Disk Read-Only status display is now updated when disk is inserted
+Bugfix: Icons without associated object were displayed incorrectly after window update
+
+V40.31
+Bugfix: Default icons were not recognized on main window. This bug could show up after dragging default icons from some drawer window onto the desktop
+Improvement: Improved caching of filetype descriptors. With &quot;env-handler&quot;, all filetypes were flushed from cache whenever a new filetype was loaded from ENVARC: to ENV:
+Bugfix: Internal command &quot;reset&quot; didn't work correctly
+Bugfix: Icons were not updated correctly after change of file comment of rename with change of case only (e.g. &quot;amiga&quot; to &quot;Amiga&quot;)
+Bugfix: Icon selection marks for popup menu could be drawn in incorrect window when &quot;Apply to every selected icon&quot; is enabled
+Bugfix: Fixed various problems with left-out icons (different icons with same name were not handled correctly, left-out icons were not updated as intended)
+Bugfix: &quot;Mac-like selection&quot; was broken
+Bugfix: &quot;Snapshot window&quot; didn't work if there was no icon present for window
+Bugfix: Main window didn't allow multiple icons with same name (e.g. left-out icons from different paths)
+
+V40.30
+Bugfix: In &quot;view all&quot; text windows, &quot;Leave out&quot; icon &quot;xxx&quot; now removes both &quot;xxx&quot; and &quot;xxx.info&quot; from text window, and &quot;Put away&quot; causes both entries to reappear
+Bugfix: Now text window SCCM_IconWin_ReadIcon method correctly handles increase in column width
+Improvement: All &quot;cleanup**&quot; menu commands are now disabled in text windows
+Bugfix: Fixed enable/disable state of &quot;leave out&quot; and &quot;put away&quot; menu commands for &quot;view all&quot; text windows
+Improvement: &quot;selectall&quot; menu command is now disabled if all icons are selected
+Improvement: &quot;clearselection&quot; menu command is now disabled if no icon is selected
+Improvement: Text windows now automatically update object associated entries if an icon is removed or added
+Bugfix: Fixed internal locking during reading and parsing of Scalos filetypes descriptions
+Bugfix: AppIcons no longer can get &quot;Default Icon&quot; attribute
+New feature: Default icons may be drawn with adjustable degree of transparency
+Improvement: Added support for MorphOS-style iconify gadgets. This fixed any visual distortion of iconify Gadgets under MorphOS
+Improvement: When loading default icons, Scalos now adds information about the original object (Path+Name) for usage by the iconobject datatypes
+Improvement: Made icon dd_Flags handling more flexible, so OS3.9 CD drawers open with correct viewmodes (WB handles invalid values of &quot;3&quot; like DDFLAGS_SHOWALL)
+Bugfix: Scalos didn't handle default icons from icon drawer (e.g. def_drawer.info) correctly. Without separate DefIcons installed, only the icon.library built-in icons were used
+Improvement: Added &quot;skip all&quot; gadget to standard copy/move &quot;replace&quot; dialog
+Bugfix: Fixed enforcer hits/crashes when starting Scalos while Scalos is already running
+Improvement: Added new ScalosControlA() tags SCALOSCTRLA_GetCopyBuffSize and SCALOSCTRLA_SetCopyBuffSize
+Improvement: Added preferences item to set default stack size
+Bugfix: FileTypes code assumed that popupmenu.library was open, leading to crashes on machines where that library was not installed
+
+V40.29
+New feature: Added full support for alpha channel icon drawing, including drag &amp; drop (&quot;Custom&quot; bob routines only)
+Bugfix: Memory for default action in filetype descriptions was freed while not in use
+Improvement: Filetype descriptions are now cached, in order to improve performance
+Bugfix: Starting WB programs left 2 locks dangling
+Improvement: Updated &quot;%os&quot; title function to recognise OS 3.5 and OS 3.9
+Improvement: Made localisable string for &quot;BUSY&quot; disks
+Improvement: Popupmenu items now show default action (the action that is taken upon double-click) in bold text
+Bugfix: Optimisation of drag &amp; drop bobs was broken, leading to very sluggish drawing of bobs when dragging multiple icons
+Improvement: Changed directory for Scalos filetype descriptors from &quot;Scalos:FileTypes/&quot; to &quot;ENV:Scalos/FileTypes/&quot;. For compatibility, Scalos still looks in the old place if the new directory cannot be found
+Bugfix: In Text window, icon update erroneously changed type from &quot;WBGARBAGE&quot; to &quot;WBDRAWER&quot;
+Bugfix: Fixed incorrect update of icons in text windows in &quot;view all&quot; mode
+Improvement: To provide a visual hint that popup menu commands only apply to the icon under the pointer, all other selected icons are temporarily deselected while the popup menu is open
+Improvement: Added keyboard qualifier to apply popup menu commands to every selected icon, instead of only the icon under the mouse pointer
+Bugfix: Fixed long delay upon startup when splash window was turned off
+Bugfix: selecting an icon in one window, then changing to another window, and hitting &quot;enter&quot; caused Scalos to crash with &quot;invalid semaphore state&quot; errors
+Bugfix: Fixed several memory leaks associated with filetype-dependent popup menus and tooltips
+Bugfix: In Window popup menus, &quot;view by text/name&quot; never displayed a checkmark
+Bugfix: Drawers opened from text view windows did not correctly inherit the &quot;view all&quot; attribute
+Bugfix: Corrected minor typo in About window &quot;100%&quot; was lacking the percent sign
+
+V40.28
+Improvement: Major improvement in text view window update - now works the same way as icon window update, only the changed items are redrawn
+Bugfix: In text view windows, it was erronously possible to &quot;snapshot&quot; and &quot;unsnapshot&quot; icons
+Bugfix: In text view windows, no file comments were displayed
+Bugfix: In text view windows, Scalos had problems recognising default tool entries for project icons
+Bugfix: Text icon IDTA_Type returned wrong icon type for WBGARBAGE (Trashcan) icons
+Improvement: Major improvements to SCA_OpenIconWindow(). Now Scalos tries hard to find the appropriate icon for the window to be opened. If an icon is to be found, the window settings are taken from the icon
+Bugfix: Text windows didn't recognise window resize events during reading of icons
+Improvement: Rewrote context-sensitive disabling of menu items
+Added requester to ask user what to do when a project icon without a default tool is encountered
+Added Polish catalog to developer archive, translation by Pawe¸ Szczodry
+Bugfix: Fixed file count routine in filetransclass. The bug caused incorrect calculation of total byte/item count and lead to display of more than 100% completion with nonsense values for &quot;remaining time&quot;
+Improvement: Removed display of every single item copied in filetrans copy/move requester. This optimization greatly improved copying speed
+New feature: Added new method &quot;SCCM_FileTrans_OverwriteRequest&quot; for FileTrans.sca class
+Bugfix: Filetype wasn't set correctly for trashcan
+Bugfix: AsyncWB hook wasn't called correctly for &quot;Empty Trashcan&quot;
+Bugfix: Program name wasn't handed over to execute_command.module on icon double-click
+Bugfix: Improved window clipping, now application-drawn appIcons no longer draw across non-backdrop Workbench window border
+Bugfix: When a drawer window was created in iconified state, it could not be uniconified by double-clicking its parent drawer
+
+V40.27
+Bugfix: In 40.27, WBStartup execution of ARexx type icons was broken
+Bugfix: Window backfill pattern re-layout didn't occur when &quot;backdrop&quot; was turned on and off
+Bugfix: Fixed enforcer hits/crashes during window zoom/resize when &quot;always relayout&quot; was enabled (code tried to use ptn_bitmap after FreeBitMap())
+Bugfix: Added locking mechanism for asynchronous backfill to avoid crashes when windows are closed while async backfill process hasn't finished
+Bugfix: Fixed enforcer hits when CLI project icon contained no default tool
+Bugfix: Cut &amp; Paste didn't work when AsyncWB was installed
+Improvement: Program list now contains full path for each program started instead of only program name
+New feature: Added SCA_ScalosControl() subcommand to get/free list of menu commands
+New feature: Added new FONT and VALIGN attributes to TOOLTIP STRING
+New feature: Added display of estimated remaining time to file copy/move progress dialog
+
+V40.26
+Bugfix: &quot;About&quot; produced 2 enforcer hits when no Scalos logo found
+Bugfix: Splash resizing / text positioning was broken when no Scalos logo was found
+Bugfix: Window process hung when one of the standard modules could not be started
+Bugfix: Snapshotting a window which had no icon created an &quot;.info&quot; instead of an icon with the drawer's name
+Bugfix: Windows with virtual width or height > 32768 could produce problems from graphical screen corruption to system crash
+Bugfix: During file copy operations, icons could be overwritten without warning
+Bugfix: TextInputHook wasn't used to run programs without an icon - instead, it always called execute_command.module
+Bugfix: Automatic disabling didn't work for some main menu items (e.g. &quot;sizetofit&quot; didn't get disabled in backdrop root window)
+New feature: Icon tooltips can now be user-defined in the file type description files. Scalos now supports file type information plugins, e.g. to display size information about image files (we will include two example plugins in the next release)
+
+V40.25
+Added &quot;viewbytype&quot;, &quot;cleanupbyname&quot;, &quot;cleanupbydate&quot;, &quot;cleanupbysize&quot;, and &quot;cleanupbytype&quot; menu commands
+Fixed Enforcer hits which occured when an ARexx program ended that had been started from an icon window, and the icon window had been been closed
+Added support for cyling through icons in window via TAB key
+Rebuilt about window code to make use of the TT layout engine
+Fixed bug in SCA_SortNode() - lists with less than 3 entries were not sorted
+Fixed broken close-window abort recognition during GenerateIcons() icon drawing in window
+The user-defined path for default icons was never used for iconified Scalos window icons. Now it is taken as fall-back if there are no theme-specific icons
+Changed sizing method for splash window
+Added new methods SCCM_AddToClipboard and SCCM_ClearClipboard to root class
+Copy/paste didn't work for volumes/disks - Fixed
+Fixed another source for erroneous error messages during SCCM_FileTrans_Copy and SCCM_FileTrans_Move operations
+Changes in icon font were not recognized in desktop window - Fixed
+The menu &quot;copy&quot; and &quot;paste&quot; commands trashed the destination file name - Fixed
+Fixed some enforcer hits and crashed when selecting some device icons, and then pressing &quot;enter&quot; twice
+Changed location of icons for iconified Scalos window from &quot;ENV:Sys/def_iconify&quot; to &quot;THEME:window/def_iconify&quot;
+LoadWB.scalos now waits until Scalos opens its first window on the Workbench screen before exiting
+Now Scalos first tries to load deficons from &quot;THEME:DefIcons/&quot;. If that fails, the standard path &quot;ENV:Sys/&quot; is used
+Now uses &quot;titlebarimageclass&quot; for iconify image if available
+Changed all makefiles to work with GNU make

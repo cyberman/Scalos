@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, plugin">
+
+	<TITLE>Scalos Plugin</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT WIDTH=100%><FONT COLOR=white><H2><B> Scalos Plugin</B></H2></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE WIDTH=95% BORDER=0 ALIGN=CENTER>
+<TR><TD>
+	<B>PLUGIN</B>
+		<UL>
+			<LI><B>filename:</B> ppc_processor.plugin</LI>
+			<LI><B>author:</B> Satanic Dreams [info@scalos.co.uk]</LI>
+			<LI><B>type:</B> [OOP] Screen Titlebar</LI>
+		</UL>
+	<BR>
+	<B>INSTALLATION</B>
+		<DL><DD>
+		Run the supplied Install Script. -or-
+		Copy the #?.plugin file to the <TT>Scalos:Plugins/OOP/</TT> directory.<BR>
+		Start up the main Scalos Preference program and select the 'Plugins' page.  Click the 'New' button and then use the file selector icon to the right-end of the string gadget to select you new plugin file from the <TT>Scalos:Plugins/OOP/</TT> directory.
+		<BR><BR>
+		The plugin uses the ppc.library (PowerUP) kernal.
+		This was chosen because both WarpUP and PowerUP users
+		can use it. WarpUP requires the installation of the
+		ppcemulib package (comes with WarpUP v4).  It also
+		keeps our options open for porting to MorphOS :)
+		</DL></DD>
+	<BR>
+	<B>DESCRIPTION</B>
+		<DL><DD>
+		The Scalos desktop screen titlebar may be configured using the main Scalos Preference program.  This plugin adds some additional placeholders:<BR>
+		<UL>
+		<LI>%Pr, which can be used to display the PowerPC CPU installed (eg. "PPC603p")</LI>
+		<LI>%Pc, the PPC processors clock speed (eg. "240Mhz")</LI>
+		<LI>%Pv, will show the PPC CPU revision number</LI>
+		</UL>
+		</DD></DL>
+	<BR>
+	<B>USAGE</B>
+		<DL>
+			<DD>
+			In the Scalos Main Preference program select 'Titles' page.  You can then use the above new placeholders in any of the title strings for Screen, RootWindow and Window.<BR><BR>
+			<B>NOTE:</B> The upper/lower case of the placeholder names is important!
+			</DD>
+		</DL>
+</TD></TR>
+</TABLE>
+</BODY>
+</HTML>

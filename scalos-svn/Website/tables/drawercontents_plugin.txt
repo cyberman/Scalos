@@ -1,0 +1,8 @@
+V40.3
+Improvement: Added localization for message strings.
+
+V40.2
+Bugfix: Fixed several memory leaks
+
+V40.1
+Initial release

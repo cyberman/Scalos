@@ -1,0 +1,33 @@
+V40.14
+Improvement: Added support for cloning of existing icons
+
+V40.13
+Improvement: accelerated icon reading by using buffered I/O
+
+V40.11
+Bugfix: Fixed handling of 32bit glowicons with only one image
+
+V40.10
+Improvement: Added support for 32bit glowicons as used by OS4
+
+V40.8
+Bugfix: fixed support for transparent colors with non-zero index.
+
+V40.7
+Improvement: replace GetDTAttrs() call by series of GetAttr(). Now datatypes.library is no longer used.
+Bugfix: CoerceMethod() in OM_NEW could lead to enforcer hits if object could not be created.
+
+V40.5
+Improvement: Reworked icon saving code, now it is possible to correctly save a modified icon image
+
+V40.4
+Bugfix: Added size checking for icon BitMaps, to fix a major memory trashing bug triggered by thumbnailed icons
+Improvement: icons can now be scaled
+
+V40.3
+Bugfix: saving of interior window offsets (dd_CurrentX/dd_CurrentY) didn't work
+
+V40.1
+Bugfix: Datatype now calls &quot;UpdateWorkbench&quot; function after saving glowicon data.
+Bugfix: Relaxed strict image size checking - some icons could not be read.
+Initial version. This datatype adds support for OS3.5+ GlowIcons even when running under OS3.1.

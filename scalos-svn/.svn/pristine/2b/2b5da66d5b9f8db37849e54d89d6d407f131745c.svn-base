@@ -1,0 +1,14 @@
+V40.6
+Improvement: accelerated icon reading by using common file handle and buffered I/O
+
+V40.4
+Improvement: Removed Assembler library startup code. Now completely coded in C, compiles with both SAS/C and GCC (No functional changes)
+
+V40.3
+Improvement: Improved cleanup code: FreeClassList() now calls RemLibrary() for each datatype
+
+V40.2
+Bugfix:Fixed possible Enforcer hit in Expunge()
+
+V40.1
+Improvement: Added new library function Convert2IconObjectA()

@@ -1,0 +1,23 @@
+# $Date$
+# $Revision$
+#############################################################
+TOPLEVEL	=	$(shell pwd)/../..
+
+include		config.mk
+
+##############################################################################
+#
+# Project subdirectories
+#
+
+SUBDIRS	=	Source \
+
+##############################################################################
+
+.PHONY: all install clean
+
+all: all_subdirs
+
+clean: clean_subdirs
+
+install: install_subdirs

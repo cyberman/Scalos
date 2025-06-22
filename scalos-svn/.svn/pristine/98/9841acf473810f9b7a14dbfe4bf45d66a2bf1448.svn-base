@@ -1,0 +1,14 @@
+V39.8
+Improvement: width of volume gauge is now adjusted to match width of window close gadget
+
+V39.7
+Replaced dedicated code by new SCA_OpenDrawerByName library function (requires Scalos V41.x)
+
+V39.6
+Improvement: Replaced Assembler library startup functions by C code. No functional changes
+
+V39.5
+Improvement: Removed some dependencies on undocumented internal Scalos data structures
+
+V39.4
+Improvement: Some changes for compatibility with Scalos 40.14

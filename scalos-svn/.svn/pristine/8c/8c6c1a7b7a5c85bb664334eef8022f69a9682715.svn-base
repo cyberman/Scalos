@@ -1,0 +1,294 @@
+15-04-2012
+status
+Scalos goes open source!<br>Scalos source code has been released as open source under BSD license. The Scalos project can not be found on Sourceforge at <a href="http://sourceforge.net/projects/scalos" target="_blank">http://sourceforge.net/projects/scalos/files/</a>
+15-04-2012
+status
+Scalos goes AROS!<br>Lots of work has been invested to port Scalos to AROS, and a first native buil is avalable <a href="http://sourceforge.net/projects/scalos/files/latest/download?source=files" target="_blank">here</a>
+05-05-2010
+bugfixes
+The hotfix 40.8.1 of Windowproperties.module has been released.<br>It resolves enforcer hits and crashes when saving changes.
+15-04-2010
+bugfixes
+The hotfix 40.3 of Updater.module has been released.<br>It adds support for patch versions like 41.7.1. This update is required for online update of Scalos from 41.7 to 41.7.1
+15-04-2010
+bugfixes
+The hotfix 41.7.1 of Scalos has been released. It fixes the following problems:<br>Bugfix: corrected recognition of active 3D-Layers (&quot;Enhanced Display&quot;) with MorphOS 2.x. <br>Bugfix: do not check RAM disk for sucfficient space (when copying files) when it returns 0 blocks free (AmigaOS3.x RAM disk always returns 0 free blocks)
+26-03-2010
+modules
+A few days ago we have released the hotfix V40.2 of Scalos Updater.module. It offers improved security agains tampering by checking the signature of the version and file list. The Hotfix can be installed with the online Updater module, To scan for available updates, select menu item &quot;Check for Updates...&quot; in tools menu.
+26-03-2010
+bugfixes
+A few days ago we have released the hotfix V40.27 of Scalos Prefs. It no longer overwrites parts of Workbench configuration, especially on AmigaOS4.x. The Hotfix can be installed with the online Updater module, To scan for available updates, select menu item &quot;Check for Updates...&quot; in tools menu.
+19-03-2010
+website
+Finally, we have fixed the &quot;last updated&quot; time stamps in our page footers!
+15-03-2010
+releases
+After lots of work on improvements and bugfixes, Scalos V41.7 is finally released for <b>AmigaOS 3.x/68K</b>, <b>AmigaOS 4.x/PPC</b>, and <b>MorphOS/PPC</b> ! User archives can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+29-03-2009
+website
+Finally, the <a href="http://scalos.noname.fr/reportbug.php">bug report</a> and <a href="http://scalos.noname.fr/submitidea.php">idea submission</a> forms are working again!
+28-03-2009
+website
+Since old Scalos group only received spam messages, and there wasn't any moderator anymore to kick the spam users, we have decided to create a new group <b>scalos_user</b> for Scalos users. Please use this group for any discussion about Scalos bugs and features, and for contacting the Scalos developers! Use this <a href="links.php">link</a> to subscribe to the new group!
+28-03-2009
+website
+We have set up a new mail address <a href="mailto:Scalos@VFEmail.net">Scalos@VFEmail.net</a> where you can ask questions or forward complaints directly to the Scalos developers.
+12-03-2009
+releases
+After a long period of silent development, Scalos V41.6 is finally released for <b>AmigaOS 3.x/68K</b>, <b>AmigaOS 4.0/PPC</b>, and <b>MorphOS/PPC</b> ! User archives can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+08-11-2007
+releases
+Finally, Scalos V41.5 for <b>AmigaOS 3.x/68K</b>, <b>AmigaOS 4.0/PPC</b>, and <b>MorphOS/PPC</b> is finished! User archives can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+08-11-2007
+releases
+Scalos translation kit has also been updated to match V41.5 and is available for download at the <a href="developers.php#archives">Developers page</a>!
+08-11-2007
+releases
+Scalos Developers' Pack has been updated for Scalos V41.5. It can be downloaded from the <a href="developers.php#archives">Developers page</a>.
+10-30-2006
+releases
+Here is a minor update to the Scalos V41.4 package that resolves thumbnail creation issues under OS3.0 and OS3.1. The update can be downloaded here <a href="downloads.php#modules">Downloads page</a> !! Please copy the updated defpicture.pvplugin to your <b>Scalos:plugins/previev</b> directory! This update is only necessary for OS3.0 / OS3.1 users.
+10-16-2006
+releases
+We did it again! Scalos V41.4 for both AmigaOS/68K and MorphOS/PPC is ready! User archives for both AmigaOS-68K and <b>MorphOS-PPC</b> can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+10-16-2006
+releases
+Scalos translation kit has also been updated to match V41.4 and is available for download at the <a href="developers.php#archives">Developers page</a>!
+10-16-2006
+releases
+Scalos Developers' Pack has been updated for Scalos V41.4. It can be downloaded from the <a href="developers.php#archives">Developers page</a>.
+04-02-2006
+releases
+We are proud to present the first alpha version of Scalos for AmigaOS4! You can download the alpha version on the <a href="downloads.php#beta">Downloads page</a>. Due to the alpha status, there are still several restrictions:<br>- A lot of 68K modules/plugins are still present and not in a PPC native version.<br>- No patching is done of OS functions so there may be problems with updating certain information. Installation as a workbench replacement is disabled.<br>- Some code for the popupmenu is still disabled and so not all information is updated every time the popupmenu is opened.<br><br>We would also advice people not to report problems and/or bugs because they will most likely be ignored till a beta version is released.
+03-23-2006
+releases
+Unfortunately, the updated installer script was copied to the wrong directory inside Scalos V41.3a archive. We now provide the second update V41.3b for download on the <a href="downloads.php#beta">Downloads page</a>. The only change to the original V41.3 release is the corrected installer script.
+03-22-2006
+releases
+We discovered a severe bug in Scalos installer script that causes it to default to install Scalos on RAM: instead of SYS:<b>Updated archives are available on the <a href="downloads.php#beta">Downloads page</a> 
+03-19-2006
+releases
+Scalos V41.3 is ready! As usual, we managed to fix quite a few old bugs. As usual, archives for both AmigaOS-68K and <b>MorphOS-PPC</b> can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+03-19-2006
+releases
+Scalos translation kit has also been updated to match V41.3 and is available for download at the <a href="developers.php#archives">Developers page</a>!
+03-19-2006
+releases
+Scalos Developers' Pack has been updated. We have changed version numbering to match Scalos version, and the new developers' pack is numbered V41.3. It can be downloaded from the <a href="developers.php#archives">Developers page</a>.
+07-11-2005
+releases
+Scalos V41.2 has been released! As usual, we fixed lots of bugs. Archives for both AmigaOS-68K and <b>MorphOS-PPC</b> can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+07-11-2005
+releases
+Scalos translation kit has also been updated to V41.2 and is available for download at the <a href="developers.php#archives">Developers page</a>!
+07-11-2005
+releases
+Scalos Developers' Pack has been updated to version 4.6 and can be downloaded from the <a href="developers.php#archives">Developers page</a>.
+17-08-2005
+releases
+We finally managed to finish the new Scalos 40.41 BETA! As always, there are lots of bugfixes, and this time, also some major new features! Archives for both AmigaOS-68K and <b>MorphOS-PPC</b> can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+15-08-2005
+releases
+We've just added the latest Scalos Developers' Pack - version 4.5 -  to the <a href="developers.php#archives">Developers page</a>. It has updated includes and autodocs.
+20-07-2005
+releases
+Scalos translation kit is now available from the <a href="developers.php#archives">Developers page</a>. If you make a translation for Scalos, please send us your .ct catalog file!
+23-04-2005
+releases
+Brand-new Scalos 40.33 BETA with lots of bugfixes - Archives for both AmigaOS-68K and <b>MorphOS-PPC</b> can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+30-03-2005
+releases
+We are proud to present new Scalos 40.32 BETA - Archives for both AmigaOS-68K and <b>MorphOS-PPC</b> can be downloaded here <a href="downloads.php#beta">Downloads page</a> !!
+20-02-2005
+status
+We have made substantial progress porting Scalos to MorphOS. A PPC-native version is currently in internal alpha-test, and we a working on a new MUI information.module.
+30-01-2005
+status
+The Scalos development team finally has received an ODW donation from Genesi in order to support development of a native MorphOS version. Porting already has started, and we are making good progress.
+03-01-2005
+status
+Scalos is NOT dead! Indeed, lots of changes have have been done under the hood. An entirely CVS-based source repository and build system has been setup, all ASM code in Scalos core components has been replaced by C code, and many code modifications have been done to allow building with GCC, as a preparation for future OS4 or MorphOS versions.
+31-12-2004
+modules
+We are currently alpha-testing a new icon datatype that will allow to display GlowIcons even when running under WB3.1.
+22-12-2004
+status
+The donation of a Pegasos machine, as announced 12-07-2003, turned out to be only vapor. However, today we received new information that a developer machine would be shipped soon. If that proves true, actual development of a native MorphOS version will start in the very near future.
+15-04-2004
+website
+There have been some delays in updating the website, due to losing access to it. But we have access back now, and as you can see, are pushing ahead with new releases!
+15-04-2004
+releases
+We've just added the latest Scalos Developers' Pack - version 4.2 -  to the <a href="developers.php#archives">Developers page</a>. It has updated includes and autodocs.
+15-04-2004
+releases
+Scalos beta version 40.31 has been uploaded!!! Visit the <a href="downloads.php#beta">Downloads page</a> to get it!!! This version includes many bugfixes.
+06-01-2004
+releases
+We've just added the latest Scalos Developers' Pack - version 4.2 -  to the <a href="developers.php#archives">Developers page</a>. It has updated includes and autodocs.
+31-12-2003
+releases
+Scalos beta version 40.29 has been uploaded!!! Visit the <a href="downloads.php#beta">Downloads page</a> to get it!!! This version includes many bugfixes and importantly, full PNG icon support including full-colour drag &amp; drop with alpha channel!
+31-12-2003
+modules
+Added new versions of the NewDrawer and EmptyTrashcan modules by Jean-Marie Coat. Thanks Jean-Marie! They're on the <a href="downloads.php#modules">Downloads page</a>.
+12-07-2003
+status
+This afternoon we sorted out the donation of a Pegasos machine (<a href="http://www.pegasosppc.com" target="_blank">www.pegasosppc.com</a>) for the development of Scalos for Morphos. So thanks to Genesi for providing the hardware to get us going!!!<br><br>We have no timescale of when a MOS version will be sorted though.
+22-06-2003
+website
+The latest Scalos archive had become corrupted! Argh! A new - not-corrupted - version is available now. Apologies for the inconvenience.
+14-06-2003
+releases
+Scalos beta version 40.28 has been uploaded. Visit the <a href="downloads.php#beta">Downloads page</a> to get it!!! Tell your friends too ;)
+09-06-2003
+status
+Scalos is NOT dead!!! We are still working on it, however certain things have caused delays in our work - house purchases, job changes, family stuff etc. We are still dedicated to making Scalos the best Workbench replacement there is!!!
+16-02-2003
+modules
+I've removed another link because of a corrupt archive... This time it's the Eject tool. I've no idea how these archives have become corrupt :( A new version will be uploaded as soon as possible. Thanks to iOurs for pointing this out in the <a href="forums/index.php" target="_top">forums</a>.
+13-02-2003
+modules
+I've removed the link to the WBRexx plugin because the archive had somehow become corrupt :( I'll upload a new version as soon as possible. Thanks to Kolla for pointing this out.
+11-02-2003
+modules
+The AvailP96 plugin has been updated to version 2.01 as requested by its author (hi!). Grab it from the <a href="downloads.php#modules">Downloads page</a>...
+11-02-2003
+releases
+Scalos beta version 40.27 has been uploaded. Visit the <a href="downloads.php#beta">Downloads page</a> to get the latest version of this outstanding software!!!
+11-02-2003
+modules
+We've uploaded the latest WBRexx plugin V39.15. It's on the <a href="downloads.php#modules">Downloads page</a>, as usual :)
+10-02-2003
+website
+We have moved hosting companies and the changeover seems to have gone with only a few minor glitches. Did anyone notice that I changed the site from plain old HTML to PHP? Nope? Oh well :)<br><br>I have also added some forums to the site, which you can access <a href="forums/index.php" target="_top">here</a>. Please feel free to register and contribute to the discussions. These forums replace any other forums we were running about Scalos (i.e. the AmigaForums site). The mailing list is still active.
+07-10-2002
+modules
+The WBRexx and WB39 plugins have been updated and uploaded. Go to the <a href="downloads.php#modules">Downloads page</a> to grab your copy!
+06-10-2002
+releases
+Scalos beta version 40.23 was uploaded, but I never reported upon this - sorry. However, to make up for this... Scalos Beta V40.24 has been released! Visit the <a href="downloads.php#beta">Downloads page</a> as usual...<br><br>There are some instructions in the readme file in the archive so you should read this before installing.
+29-09-2002
+releases
+The Masonicons.de website have updated the ScalosMI.lha archive to include the missing theme files added in the v40.22 archive recently.
+24-09-2002
+releases
+Scalos beta version 40.22 had some missing theme files. The new archive has just been uploaded to the <a href="downloads.php#beta">usual place</a>. Sorry for the error.
+15-09-2002
+website
+The link to the Overshakers themes in Hints and Tips was dead. Thanks to Nowee^SKT for pointing it out.
+13-09-2002
+releases
+Scalos beta version 40.22 has just been uploaded. Visit the <a href="downloads.php#beta">Downloads page</a> as usual...<br><br>There are some instructions in the readme file in the archive so you should read this before installing. 
+02-04-2002
+releases
+Scalos beta version 40.21 has been uploaded. Visit the <a href="downloads.php#beta">Downloads page</a> as usual...<br><br>The very latest improvement is the asynchronous SCCM_DeviceList_Generate. This should take care of the problems some people have with Scalos hanging when started with an audio CD in the drive. There should also be less trouble with Samba causing Scalos to hang after disconnecting. However, the current solution is not yet watertight, there are still some timing windows when a no longer responding filesystem could cause Scalos to hang. As far as we know, those problems have been there since the very first versions of Scalos.
+03-03-2002
+website
+New miscellaneous news page added. It contains stuff that doesn't really fit anywhere else. You can access it in the navigation panel above, or <a href="miscnews.php">here</a>.<br><br>It has a few pictures of the recent ALT WOA 2002 show - we were there!!!
+20-02-2002
+releases
+Scalos beta version 40.20 has been uploaded. Visit the <a href="downloads.php#beta">Downloads page</a> as usual...
+24-01-2002
+releases
+Scalos beta version 40.19 has been uploaded. Visit the <a href="downloads.php#beta">Downloads page</a> as usual...
+13-01-2002
+modules
+We've uploaded new versions of the DefIcons, Persistent Windows and WB39 plugins. Available from the <a href="downloads.php#beta">Downloads page</a>.
+09-12-2001
+releases
+A new beta version of Scalos has been uploaded. This is version 40.16 and fixes a number of reported bugs. As always, the <a href="downloads.php#beta">Downloads page</a> is the place to visit :)
+06-12-2001
+modules
+The preferences program that's included with the Titlebar Clock Plugin has been updated. It fixes a few bugs and can be found on the <a href="downloads.php#modules">Downloads page</a>.
+03-12-2001
+modules
+The modules archive from Bruce Steers has been updated. The changes are: added large d&amp;d pointer images; fixed a few silly bugs in the amigaini.library; and re-compiled the programs for the newer library. It's available in the <a href="downloads.php#modules">downloads page</a>.
+02-12-2001
+website
+The scalos.com domain expired and is being held for ransom at namezero.com - so we've got ourselves a new domain - scalos.noname.fr. All contact e-mail addresses have changed to use the scalos.co.uk domain as expected. Sorry for any inconvenience. Please update your bookmarks.
+23-11-2001
+website
+I've added a new feature to the news and version history pages. It's called &quot;MindIt&quot;. You click the button at the bottom of this page and you fill in your e-mail address on the resulting site. Each time the news or version history pages are updated by us, the MindIt site will send you an e-mail telling you that the pages you were watching have been updated. Neat eh?<br><br>By the way, we're not affiliated with this service at all, we just thought it might be useful to some of you :)
+21-11-2001
+website
+We've added version numbers for the modules and plugins, available on the <a href="downloads.php#modules">Downloads page</a>, after a few people requested them. Aren't we good? ;)
+21-11-2001
+releases
+Jurgen has fixed a slight problem in the WB3.9 plugin. The updated archive is now available from the <a href="downloads.php#modules">Downloads page</a>.
+21-11-2001
+releases
+Sorry, we uploaded a new beta (40.15) of the Scalos executable, but I forgot to update this news page! Whoops! If you haven't yet got it, go to the <a href="downloads.php#beta">Downloads page</a> now!
+21-11-2001
+website
+I've uploaded the new Scalos site! What do you think? Better, worse, neutral? If you have any problems or comments about it, please mail me: <a href="mailto:webmaster@scalos.noname.fr">The Webmaster</a> or use the Scalos mailing list.
+21-11-2001
+releases
+The Persistent Windows, WB3.9, Volume Gauge and WBRexx plugins have all been updated. Get them from the <a href="downloads.php#modules">Downloads page</a>.
+21-11-2001
+releases
+Another new BETA of the Scalos executable is now available! You can get version 40.14 from the <a href="downloads.php#beta">Downloads page</a>. Check out what's changed in the <a href="versionhistory.php">History page</a>. NOTE: German users also need to download the German language pack <a href="downloads.php#languages">found here</a>.
+10-11-2001
+website
+Added the missing history information for various plugins to the <a href="versionhistory.php">History page</a>.
+03-10-2001
+releases
+A new BETA of the Scalos executable is now available! This is version 40.12 and you can get it from the <a href="downloads.php#beta">Downloads page</a>.
+20-09-2001
+status
+Sorry, I was on holiday in Crete for the past two weeks, so I couldn't update the site. However, I've now added the latest changes to the <a href="versionhistory.php">Version History page</a>. No other news yet, but the holiday was great!
+01-09-2001
+releases
+We've uploaded a BETA German language pack. It's for those of you using our BETA executable who don't want to see their text strings in a mixture of languages. Get it from the <a href="downloads.php#beta">Downloads page</a>.
+19-08-2001
+releases
+Scalos beta version 40.10 has been uploaded. See the <a href="versionhistory.php">Version History page</a> for what changes there are. Get it from the <a href="downloads.php#beta">Downloads page</a>. If you find any bugs, please report them using our <a href="reportbug.php">bug reporting page here</a>.
+13-08-2001
+modules
+Bruce Steers has created and submitted his StackWindow plugin. This plugin will allow you to stack your Scalos desktop windows so they appear a little neater on the screen. Get it from the <a href="downloads.php#modules">Downloads page</a>.
+10-08-2001
+releases
+Scalos beta version 40.9 has been uploaded. See the <a href="versionhistory.php">Version History page</a> for what changes there are. Get it from the <a href="downloads.php#beta">Downloads page</a>. If you find any bugs, please report them using our <a href="reportbug.php">bug reporting page here</a>.
+08-08-2001
+website
+Sorry! Mea culpa! I uploaded the wrong version of some pages, and they incorrectly stated that the language packs had been released. In actual fact, they're currently in internal BETA stage, not yet ready for public consumption... I'll update the site with the language packs as and when they're ready. Once again, sorry for the confusion! Signed, the webmaster.
+04-08-2001
+releases
+Another beta! This time version 40.8 of Scalos has been uploaded. See the <a href="versionhistory.php">Version History page</a> for what changes we've made. Get it from the <a href="downloads.php#beta">Downloads page</a>. If you find any bugs, please report them using our <a href="reportbug.php">bug reporting page here</a>.<br><br>Note that we have changed menu and palette preferences so you no longer have to worry about changed preferences (menu.prefs -> menu13.prefs, palette.prefs -> palette13.prefs). Both Scalos and preferences try to load the new prefs files, falling back to the old ones if no new ones can be found. Saving prefs always generates the new files.
+31-07-2001
+releases
+Beta version 40.7 of Scalos has been uploaded. See the <a href="versionhistory.php">Version History page</a> for what's changed in this version. This version includes updated prefs and language versions. Get it from the <a href="downloads.php#beta">Downloads page</a>. Again, if you find any bugs, please be sure to report them using our <a href="reportbug.php">bug reporting page here</a>.
+21-07-2001
+website
+Some minor updates to the site. I've added the modification date of each archive to the downloads page.
+21-07-2001
+releases
+Beta version 40.6 of Scalos has been uploaded. See the <a href="versionhistory.php">Version History page</a> for what's changed in this version. Get it from the <a href="downloads.php#beta">Downloads page</a>. As always, if you find any bugs, please be sure to report them using our <a href="reportbug.php">bug reporting page here</a>.
+17-07-2001
+status
+We've updated the old autodocs and uploaded some new ones. You can find them on the <a href="developers.php#autodocs">Developers page</a>.
+14-07-2001
+modules
+There's a new plugin available. It's a clock plugin and it allows you to add clock and date functions to the Scalos desktop title bar. You can get it now from the <a href="downloads.php#modules">Downloads page</a>.
+12-07-2001
+releases
+We've uploaded the latest beta executable. This is version 40.5 and fixes a number of bugs reported by users. Get it from the <a href="downloads.php#beta">Downloads page</a>. Remember, it's only a BETA, so if you find any bugs, please be sure to report them using our <a href="reportbug.php">bug reporting page here</a>.
+07-07-2001
+modules
+The WB39 plugin has been updated to V45.12. Get it from the <a href="downloads.php#modules">Downloads page</a>.
+04-07-2001
+modules
+DevFilter is a new plugin that filters bad disk icons from the desktop. With OS3.5+ it also allows filtering of any devices specified in the standard Workbench prefs too. Get it from the <a href="downloads.php#modules">Downloads page</a>.
+23-06-2001
+status
+Jurgen has updated both the persist.plugin and wb39.plugin files.<br>Persist.plugin v39.11: When re-opening a window in iconified state, an entry in the persist file is now immediately added (no SCCM_Window_Open will occur, so no entry will be generated at all).<br>WB39.plugin: Requires the new Scalos V39.234 executable. Added full support for WBCTRLA_GetDefaultStackSize and WBCTRLA_GetProgramList, using new SCA_ScalosControl() call.
+23-06-2001
+status
+Due to the addition of a new appicons popup menu, the old menu.prefs file is not compatible. To correct this, either rename your menu.prefs file to menu13.prefs, or load your old file into the menu prefs editor and save it back out as menu13.prefs.
+15-06-2001
+releases
+We've uploaded a new BETA Scalos executable. It has loads of new features and bug fixes. A list of bug fixes can be found in the <a href="versionhistory.php">version history page</a>. Get the archive from the <a href="downloads.php#beta">Downloads page</a> now! Please remember, if you find any bugs, to <a href="reportbug.php">report them to us</a> as soon as possible. We'll do our best to get them fixed!
+09-05-2001
+status
+We have a new forum for you to post your questions, answers etc. Mainly for those who don't want to subscribe to our mailing list. It's over at <a href="http://www.amigaforums.org/" target="_blank">www.amigaforums.org</a>. Click on the &quot;The Forums&quot; link. You'll find us in the &quot;Scalos Forums&quot; section. Go post something today!

@@ -1,0 +1,152 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, faq">
+
+	<TITLE>Scalos Frequently Asked Questions</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><FONT COLOR=white><B>FAQ</B></FONT></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+<BR>
+
+<H2>
+1 <A HREF="#install">Installation Problems</A><BR>
+2 <A HREF="#graphical">Graphical Problems</A><BR>
+3 <A HREF="#system">System Problems</A><BR>
+</H2>
+
+<A NAME="install">
+<BR><BR>
+<H3><B>1. Installation Problems</B></H3>
+
+<H4>1.1 After Installing Scalos and rebooting I no longer have any pull-down menus.</H4>
+<P>
+Load up the Scalos <A HREF="Pref_Menus.html">Menu Preferences</A> program.  You will need to add your menus and then save.  Scalos is provided with English menus as standard,  the configuration file can be found in the Scalos distribution <TT>"Presets/Scalos/Menu_UK.pre"</TT> .
+If you installed Scalos using the provided installer it <B>should</B> have copied the English default menu into <TT>"ENVARC:Scalos/Menu.prefs"</TT> for you.
+Additional languages are available as seperate downloads from the <A HREF="Authors.html">Scalos website</A>.
+</P>
+<BR>
+<H4>1.2  Scalos displays "Couldn't open iconobject.library" when the library exists in the Libs: directory.</H4>
+<P> 
+Supplied Datatypes may be not correctly installed.  You should test if:<BR>
+<UL>
+	<LI><TT>"amigaiconobject.datatype"</TT> and <TT>"iconobject.datatype"</TT> exist in <TT>SYS:Classes/Datatypes/</TT> ?</LI>
+	<LI><TT>"Classes/Datatypes"</TT> correctly assigned to Libs:?</LI>
+	<LI><TT>"AmigaIconObject"</TT> in <TT>"Devs:Datatypes/"</TT> (Multiassigns not accepted!) ?</LI>
+	<LI>mcpgfx.library is installed in your <TT>LIBS:</TT> directory?</LI>
+</UL>
+</P>
+<BR>
+<H4>1.3  After installation of Scalos MCP's SysIHack doesn't work correctly.</H4>
+<P>
+You need a newer version of MCP. The installed mcpgfx.library is not compatible with MCP version V1.30 or less.<BR>
+<B>Solution:</B> install again old mcpgfx.library or look for newer MCP version.
+</P>
+<BR>
+<H4>1.4  My icons still have borders after i selected no icon frame in the Scalos Prefs!</H4>
+<P>
+Have you selected no frames in the <A HREF="Pref_Main.html">main Scalos preferences</A> (Icons page)?<BR>
+<B>Solution:</B> Ensure you have removed the <TT>"Run >NIL: NewIcons"</TT> from your <TT>s:startup-sequence</TT> or <TT>s:user-startup</TT>.
+</P>
+<BR>
+<H4>1.5  Before I installed Scalos I used the DefIcons package, now my setup no longer works.</H4>
+<P>
+<B>Solution:</B> Go to the scalos.co.uk downloads page and get the "FileTypes.plugin" package which is a DefIcons compatible package for Scalos. 
+</P>
+<BR>
+<H4>1.6  What programs aren't compatible with Scalos?</H4>
+<P>
+MagicWB-Daemon, ReKeyIt, PatchWB, NewIcons Patch, CommandList<BR>
+<BR>
+OS3.5 specifics such as AREXX scripts which alter the Workbench require the installation of the wbrexx.plugin available from the Scalos website downloads section.<BR>
+OS3.5 Programs TweakWB, RAWBInfo (unless you delete 'scalos:modules/information.module')<BR>
+</P>
+<BR>
+
+<A NAME="graphical">
+<BR><BR>
+<H3><B>2. Graphical Problems</B></H3>
+
+<H4>2.1  No background pictures loaded, though they are correctly defined in the Pattern Preferences.</H4>
+<P>
+This may be caused by old Datatypes. Try to reinstall the Datatypes from the Workbench disk, or the actual version of V43 picture.datatypes. You will find many new and optimised datatypes in the Aminet archive.
+</P>
+<BR>
+<H4>2.2  Many of my Icons display more than once on the Scalos desktop, while on the Workbench all seems ok.</H4>
+<P>
+The Workbench filters double displayed icons, Scalos does not.<BR>
+<B>Solution:</B> please edit the ".backdrop" file using a standard ASCII editor, and clear lines containing double entires.
+</P>
+<BR>
+<H4>2.3  Background images not scaled.</H4>
+<P>
+GUIGfx option not set in the Scalos <A HREF="Pref_Pattern.html">Pattern Preferences</A> or <TT>guigfx.library</TT> and/or <TT>render.library</TT> are not installed in your LIBS: directory.  You may obtain the latest versions of the two libraries from the Aminet archives.
+</P>
+<BR>
+<H4>2.4  Standard NewIcons display with borders.</H4>
+<P>
+This may be caused by a missing function of the <TT>newicon.library</TT> in NewIcons V3. You should use at least NewIcons V4 (which was provided in the Scalos installation).
+</P>
+<BR>
+<H4>2.5  Left out icons (on the Scalos desktop) or programs (AppIcons) aren't transparent.</H4>
+<P>
+That's because of conficts with the newicons patch.<BR>
+<B>Solution:</B> You should remove the line <TT>"Run >NIL: NewIcons"</TT> from your <TT>s:startup-sequence</TT> or <TT>s:user-startup</TT>
+</P>
+<BR>
+<H4>2.6  Problems with CyberGraphX 3 or 4 and the 'BitmapCache=ON' tooltype.</H4>
+<P>
+The BITMAPCACHE tooltype of CybergraphX drivers is usually reuqired for the Warp3D system to function at all.<BR>
+Sometimes NewIcons will be displayed trashed if the BitmapCache feature is enabled in your monitor drivers tooltypes. This bug is fixed in CyberGraphX v4.2+ which can be downloaded as an upgrade from the commercial v4 CD-ROM from <A HREF="http://www.vgr.com/V4">http://www.vgr.com/V4</A>
+</P>
+<BR>
+<H4>2.7  The Scalos desktop backdrop image doesn't fit the screen correctly, bits seem to hang off the edges of the screen, and it tiles the picture even though i specified no tiling in the pattern prefs!</H4>  
+<P>
+<B>Solution:</B> First make the desktop into a window by unselecting the 'Backdrop' option for the first menu (just like you can do on the old Workbench).  Make this main desktop window to the full size of the screen, then snapshot the window using the usual option in the 'Window' menu.  Now set the desktop window back to 'Backdrop' as usual.
+</P>
+
+<A NAME="system">
+<BR><BR>
+<H3><B>3. System Problems</B></H3>
+
+<H4>3.1  Working with CD's causes crashes or Scalos doesn't function correctly when accessing some file systems.</H4>
+<P>
+Most Filesystems don't support the ExAll function correctly. Disable "Use ExAll" in the Scalos <A HREF="Pref_Main.html">Main preferences</A>.
+</P>
+<BR>
+<H4>3.2  Scalos is using lots of chip ram for every directory window I open.</H4>
+<P>
+Scalos needs, normally, more chip ram than the original WorkBench desktop. However IPrefs can be causing some memory wastage as it is still loading window patterns too (as used by the original Workbench).<BR>
+<BR>
+Scalos uses multiple tasks when working, a window is a seperate task from the desktop - hence the ability to multitask.  If usually you have all graphics in fast RAM using Fblit when using Workbench you will need to configure the FBlit patch to also work with Scalos.<BR>
+<BR>
+<B>Solution:</B> Remove all pictures in 'WBPattern' preferences.<BR>Ensure both 'Scalos_Window_Task' and 'Workbench' are in the include list for FBlit.<BR>
+</P>
+<BR>
+
+<H4>3.3  Scalos doesn't start any programs from the WBStartup drawer.</H4>
+<P>
+'WBStartup Path' may be set wrongly.  Use the Scalos <A HREF="Pref_Main.html">Main Preferences</A> program to edit the path used by Scalos.
+</P>
+<BR>
+<H4>3.4  Scalos crashes while starting the WBStartup programs.</H4>
+<P>
+Maybe you've got the program "Cyberpatcher" in your WBStartup drawer? Please remove it from there and start it in the <TT>s:user-startup</TT>.
+</P>
+<BR>
+<H4>3.5  Using OS3.9 and "Icon Information" from the menu it appears that some tooltypes are not being saved.  Sometimes even the icons are no longer recognised.</H4>
+<P>
+Delete the 'Scalos:Modules/information.module' and Scalos will fall back to using the workbench.library standard version.  With OS3.5+ this could be "RAWBInfo" add-on which works very well.
+</P>
+
+</BODY>
+</HTML>

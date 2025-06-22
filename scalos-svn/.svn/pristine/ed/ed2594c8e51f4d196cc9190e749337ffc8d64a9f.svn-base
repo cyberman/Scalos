@@ -1,0 +1,81 @@
+<HTML>
+
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, preferences">
+
+	<TITLE>Scalos Preferences - Scalos</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT VALIGN=CENTER WIDTH=100%><nobr><FONT COLOR=white><B>Scalos Preferences</B></FONT><nobr></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<P>
+With this program you can configure many aspects of the Scalos desktop functionality.
+<BR><BR>
+</P>
+
+<A NAME="aboutpage">
+<BR>
+<H3><B>About Page</B></H3>
+
+<A NAME="iconspage">
+<BR>
+<H3><B>Icons Page</B></H3>
+
+<A NAME="bobspage">
+<BR>
+<H3><B>Bobs Page</B></H3>
+
+In screens with a depth greater than 8-bit (256 colours) the custom bob routines are always used.
+
+<A NAME="titlespage">
+<BR>
+<H3><B>Titles Page</B></H3>
+
+<A NAME="textmodepage">
+<BR>
+<H3><B>Textmode Page</B></H3>
+
+<A NAME="pathspage">
+<BR>
+<H3><B>Paths Page</B></H3>
+
+<A NAME="defsizepage">
+<BR>
+<H3><B>Default Sizes Page</B></H3>
+
+<A NAME="pluginspage">
+<BR>
+<H3><B>Plugins Page</B></H3>
+
+<P>
+Details of available plugins are covered in the <A HREF="Plugins.html">plugin section</A>.
+</P>
+
+<A NAME="miscpage">
+<BR>
+<H3><B>Miscellaneous Page</B></H3>
+
+<A NAME="newiconspage">
+<BR>
+<H3><B>NewIcons Page</B></H3>
+
+
+<HR WIDTH=95%>
+<A NAME="tooltypes">
+<H3><B>Tooltypes</B></H3>
+
+<P>
+The Scalos Prefs program recognises the standard preferences tooltypes (CREATEICONS, ACTION).
+</P>
+
+</BODY>
+</HTML>

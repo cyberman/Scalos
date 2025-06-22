@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+	<META NAME="author" CONTENT="Mike Carter">
+	<META NAME="description" CONTENT="Documentation for Scalos desktop">
+	<META NAME="keywords" CONTENT="Scalos, desktop, documentation, plugin">
+
+	<TITLE>Scalos Plugin</TITLE>
+</HEAD>
+
+<BODY TEXT=Black BGCOLOR=White BACKGROUND="images/backdrop">
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR>
+<TD BGCOLOR=black ALIGN=LEFT WIDTH=100%><nobr><FONT COLOR=white><B>Scalos Plugin</B></FONT><nobr></TD>
+<TD BGCOLOR=black WIDTH=380><IMG SRC="images/headingbar"></TD>
+</TR>
+</TABLE>
+
+<BR><BR>
+
+<TABLE WIDTH=95% BORDER=0 ALIGN=CENTER>
+	<B>PLUGIN</B>
+		<UL>
+			<LI><B>filename:</B> title_clock.plugin</LI>
+			<LI><B>author:</B> David McMinn [dave@scalos.co.uk]</LI>
+			<LI><B>type:</B> [OOP] Screen Titlebar</LI>
+		</UL>
+	<BR>
+	<B>INSTALLATION</B>
+		<DL><DD>
+		Run the supplied Install Script. -or-
+		Copy the #?.plugin file to the <TT>Scalos:Plugins/OOP/</TT> directory.<BR>
+		Start up the main Scalos Preference program and select the 'Plugins' page.  Click the 'New' button and then use the file selector icon to the right-end of the string gadget to select you new plugin file from the <TT>Scalos:Plugins/OOP/</TT> directory.
+		</DL></DD>
+	<BR>
+	<B>DESCRIPTION</B>
+		<DL><DD>
+		The Scalos desktop screen titlebar may be configured using the main Scalos Preference program.  This plugin adds some additional placeholders:<BR>
+		<UL>
+		<LI>%ti, displays the current time in the default Locale format.  e.g. "10:43:37"</LI>
+		<LI>%da, displays the date in the default Locale format.  e.g. "Saturday 14 July 2001"</LI>
+		</UL>
+		</DD></DL>
+	<BR>
+	<B>USAGE</B>
+		<DL>
+			<DD>
+			In the Scalos Main Preference program select 'Titles' page.  You can then use the above new placeholders in any of the title strings for Screen, RootWindow and Window.<BR><BR>
+			<B>NOTE:</B> In order to allow the seconds display to count up in seconds you must set the title bar refresh time to every 1 second.  It is currently not possible to remove the seconds display from the time string. The date/time will only display when the Scalos desktop is active, i.e. when one of the directory windows is currently the active window; this is a system limitation and not possible to get around with out a patch/hack.
+			</DD>
+		</DL>
+</TABLE>
+</BODY>
+</HTML>

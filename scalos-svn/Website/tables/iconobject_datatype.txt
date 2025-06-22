@@ -1,0 +1,111 @@
+V40.21
+Improvement: Added support for cloning of existing icons
+
+40.24
+Improvement: faster drawing of true-color icons by avoiding multiple coping of image data
+Improvement: added support for selected state ARGB icon images
+
+40.23
+Improvement: draw mode and background color for standard icon text (no outline, no shadow) are now selectable
+
+V40.22
+Bugfix: incorrect check for allocation success in SetTags().
+
+V40.21
+Improvement: Once CyberGfxbase found, chip memory was always used if Fblit port wasn't found.
+
+V40.20
+Now uses common code for image scaling and dithering from scalosgfx.library.
+
+V40.19
+Improvement: replace GetDTAttrs() call by series of GetAttr(). Now datatypes.library is no longer used
+
+V40.18
+Bugfix: CoerceMethod() in OM_NEW could lead to enforcer hits if object could not be created
+
+V40.17
+Improvement: mcpgfx.library is no longer required
+
+V40.16
+Bugfix: scaling non-PNG icons caused enforcer hits and trashed display, due to a NULL ColorMap
+Bugfix: ScaleBitMap() didn't work with P96 - as a workaround, we now always use graphics.library function BitMapScale()
+Bugfix: Once again switched to own bitmap scaling, to overcome remaining P96-related problems. Redesigned WriteARGBToBitMap() for LUT BitMaps.
+
+V40.15
+Improvement: icons can now be scaled
+
+V40.14
+Bugfix: Attributes &quot;IDTA_Mask_Normal&quot; and &quot;IDTA_Mask_Selected&quot; didn't return correct values
+
+V40.13
+Improvement: Finished conversion from ASM to C, compiles with bith SAS/C and GCC
+Bugfix: Corrected minor miscalculation of icon bounding box, leading to some pixels on right border of icon text not getting erased
+
+V40.12
+Improvement: Added support for new IODRAWF_NoEraseBg flag
+
+V40.11
+Improvement: Added functionality to support TrueType fonts for icon text
+
+V40.10
+Improvement: Changed library from &quot;struct Library&quot; to &quot;struct ClassLibrary&quot;
+
+V40.9
+Improvement: Added support for per-icon &quot;borderless&quot; flag
+
+V40.7
+Improvement: Added IDTA_UserFlags get/set tag
+
+V40.6
+Bugfix: Fixed possible Enforcer hit in Expunge()
+
+V40.5
+Bugfix: Fixed crash when GM_HITTEST was invoked with icon mask of NULL
+
+V40.4
+Bugfix: GM_HITTEST was broken when icon borders were &gt; 0
+
+V40.3
+Improvement: Added attribute tags IDTA_MaskBM_Normal and IDTA_MaskBM_Selected
+
+V40.2
+More changes for enhanced compatibility for icons with borders
+
+V40.1
+Improvement: Added separate pens for selected icon text, icon text outline, and icon text shadow
+
+V39.38
+Improvement: Major changes to support borders around os3.5 icons and NewIcons
+
+V39.37
+Improvement: Added IDTA_Font attribute
+
+V39.36
+Improvement: SetAttr(IDTA_ToolTypes) now stores a COPY of the provided tooltype array. Copy gets freed on Dispose
+
+V39.35
+Improvement: Checks for &quot;FBlit&quot; on OpenLibrary and doesn't use any chip memory if found
+
+V39.34
+Improvement: Longword-aligned structure IconObjectInst
+
+V39.33
+Improvement: Displays underlined text if IDTA_isLink is TRUE
+
+V39.32
+Improvement: Uses no chip mem if cybergraphics is found
+
+V39.31
+Bugfix: Added missing &quot;ret&quot; in LibClose... Fixes crash on Scalos closing
+
+V39.30
+Improvement: Added Semaphore protection for memory pools
+
+V39.29
+Improvement: All memory allocations are now being done via memory pools
+
+V39.28
+Bugfix: Fixed memory leak with iobj_name
+
+V39.27
+Improvement: Added ability to set DTA_Name tag
