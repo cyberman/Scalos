@@ -56,5 +56,5 @@ Primary upstream license reference:
 - Source: `vendor/scalos-svn/include/proto/openurl.h`
 
 ### IJG JPEG header
-- License: “see accompanying README file” (needs corresponding README in tree).
+- Notice: header refers to an accompanying IJG README for distribution/use conditions, but no such README is shipped in this tree.
 - Source: `vendor/scalos-svn/include/jpeglib.h`
