@@ -1,14 +1,13 @@
 # Scalos
 ## Scalos323 workspace (Classic AmigaOS 3.2.3)
 This repository is a focused workspace for Classic AmigaOS 3.2.3 (NDK 3.2R4 baseline):
-- `vendor/` upstream import(s)
+- `vendor/` tracked upstream import(s) (reference sources)
 - `patches/` local changes
 - `os323/` integration / build glue for 3.2.3
 
 ## Licensing
 This is a multi-license repository. See:
 - `vendor/scalos-svn/LEGAL`
-- `vendor/` tracked upstream import(s) (reference sources)
 - `docs/LICENSES.md`
 
 Note: licensing is defined per component inside `vendor/`.
