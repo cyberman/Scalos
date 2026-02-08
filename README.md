@@ -8,7 +8,10 @@ This repository is a focused workspace for Classic AmigaOS 3.2.3 (NDK 3.2R4 base
 ## Licensing
 This is a multi-license repository. See:
 - `vendor/scalos-svn/LEGAL`
+- `vendor/` tracked upstream import(s) (reference sources)
 - `docs/LICENSES.md`
+
+Note: licensing is defined per component inside `vendor/`.
 
 ## About Scalos
  Scalos is a desktop replacement for Amiga computer. 
