@@ -24,7 +24,7 @@ Note: licensing is defined per component inside `vendor/`.
  - Icon imagetypes
  - Icon datatype system
  - Icon dragging is more stable
- - Cybergraphics and Picasso96 24bit color support
+ - Picasso96 24bit color support
  - Window patterns
  - Optimised backgroundpatterns routine
  - Live updating window scrolling
