@@ -1,2 +1,30 @@
-# Local vendor drop (not committed)
-/vendor/
+# -----------------------------------------------------------------------------
+# Workspace build artifacts (generic)
+# -----------------------------------------------------------------------------
+*.o
+*.a
+*.so
+*.elf
+*.map
+*.lst
+*.s
+*.asm
+*.bak
+*.tmp
+*~
+.DS_Store
+
+# -----------------------------------------------------------------------------
+# Vendor: keep tracked, ignore build output only
+# -----------------------------------------------------------------------------
+vendor/**/obj/
+vendor/**/objs/
+vendor/**/*.o
+vendor/**/*.a
+vendor/**/*.so
+vendor/**/*.elf
+vendor/**/*.map
+vendor/**/*.lst
+vendor/**/*~
+vendor/**/*.bak
+vendor/**/*.tmp
