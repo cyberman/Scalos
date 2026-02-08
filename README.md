@@ -1,4 +1,16 @@
 # Scalos
+## Scalos323 workspace (Classic AmigaOS 3.2.3)
+This repository is a focused workspace for Classic AmigaOS 3.2.3 (NDK 3.2R4 baseline):
+- `vendor/` upstream import(s)
+- `patches/` local changes
+- `os323/` integration / build glue for 3.2.3
+
+## Licensing
+This is a multi-license repository. See:
+- `vendor/scalos-svn/LEGAL`
+- `docs/LICENSES.md`
+
+## About Scalos
  Scalos is a desktop replacement for Amiga computer. 
  
  Some of its features: 
