@@ -5,6 +5,10 @@ This repository is a *multi-license* workspace. Licensing is defined per compone
 Primary upstream license reference:
 - `vendor/scalos-svn/LEGAL`
 
+## Scope
+Upstream Scalos is *mostly* BSD 2-Clause (see `vendor/scalos-svn/LEGAL`).
+Some components and bundled notices use different licenses/terms; those exceptions are listed below.
+
 ## Scalos (majority)
 - License: BSD 2-Clause
 - Source: `vendor/scalos-svn/LEGAL` (top section)
