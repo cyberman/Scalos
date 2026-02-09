@@ -14,7 +14,6 @@ Some components and bundled notices use different licenses/terms; those exceptio
 - Source: `vendor/scalos-svn/LEGAL` (top section)
 
 ## Components with different licenses
-
 ### Modules/Delete.MUI
 - License: GNU GPL v3
 - Sources:
